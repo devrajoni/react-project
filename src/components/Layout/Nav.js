@@ -4,8 +4,16 @@ import Button from "./Button";
 
 export default function Navbar() {
   let links = [
-    { name: "Home", link: "/", subMenu: [{ name: "Home", link: "/" }] },
-    { name: "Service", link: "/", subMenu: [{ name: "Home", link: "/" }] },
+    { name: "Home", link: "/" },
+    {
+      name: "Service",
+      link: "/",
+      subMenu: [
+        { name: "Demo1", link: "/" },
+        { name: "Demo2", link: "/" },
+        { name: "Demo3", link: "/" },
+      ],
+    },
     { name: "Works", link: "/" },
     { name: "About", link: "/" },
     { name: "Blog", link: "/" },
@@ -35,20 +43,22 @@ export default function Navbar() {
               open ? "top-20 opacity-100" : "top-[-490] h-auto"
             } opacity-0 md:opacity-100`}
           >
-            {/* {links.map((data) => (
+            {links.map((data) => (
               <li
                 key={data.name}
-                className="md:ml-8 md:text-xl md:my-0 my-4 left-0"
+                className="md:ml-8 md:text-xl md:my-0 py-4 left-0"
               >
                 {data?.subMenu ? (
-                  <div>
-                    <p>{data.name}</p>
-                    <ul>
+                  <div className="relative group">
+                    <p className="text-white-800 hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4">
+                      {data.name}
+                    </p>
+                    <ul className="absolute translate-y-12 invisible group-hover:translate-y-0 transition-transform duration-300 ease-in group-hover:visible bg-slate-900 w-56 p-4 rounded">
                       {data?.subMenu?.map((menu) => (
                         <li key={menu.name}>
                           <Link
                             to={menu.link}
-                            className="text-white-800 hover:text-green-400 duration-500 hover:underline"
+                            className="text-white-800 font-normal text-base hover:ring-offset-4 hover:ring-b inline-block"
                           >
                             {menu.name}
                           </Link>
@@ -59,14 +69,15 @@ export default function Navbar() {
                 ) : (
                   <Link
                     to={data.link}
-                    className="text-white-800 hover:text-green-400 duration-500 hover:underline"
+                    className="text-white-800 hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4"
                   >
                     {data.name}
                   </Link>
                 )}
               </li>
-            ))} */}
-            <Link to='/'>Home</Link>
+            ))}
+            {/* <Link to="/">Home</Link> */}
+
             <li>
               <a
                 href="/"
