@@ -1,7 +1,8 @@
 import Banner from '../../section/home/banner';
 import Service from '../../section/home/service';
-import Space from '../../section/home/space';
 import Work from '../../section/home/work';
+import About from '../../section/home/about';
+import Testimonial from '../../section/home/testimonial';
 
 export default function home() {
     return(
@@ -9,8 +10,9 @@ export default function home() {
         <div>
             <Banner />
             <Service />
-            <Space />
             <Work />
+            <About />
+            <Testimonial />
         </div>
 
     </>

@@ -4,6 +4,7 @@ import Button from "../../components/Button";
 import Nav from "../../components/Nav";
 import Card from "../../components/Card";
 
+
 export default function Banner() {
     let [search, setSearch] = useState(false);
   useEffect(() => {
@@ -37,13 +38,13 @@ export default function Banner() {
 
   return (
     <>
-      <div className="header-section relative w-full bg-slate-900">
+      <section className="header-section relative w-full bg-slate-900">
         <img
           src="https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s"
           className="w-full bg-cover h-full absolute mix-blend-overlay"
           alt="banner"
         />
-        <Nav setSearch='setSearch' />
+        <Nav setSearch={setSearch} />
 
         <div className="text-left fixed py-60 text-white px-20 md:px-40 absolute">
           <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap pb-3">
@@ -52,10 +53,10 @@ export default function Banner() {
           <h1 className="font-bold text-4xl pb-10">We are digital agency.</h1>
           <Button name="Getting Started"/>
         </div>
-      </div>
-        <div class="grid md:grid-cols-3 grid-cols-1 mb-12 gap-6 px-20 ">
+      </section>
+        <div class="grid md:grid-cols-3 grid-cols-1 mb-12 gap-6 px-20 mb-32 ">
         { cardContents.map((cardContent) =>
-            <div className="bg-[#121212] px-12 py-12 drop-shadow-2xl hover:border-4 border-[#66FCF1]">
+            <div className="bg-[#121212] px-12 py-12 drop-shadow-2xl hover:ring-4 ring-[#66FCF1]">
                 <Card cardContent={cardContent}/>
             </div>
         )}

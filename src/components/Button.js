@@ -4,7 +4,7 @@ export default function Button(props) {
     return(
         <>
         <div>
-            <button className="outline outline-[#66FCF1] hover:opacity-50 p-6 font-bold text-1xl uppercase">{name}</button>
+            <button className="outline outline-[#66FCF1] hover:opacity-50 p-4 md:p-6 font-bold text-1xl uppercase">{name}</button>
         </div>
     </>
     );
