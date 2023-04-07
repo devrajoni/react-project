@@ -62,12 +62,14 @@ export default function Banner() {
         )}
         </div>
 
-      {search ? <div className="fixed inset-0 bg-slate-900/70 flex justify-center items-center">
-        <div>
-            <button onClick={() => setSearch(false)} className="text-white absolute top-4 right-4">x</button>
+      {search ? <div className="fixed z-50 inset-0 bg-slate-900/70">
+        <div className="flex justify-end mt-6 mr-6">
+            <button onClick={() => setSearch(false)} className="text-white top-16 right-16 z-[999]">x</button>
         </div>
-        <div className="max-w-2xl w-full"><input type="search" placeholder="search" className="w-full px-5 py-4 bg-transparent rounded-full border-2 border-white"/>
-        </div>
+          <div className="flex justify-center items-center h-full">
+            <div className="max-w-2xl w-full"><input type="search" placeholder="search" className="w-full px-5 py-4 bg-transparent rounded-full border-2 border-white"/>
+          </div>
+          </div>
         </div>: null}
     </>
   );

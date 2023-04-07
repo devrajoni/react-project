@@ -52,21 +52,23 @@ export default function Service() {
             <div class="grid grid-cols-1  md:grid-cols-4  grid-cols-1 px-12 gap-6 mb-12 w-full bg-slate-900 text-white">
                 {
                     items.map((item) =>
-                        <div className='bg-[#0B0C10] px-8 pt-12 gap-6 mb:56 ring-4 h-96 ring-[#191919]'>
+                        <div className='bg-[#0B0C10] px-8 pt-12 gap-6 mb-44 ring-4 ring-[#191919] relative'>
                             <p className=' text-2xl text-center'>{item.description}</p>
-                            <div className='py-8 flex justify-center items-center gap-3 text-1xl font-bold text-[#FEC42D]'>
+                            <div className='py-8 mb-28 flex justify-center items-center gap-3 text-1xl font-bold text-[#FEC42D]'>
                                 <ion-icon name={item.star}></ion-icon>
                                 <ion-icon name={item.star}></ion-icon>
                                 <ion-icon name={item.star}></ion-icon>
                                 <ion-icon name={item.star}></ion-icon>
                                 <ion-icon name={item.star}></ion-icon>
                             </div>
-                            <div className=' flex justify-center items-center text-white'>
-                                <img src={item.image} className='h-32 w-32 rounded-full' alt='testimonial1'/>
-                            </div>
-                            <div className='text-center pt-4 mb-12 gap-6'>
-                                <h3 className='font-bold text-2xl'>{item.name}</h3>
-                                <p>{item.designation}</p>
+                            <div className='absolute bottom-0 translate-y-1/2 w-full  left-0'>
+                                <div className=' flex justify-center items-center text-white'>
+                                    <img src={item.image} className='h-32 w-32 rounded-full mt-16' alt='testimonial1'/>
+                                </div>
+                                <div className='text-center pt-4 gap-6'>
+                                    <h3 className='font-bold text-2xl'>{item.name}</h3>
+                                    <p>{item.designation}</p>
+                                </div>
                             </div>
                         </div>
                     )

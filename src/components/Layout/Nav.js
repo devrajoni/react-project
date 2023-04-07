@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 
-export default function Navbar() {
+export default function Navbar({setSearch}) {
   let links = [
     { name: "Home", link: "/" },
     {
@@ -79,12 +79,11 @@ export default function Navbar() {
             {/* <Link to="/">Home</Link> */}
 
             <li>
-              <a
-                href="/"
+              <button onClick={ () => setSearch(true)}
                 className="text-xl md:ml-8 md:my-0 md:opacity-100 opacity-0"
               >
                 <ion-icon name="search-outline"></ion-icon>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>

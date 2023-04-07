@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-=======
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
-import "./index.css";
-import reportWebVitals from "./reportWebVitals";
->>>>>>> 51ba83d7208ae94dfd1c2abeac82f8007de026e6
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
