@@ -28,7 +28,7 @@ export default function Navbar({setSearch}) {
           className="w-full bg-cover h-full absolute mix-blend-overlay"
           alt="banner"
         />
-        <nav className="flex items-center font-medium justify-between w-full fixed left-0 text-[#ffffff] py-6 px-7 md:px-20 bg-black md:bg-transparent">
+        <nav className="flex items-center font-medium justify-between w-full  left-0 text-[#ffffff] py-6 px-7 md:px-20 bg-black md:bg-transparent">
           <div className="font-bold text-2xl font-[poppins]">
             <p>Logo</p>
           </div>

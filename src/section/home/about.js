@@ -39,7 +39,7 @@ export default function Service() {
                         <p>Committed and creative</p>
                     </div>
                 </div>
-                <div className=' col-span-2 lg:col-span-1'>
+                {/* <div className=' col-span-2 lg:col-span-1'>
                     <div className='flex flex-col'>
                         <div className='bg-red-900 w-full'>
                         <img src='https://fastly.picsum.photos/id/7/4728/3168.jpg?hmac=c5B5tfYFM9blHHMhuu4UKmhnbZoJqrzNOP9xjkV4w3o' className='h-auto w-full' alt='about1'/>
@@ -49,7 +49,7 @@ export default function Service() {
 
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-12 md:mb-0 w-full bg-slate-900 text-left">
                 {
