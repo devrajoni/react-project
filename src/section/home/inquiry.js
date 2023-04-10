@@ -6,22 +6,22 @@ export default function Inquiry() {
 
     return(
         <>
-        <section className="service-section md:px-20 mb-12 px-12 text-white relative w-full">
-            <img src={Quiry} alt="quiry" className='absolute'/>
+        <section className="inquiry-section md:px-20 px-12 text-white relative w-full">
+            <img src={Quiry} alt="quiry" className='bg-cover absolute'/>
             <div className='content flex justify-center item-center'>
                 <div className='text-center absolute top-16'>
                     <HorizontalLine />
                     <div className='text-2xl mt-20 flex justify-center item-center gap-8 mb-8'>
-                        <div className='ring-2 ring-[#66FCF1] h-12 w-12 rounded-full p-2 '>
+                        <div className='ring-2 ring-[#66FCF1] bg-black h-12 w-12 rounded-full p-2 '>
                             <ion-icon name="logo-facebook" className=''></ion-icon>
                         </div>
-                        <div className='ring-2 ring-[#66FCF1] h-12 w-12 rounded-full p-2 '>
+                        <div className='ring-2 ring-[#66FCF1] bg-black h-12 w-12 rounded-full p-2 '>
                             <ion-icon name="logo-twitter"></ion-icon>
                         </div>
-                        <div className='ring-2 ring-[#66FCF1] h-12 w-12 rounded-full p-2 '>
+                        <div className='ring-2 ring-[#66FCF1] bg-black h-12 w-12 rounded-full p-2 '>
                             <ion-icon name="logo-instagram"></ion-icon>
                         </div>
-                        <div className='ring-2 ring-[#66FCF1] h-12 w-12 rounded-full p-2 '>
+                        <div className='ring-2 ring-[#66FCF1] bg-black h-12 w-12 rounded-full p-2 '>
                             <ion-icon name="logo-youtube"></ion-icon>
                         </div>
                     </div>
