@@ -13,7 +13,7 @@ export default function latestNews() {
     return(
         <>
         <section className="service-section">
-            <div className='flex justify-center item-center h-full mt-12 mb-20 md:mt-24 md:px-20 px-12'>
+            <div className='flex justify-center items-center h-full mt-12 mb-20 md:mt-24 md:px-20 px-12'>
                 {heading.map((headings) =>
                     <TopTitleTwo headings={headings} />
                 )}
@@ -23,8 +23,8 @@ export default function latestNews() {
                     <div>
                         <img src={News1} alt='test' className='w-full rounded-t-lg'/>
                     </div>
-                    <div className='flex justify-center item-center'>
-                        <div className='bg-[#0B0C10] ring-4 ring-[#191919] drop-shadow-md text-white p-8'>
+                    <div className='flex justify-center items-center'>
+                        <div className='bg-[#0B0C10] border-x-4 border-b-4 border-[#191919] drop-shadow-md text-white p-8'>
                             <h1 className='font-bold text-2xl py-2'>Could this VR sketching tool be coming of age for designers in the future?</h1>
                             <p className='text-1xl py-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....</p>
                             <button className='btn ring-2 ring-[#66FCF1] p-4'>Read More</button>
@@ -36,8 +36,8 @@ export default function latestNews() {
                     <div className='content'>
                         <img src={News2} alt='test' className='w-full rounded-t-lg'/>
                     </div>
-                    <div className='flex justify-center item-center'>
-                        <div className='bg-[#0B0C10] ring-4 ring-[#191919] drop-shadow-md text-white p-8'>
+                    <div className='flex justify-center items-center'>
+                        <div className='bg-[#0B0C10] border-x-4 border-b-4 border-[#191919] drop-shadow-md text-white p-8'>
                             <h1 className='font-bold text-2xl py-2'>8 Cities That Show You What The Future Will Look Like (Innovative Ideas)</h1>
                             <p className='text-1xl py-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt...</p>
                             <button className='btn ring-2 ring-[#66FCF1] p-4'>Read More</button>
@@ -49,7 +49,7 @@ export default function latestNews() {
                         <img src={News3} alt='test' className='w-full rounded-t-lg'/>
                     </div>
                     <div className='flex justify-center item-center'>
-                        <div className='bg-[#0B0C10] ring-4 ring-[#191919] drop-shadow-md text-white p-8'>
+                        <div className='bg-[#0B0C10] border-x-4 border-b-4 border-[#191919] drop-shadow-md text-white p-8'>
                             <h1 className='font-bold text-2xl py-2'>Could this VR sketching tool be coming of age for designers in the future?</h1>
                             <p className='text-1xl py-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....</p>
                             <button className='btn ring-2 ring-[#66FCF1] p-4'>Read More</button>

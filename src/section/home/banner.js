@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
-import Nav from "../../components/Nav";
+import Nav from "../../components/Layout/Nav";
 // import Image1 from "../../asset/home_banner1.jpg";
 import Image2 from "../../asset/home_banner2.jpg";
 
