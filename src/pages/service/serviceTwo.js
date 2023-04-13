@@ -2,8 +2,10 @@ import Banner from "../../section/service/serviceOne/banner";
 import Services from "../../section/service/serviceOne/service";
 import Space from "../../section/service/serviceOne/space";
 import Work from "../../section/service/serviceTwo/work";
+import About from "../../section/service/serviceTwo/about";
 // import Skill from "../../section/service/serviceOne/skill";
-// import Inquiry from "../../section/home/inquiry";
+import Inquiry from "../../section/service/serviceTwo/inquiry";
+import Footer from "../../section/service/serviceTwo/footer";
 
 export default function ServiceTwo() {
   return (
@@ -13,8 +15,11 @@ export default function ServiceTwo() {
         <Services />
         <Space />
         <Work />
-        {/* <Skill />
-        <Inquiry /> */}
+        <Space />
+        <About />
+        {/* <Skill /> */}
+        <Inquiry />
+        <Footer />
       </div>
     </>
   );

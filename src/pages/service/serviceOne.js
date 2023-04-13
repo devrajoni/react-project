@@ -4,6 +4,7 @@ import Space from "../../section/service/serviceOne/space";
 import Work from "../../section/service/serviceOne/work";
 import Skill from "../../section/service/serviceOne/skill";
 import Inquiry from "../../section/home/inquiry";
+import ServiceFooter from "../../section/service/serviceOne/footer";
 
 export default function ServiceOne() {
   return (
@@ -15,6 +16,7 @@ export default function ServiceOne() {
         <Work />
         <Skill />
         <Inquiry />
+        <ServiceFooter />
       </div>
     </>
   );
