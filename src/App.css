@@ -18,3 +18,15 @@ body {
 .item:hover {
   flex-grow: 120;
 }
+
+.testing::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #019fb6;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.testing:hover:after {
+  transform: scaleX(1);
+}
