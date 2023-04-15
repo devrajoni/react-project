@@ -11,7 +11,7 @@ export default function Work() {
   let data = [
     {
       titleData: "Works.",
-      subTitle: "THINGS WE'VE MADE",
+      subTitle: "Flagship projects",
     },
   ];
 

@@ -1,32 +1,35 @@
 import serviceAbout from "../../../asset/service_about.jpg";
+import Test1 from "../../../asset/test_1.jpg";
+import Test2 from "../../../asset/test_2.jpg";
+import Test3 from "../../../asset/test_3.jpg";
 
 export default function About() {
     let items =[
         {
             description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
             star:"star",
-            image:"https://fastly.picsum.photos/id/5/5000/3334.jpg?hmac=R_jZuyT1jbcfBlpKFxAb0Q3lof9oJ0kREaxsYV3MgCc",
+            image:Test1,
             name:"Jhon Doe",
             designation:"Designation",
         },
         {
             description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
             star:"star",
-            image:"https://fastly.picsum.photos/id/5/5000/3334.jpg?hmac=R_jZuyT1jbcfBlpKFxAb0Q3lof9oJ0kREaxsYV3MgCc",
+            image:Test2,
             name:"Jhon Doe",
             designation:"Designation",
         },
         {
             description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
             star:"star",
-            image:"https://fastly.picsum.photos/id/5/5000/3334.jpg?hmac=R_jZuyT1jbcfBlpKFxAb0Q3lof9oJ0kREaxsYV3MgCc",
+            image:Test3,
             name:"Jhon Doe",
             designation:"Designation",
         },
         {
             description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
             star:"star",
-            image:"https://fastly.picsum.photos/id/5/5000/3334.jpg?hmac=R_jZuyT1jbcfBlpKFxAb0Q3lof9oJ0kREaxsYV3MgCc",
+            image:Test1,
             name:"Jhon Doe",
             designation:"Designation",
         },

@@ -22,11 +22,136 @@ body {
 .testing::after {
   display: block;
   content: "";
-  border-bottom: solid 3px #019fb6;
+  border-bottom: solid 3px rgb(102,252,241);
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
 
 .testing:hover:after {
   transform: scaleX(1);
+}
+
+.skill-container li{
+  list-style: none;
+  margin: 50px 0;
+  position: relative;
+}
+
+.skill-container li::before{
+  content: '';
+  position: absolute;
+
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 5px;
+  top: calc(100% + 5px);
+  border-radius: 500px;
+}
+
+.skill-container li::after{
+  content: '';
+  position: absolute;
+
+  left: 0;
+  background-color: #66FCF1;
+  width: 0;
+  height: 5px;
+  top: calc(100% + 5px);
+  border-radius: 500px;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  animation-direction: forward;
+}
+
+.skill-container li.DURABILITY::after{
+  animation-name: DURABILITY;
+}
+
+@keyframes DURABILITY {
+  to{
+    width: 90%;
+  }
+}
+
+.skill-container li.BATTERYLIFE::after{
+  animation-name: BATTERYLIFE;
+}
+
+@keyframes BATTERYLIFE {
+  to{
+    width: 80%;
+  }
+}
+
+.skill-container li.DESIGN::after{
+  animation-name: DESIGN;
+}
+
+@keyframes DESIGN {
+  to{
+    width: 60%;
+  }
+}
+
+.skill-container li.CONVENIENCE::after{
+  animation-name: CONVENIENCE;
+}
+
+@keyframes CONVENIENCE {
+  to{
+    width: 50%;
+  }
+}
+
+.skill-container li.PRICE::after{
+  animation-name: PRICE;
+}
+
+@keyframes PRICE {
+  to{
+    width: 90%;
+  }
+}
+
+.skill-container li.ui-design::after{
+  animation-name: ui-design;
+}
+
+@keyframes ui-design {
+  to{
+    width: 90%;
+  }
+}
+
+.skill-container li.ux-design::after{
+  animation-name: ux-design;
+}
+
+@keyframes ux-design {
+  to{
+    width: 80%;
+  }
+}
+
+.skill-container li.digital-marketing::after{
+  animation-name: digital-marketing;
+}
+
+@keyframes digital-marketing {
+  to{
+    width: 70%;
+  }
+}
+
+.skill-container li.social-media::after{
+  animation-name: social-media;
+}
+
+@keyframes social-media {
+  to{
+    width: 60%;
+  }
 }

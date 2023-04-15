@@ -6,7 +6,7 @@ export default function Footer() {
         <>
             <div className="">
                 <div className='grid grid-cols-1 md:grid-cols-5 gap-6 px-12 md:px-20 mt-12 md:mt-16 mb-16 text-white text-left'>
-                    <div className="col-span-2">
+                    <div className="col-span-2 md:text-xs">
                         <p className="font-bold text-2xl font-[poppins] pb-4">Logo</p>
                         <p className="text-1xl pb-4">We are more than a digital agency</p>
                         <hr className="h-0.5 text-2xl w-16 bg-[#66FCF1]" />
@@ -53,9 +53,9 @@ export default function Footer() {
                     <p>PRIVACY POLICY</p>
                     <p>Terms of Use</p>
                 </div>
-                <div className="flex text-white gap-80 mt-4">
+                <div className="grid grid-cols-1 md:grid-cols-2   text-white text-left mt-4">
                     <p className="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                    <div className="flex gap-6 text-bold">
+                    <div className="flex gap-6 text-bold  ps-16 md:ps-56 lg:ps-96">
                         <div>
                             <ion-icon name="logo-facebook"></ion-icon>
                         </div>

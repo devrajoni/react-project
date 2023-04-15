@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import Nav from "../../../components/Layout/Nav";
-// import Image1 from "../../asset/home_banner1.jpg";
-import Image2 from "../../../asset/single_service3.jpg";
+import Nav from "../../components/Layout/Nav";
+import Image2 from "../../asset/service_banner.jpg";
 
 export default function Banner() {
   let [search, setSearch] = useState(false);
@@ -18,22 +17,16 @@ export default function Banner() {
 
   return (
     <>
-      <section
-        className="bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${Image2})` }}
-      >
-        {/* <img src={Image2} className="w-full bg-cover h-full" alt="banner" /> */}
+      <section className="header-section relative w-full bg-slate-900">
+        <img
+          src={Image2}
+          className="w-full bg-cover h-full absolute"
+          alt="banner"
+        />
         <Nav setSearch={setSearch} />
 
-        <div className="text-left px-6 py-60 text-white px-20 md:px-40">
-          <h1 className="font-bold text-7xl pb-6">Activity Tracker.</h1>
-          <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap pb-3">
-            CREATIVE MIND, CREATIVE WORKS.
-          </h5>
-          <p className="w-60 md:w-96 text-1xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id
-            arcu luctus, pellentesque lorem ac, pharetra sapien.
-          </p>
+        <div className="flex justify-center items-center w-full h-full absolute text-white">
+          <h1 className="font-bold text-6xl md:text-8xl">Services.</h1>
         </div>
       </section>
       {search ? (

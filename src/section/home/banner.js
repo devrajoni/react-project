@@ -21,18 +21,18 @@ export default function Banner() {
   let cardContents = [
     {
       icon: "navigate-outline",
-      title: "Future Concept.",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.​",
+      title: "We Provide Full-Service.",
+      text: "We become fully immersed into our client business and industry, acquiring the same vision to accomplish goals together.​",
     },
     {
       icon: "snow-outline",
-      title: "The Big Ideas.",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus",
+      title: "We deliver solutions.",
+      text: "We love to innovate and produce new ideas, to grow your business and save your time. Always proud to be able to exceed your expectations .",
     },
     {
       icon: "bonfire-outline",
-      title: "Creative Solutions.",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.​",
+      title: "We Build Brands.",
+      text: "We design the brand; we turn the brand into an experience; and we communicate the brand’s story. We make brands matter.",
     },
   ];
 
@@ -55,10 +55,10 @@ export default function Banner() {
 
         <div className="text-left absolute py-60 text-white px-20 md:px-40">
           <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap pb-3">
-            CREATIVE MIND, CREATIVE WORKS.
+            Shapping your Ideas into products.
           </h5>
-          <h1 className="font-bold text-4xl pb-10">We are digital agency.</h1>
-          <Button name="Getting Started" />
+          <h1 className="font-bold text-4xl pb-10">Creating brands worth remembering</h1>
+          <Button name="3D Portfolio" />
         </div>
       </section>
       <div class="grid md:grid-cols-3 grid-cols-1 gap-6 px-20 mb-32 ">
