@@ -20,13 +20,21 @@ export default function Activity() {
                         <TopTitleTwo headings={headings} />
                     )}
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 h-auto drop-shadow-md text-white">
-                <div>
+            <div class="grid grid-cols-12 gap-12 h-auto drop-shadow-md text-white">
+                <div className='col-span-12 md:col-span-6'>
                     <img src={Image} alt='activity'/>
                 </div>
-                <div className='text-left'>
+                <div className='col-span-12 md:col-span-6 text-left'>
                     <h3 className='font-bold text-2xl pb-4'>Customer Opinion</h3>
-                    <p className='text-1xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat posuere orci, eget semper magna suscipit nec.</p>
+                    <p className='text-1xl py-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat posuere orci, eget semper magna suscipit nec.</p>
+                        <ul className='skill-container'>
+                            <li className='DURABILITY'>DURABILITY</li>
+                            <li className='BATTERYLIFE'>BATTERY LIFE</li>
+                            <li className='DESIGN'>DESIGN</li>
+                            <li className='CONVENIENCE'>CONVENIENCE</li>
+                            <li className='PRICE'>PRICE</li>
+                        </ul>
+
                 </div>
             </div>
             <div className='py-20'>

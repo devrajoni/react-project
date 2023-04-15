@@ -24,24 +24,26 @@ export default function Work() {
                         <TopTitleTwo headings={headings} />
                     )}
                 </div>
-                <div className='grid grid-cols-3 mt-16 gap-6'>
-                    <div>
-                        <img src={Image} alt='work_image'/>
+                <div className='grid grid-cols-12 mt-16 gap-12'>
+                    <div className='transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4'>
+                        <img src={Image} alt='work_image' className="hover:scale-110 transition duration-500"/>
                     </div>
-                    <div>
-                        <img src={Image1} alt='work_image'/>
+                    <div className='transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4'>
+                        <img src={Image1} alt='work_image' className="hover:scale-110 transition duration-500"/>
                     </div>
-                    <div>
-                        <img src={Image2} alt='work_image'/>
+                    <div className='transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4'>
+                        <img src={Image2} alt='work_image' className="hover:scale-110 transition duration-500"/>
                     </div>
-                    <div>
-                        <img src={Image3} alt='work_image'/>
+                </div>
+                <div className='grid grid-cols-12 mt-16 gap-12'>
+                    <div className='transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4'>
+                        <img src={Image3} alt='work_image' className="hover:scale-110 transition duration-500"/>
                     </div>
-                    <div>
-                        <img src={Image4} alt='work_image'/>
+                    <div className='transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4'>
+                        <img src={Image4} alt='work_image' className="hover:scale-110 transition duration-500"/>
                     </div>
-                    <div >
-                        <img src={Image5} alt='work_image'/>
+                    <div className='transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4'>
+                        <img src={Image5} alt='work_image' className="hover:scale-110 transition duration-500"/>
                     </div>
                 </div>
                 {/* <div className='grid grid-cols-3 gap-8'>

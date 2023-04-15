@@ -9,7 +9,7 @@ import Space2 from "../../section/home/space2";
 import Testimonial from "../../section/home/testimonial";
 import Work from "../../section/home/work";
 
-export default function home() {
+export default function Home() {
   return (
     <>
       <div>

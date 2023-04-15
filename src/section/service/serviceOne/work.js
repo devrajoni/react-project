@@ -7,9 +7,9 @@ export default function Work() {
         <>
         <section className="relative w-full h-72 bg-slate-900">
             <img src={Image2} className="w-full bg-cover h-80 absolute" alt="banner" />
-            <div className="flex justify-center items-center h-80 w-full bg-slate-900">
+            <div className="flex justify-center items-center px-12 md:px-20 h-80 w-full bg-slate-900">
                 <div className="absolute text-center text-white">
-                    <h1 className="font-bold text-6xl whitespace-pre-wrap pb-8">Wanna see our works?</h1>
+                    <h1 className="font-bold text-4xl md:text-6xl whitespace-pre-wrap pb-8">Wanna see our works?</h1>
                     <Button name="All Projects" />
                 </div>
             </div>

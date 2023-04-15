@@ -10,19 +10,19 @@ export default function Service() {
 
   let items = [
     {
-      title: "Who we are",
+      title: "Guide for Email Marketing",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+        "The latest email marketing and marketing automation techniques deployed by brand...",
     },
     {
-      title: "Our philosophy",
+      title: "Digital Marketing Template",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+        "Business people planning digital marketing strategy Our popular digital marketin...",
     },
     {
-      title: "How we work",
+      title: "Social Media Cheatsheet",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+        "Social media addiction Free Google and Facebook Paid Media Cheatsheet Review you...",
     },
   ];
 
