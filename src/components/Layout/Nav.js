@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 let links = [
-  { name: "Home", link: "/", subMenu: [{ name: "Home 1", link: "/" }, { name: "Home 2", link: "/" }] },
+  { name: "Home", link: "/"},
   { name: "Service", link: "/service", subMenu: [{ name: "Service 1", link: "/service" }, { name: "Service 2", link: "/service-two" }, { name: "Single Project", link: "/single-project" }] },
-  { name: "Works", link: "/"},
+  { name: "Works", link: "/work"},
   { name: "About", link: "/about" },
   { name: "Blog", link: "/blog" },
-  { name: "Contact", link: "/" },
+  { name: "Contact", link: "/contact" },
 ];
 
 

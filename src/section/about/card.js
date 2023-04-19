@@ -38,9 +38,9 @@ export default function Card() {
     return(
         <>
         <section className="service-section mt-16 md:mt-32 px-12 h-full w-full md:px-20">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 drop-shadow-md">
+            <div class="grid grid-cols-12 gap-6 drop-shadow-md">
                 { cardContents.map((cardContent) =>
-                    <div>
+                    <div className="col-span-12 md:col-span-6 lg:col-span-4 px-12 py-6">
                         <div className="text-[#66FCF1] text-4xl mb-8 md:text-4xl">
                             <ion-icon name={cardContent.icon}></ion-icon>
                         </div>

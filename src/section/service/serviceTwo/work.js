@@ -24,7 +24,7 @@ export default function Work() {
                         <TopTitleTwo headings={headings} />
                     )}
                 </div>
-                <div className='grid grid-cols-12 mt-16 gap-12'>
+                <div className='grid grid-cols-12 mt-16 gap-6 lg:gap-12'>
                     <div className='transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4'>
                         <img src={Image} alt='work_image' className="hover:scale-110 transition duration-500"/>
                     </div>
@@ -35,7 +35,7 @@ export default function Work() {
                         <img src={Image2} alt='work_image' className="hover:scale-110 transition duration-500"/>
                     </div>
                 </div>
-                <div className='grid grid-cols-12 mt-16 gap-12'>
+                <div className='grid grid-cols-12 mt-16 gap-6 lg:gap-12'>
                     <div className='transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4'>
                         <img src={Image3} alt='work_image' className="hover:scale-110 transition duration-500"/>
                     </div>

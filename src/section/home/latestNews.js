@@ -18,8 +18,8 @@ export default function latestNews() {
                     <TopTitleTwo headings={headings} />
                 )}
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 h-full mb-12 gap-6 px-8'>
-                <div className='content'>
+            <div className='grid grid-cols-12 h-full mb-12 gap-6 px-8'>
+                <div className='col-span-12 md:col-span-6 lg:col-span-4 content'>
                     <div>
                         <img src={News1} alt='test' className='w-full rounded-t-lg'/>
                     </div>
@@ -32,8 +32,8 @@ export default function latestNews() {
                     </div>
                 </div>
 
-                <div>
-                    <div className='content'>
+                <div className='col-span-12 md:col-span-6 lg:col-span-4 content'>
+                    <div>
                         <img src={News2} alt='test' className='w-full rounded-t-lg'/>
                     </div>
                     <div className='flex justify-center items-center'>
@@ -44,7 +44,7 @@ export default function latestNews() {
                         </div>
                     </div>
                 </div>
-                <div className='content'>
+                <div className='col-span-12 md:col-span-6 lg:col-span-4 content'>
                     <div>
                         <img src={News3} alt='test' className='w-full rounded-t-lg'/>
                     </div>

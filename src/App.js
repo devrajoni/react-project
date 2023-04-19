@@ -4,8 +4,10 @@ import Home from  './pages/home/home';
 import Service from  './pages/service/serviceOne';
 import ServiceTwo from  './pages/service/serviceTwo';
 import SingleProject from  './pages/service/serviceThree';
-import Blog from  './pages/blog/blog';
+import Work from  './pages/work/work';
 import About from  './pages/about/about';
+import Blog from  './pages/blog/blog';
+import Contact from  './pages/contact/contact';
 
 function App() {
   return (
@@ -15,8 +17,10 @@ function App() {
         <Route path="/service" element={<Service />} />
         <Route path="/service-two" element={<ServiceTwo />} />
         <Route path="/single-project" element={<SingleProject />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/work" element={<Work />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );

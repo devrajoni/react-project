@@ -64,9 +64,9 @@ export default function Service() {
             ))}
           </div>
         </div>
-        <div class="grid grid-cols-1  md:grid-cols-4  grid-cols-1 px-12 gap-6 mb-12 w-full text-white">
+        <div class="grid grid-cols-12 px-12 gap-6 mb-12 w-full text-white">
           {items.map((item) => (
-            <div className="bg-[#0B0C10] px-8 pt-12 gap-6 mb-44 ring-4 ring-[#191919] relative">
+            <div className="col-span-12 md:col-span-6 lg:col-span-3 bg-[#0B0C10] px-8 pt-12 gap-6 mb-44 ring-4 ring-[#191919] relative">
               <p className=" font-medium text-center">{item.description}</p>
               <div className="py-8 mb-28 flex justify-center items-center gap-3 text-1xl font-bold text-[#FEC42D]">
                 <ion-icon name={item.star}></ion-icon>

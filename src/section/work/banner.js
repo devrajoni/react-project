@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Nav from "../../components/Layout/Nav";
-import Image2 from "../../asset/blog_banner.jpg";
+import Image2 from "../../asset/work_banner.jpg";
 
 export default function Banner() {
   let [search, setSearch] = useState(false);
@@ -26,7 +26,7 @@ export default function Banner() {
         <Nav setSearch={setSearch} />
 
         <div className="flex justify-center items-center w-full h-full absolute text-white">
-          <h1 className="font-bold text-6xl md:text-8xl">Blog.</h1>
+          <h1 className="font-bold text-6xl md:text-8xl">Our Works</h1>
         </div>
       </section>
       {search ? (

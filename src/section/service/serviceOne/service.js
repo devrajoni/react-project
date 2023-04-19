@@ -50,9 +50,9 @@ export default function Services() {
                         <TopTitleTwo headings={headings} />
                     )}
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-auto mb-12 drop-shadow-md">
+            <div class="grid grid-cols-12 gap-6 h-auto mb-12 drop-shadow-md">
                 { cardContents.map((cardContent) =>
-                    <div className="bg-[#121212] px-12 py-12 border-b-4 border-white hover:border-[#66FCF1] drop-shadow-2xl">
+                    <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#121212] px-12 py-12 border-b-4 border-white hover:border-[#66FCF1] drop-shadow-2xl">
                         <Card cardContent={cardContent}/>
                     </div>
                 )}
