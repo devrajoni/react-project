@@ -17,12 +17,7 @@ export default function Banner() {
 
   return (
     <>
-      <section className="header-section relative w-full bg-slate-900">
-        <img
-          src={Image2}
-          className="w-full bg-cover h-full absolute"
-          alt="banner"
-        />
+      <section className="header-section relative w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${Image2})` }}>
         <Nav setSearch={setSearch} />
 
         <div className="flex justify-center items-center w-full h-full absolute text-white">

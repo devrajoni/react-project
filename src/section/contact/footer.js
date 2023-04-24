@@ -1,6 +1,6 @@
 import Footer from '../../components/Layout/Footer';
 
-export default function BlogFooter() {
+export default function ContactFooter() {
 
     return(
         <>

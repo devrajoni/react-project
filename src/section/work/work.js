@@ -1,4 +1,4 @@
-import useState from "react";
+import {useState} from "react";
 import image1 from '../../asset/work_cat.jpg'
 
 const works = [{
@@ -28,17 +28,25 @@ const works = [{
 export default function Work() {
     const[category, setCategory] = useState('');
 
-    // const selectedWorks = category === '' ? works : works.filter((work) =>{
-    //     return work.category.toLowerCase() === category.toLowerCase()
-    // })
-    // console.log(selectedWorks);
+    const selectedWorks = category === '' ? works : works.filter((work) =>{
+        return work.category.toLowerCase() === category.toLowerCase()
+    })
+
   return (
     <div>
-        <div>
+        <div className="text-white">
             <button onClick={ () => setCategory('')}>All</button>
             <button onClick={ () => setCategory('Architecture')}>Architecture</button>
             <button onClick={ () => setCategory('Design')}>Design</button>
-            {/* <button>All</button> */}
+        </div>
+        <div>
+            {
+                selectedWorks.map((data) => {
+                    return <div key={data.id}>
+                        <p>{data.title}-{data.category}</p>
+                    </div>
+                })
+            }
         </div>
     </div>
   );

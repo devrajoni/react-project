@@ -1,6 +1,6 @@
 import Inquiry from "../../components/Inquiry";
 
-export default function BlogInquiry() {
+export default function ContactInquiry() {
   return (
     <>
         <Inquiry />
