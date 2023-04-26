@@ -20,23 +20,23 @@ export default function FooterCard() {
 
         <div class="grid grid-cols-12 gap-4 pt-12 px-12 md:px-20 md:mb-0 w-full">
             <div className="col-span-12 md:col-span-6 ">
-                <input type="text" placeholder="First Name" className="bg-[#242424] w-full py-3 px-4" />
+                <input type="text" placeholder="First Name" className="bg-[#242424] w-full p-4" />
             </div>
-            <div className="col-span-12 md:col-span-6 w-full bg-[#242424]">
-                <input type="text" placeholder="Last Name" />
-            </div>
-        </div>
-        <div class="grid grid-cols-12 gap-4 pt-12 px-12 md:px-20 w-full">
-            <div className="col-span-12 md:col-span-6 bg-[#242424]">
-                <input type="text" placeholder="First Name"  />
-            </div>
-            <div className="col-span-12 md:col-span-6 w-full bg-[#242424]">
-                <input type="text" placeholder="Last Name" />
+            <div className="col-span-12 md:col-span-6">
+                <input type="text" placeholder="Last Name" className="bg-[#242424] w-full p-4" />
             </div>
         </div>
-        <div class="grid grid-cols-12 gap-4 pt-12 px-12 md:px-20 w-full">
-            <div className="col-span-12 bg-[#242424]">
-                <input type="text" placeholder="First Name"  />
+        <div class="grid grid-cols-12 gap-4 pt-4 md:pt-12 px-12 md:px-20 w-full">
+            <div className="col-span-12 md:col-span-6">
+                <input type="text" placeholder="Email" className="bg-[#242424] w-full p-4"  />
+            </div>
+            <div className="col-span-12 md:col-span-6">
+                <input type="text" placeholder="Subject" className="bg-[#242424] w-full p-4" />
+            </div>
+        </div>
+        <div class="grid grid-cols-12 gap-4 pt-4 md:pt-12 px-12 md:px-20 w-full">
+            <div className="col-span-12">
+                <textarea placeholder="Your Message" className="bg-[#242424] w-full p-4" rows={4} />
             </div>
         </div>
         <div className="text-center mt-12 pb-32">

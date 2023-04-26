@@ -12,7 +12,7 @@ export default function Footer() {
                         <hr className="h-0.5 text-2xl w-16 bg-[#66FCF1]" />
                     </div>
 
-                    <div className="gap-4">
+                    <div className="md:gap-2 lg:gap-4">
                         <h1 className="text-2xl pb-4">Contact Us</h1>
                         <div className="flex pb-4 gap-2">
                             <ion-icon name="call-outline"></ion-icon>
@@ -31,7 +31,7 @@ export default function Footer() {
                             <p className="text-1xl ">Monday to Friday</p>
                         </div>
                     </div>
-                    <div className="gap-4">
+                    <div className="md:gap-2 lg:gap-4">
                         <h1 className="text-2xl pb-4">Our Services</h1>
                         <p className="text-1xl pb-4">Single Project</p>
                         <p className="text-1xl pb-4">Service 1</p>
@@ -54,7 +54,7 @@ export default function Footer() {
                     <p>Terms of Use</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2   text-white text-left mt-4">
-                    <p className="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    <p className="text-xs sm:mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                     <div className="flex gap-6 text-bold  ps-16 md:ps-56 lg:ps-96">
                         <div>
                             <ion-icon name="logo-facebook"></ion-icon>

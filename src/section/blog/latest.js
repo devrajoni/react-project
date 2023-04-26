@@ -15,7 +15,7 @@ export default function latestNews() {
     ];
     return(
         <>
-        <section className="service-section">
+        <section className="blog-section">
             <div className='flex justify-center items-center h-full mt-12 mb-20 md:mt-24 md:px-20 px-12'>
                 {heading.map((headings) =>
                     <TopTitleTwo headings={headings} />

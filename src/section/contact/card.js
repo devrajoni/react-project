@@ -17,7 +17,7 @@ export default function FooterCard() {
           ))}
         </div>
 
-        <div class="grid grid-cols-12 gap-4 pt-12 md:mb-0 w-full bg-slate-900 text-left ">
+        <div class="grid grid-cols-12 md:gap-4 pt-12 md:mb-0 w-full bg-slate-900 text-left ">
             <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-12 md:border-r-4 border-[#66FCF1] text-center">
                 <div className="text-[#66FCF1] text-4xl md:text-4xl mb-3">
                     <ion-icon name="call-outline"></ion-icon>
