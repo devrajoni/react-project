@@ -137,10 +137,10 @@ export default function Work() {
           {selectedWorks.map((data) => {
             return (
               <div
-                className="col-span-12 md:col-span-6 relative group"
+                className="col-span-12 md:col-span-6 relative group transition duration-500"
                 key={data.id}
               >
-                <img src={data.image} alt="image1" />
+                <img src={data.image} alt="image1" className="h-full" />
                 <div className="absolute flex items-center justify-center inset-0 bg-black/0 group-hover:bg-black/50">
                   <p className="text-white text-bold text-2xl opacity-0 group-hover:opacity-100">
                     {data.title}

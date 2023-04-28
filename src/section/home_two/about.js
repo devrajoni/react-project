@@ -50,8 +50,8 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <div className="col-span-12 md:col-span-6 lg:col-span-4">
-                <div className="relative group">
+            <div className="flex flex-col col-span-12 md:col-span-6 lg:col-span-4">
+                <div className="relative h-1/2 group">
                     <img
                     src={AboutThree}
                     alt=""
@@ -65,7 +65,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="relative group pt-4">
+                <div className="relative h-1/2 group pt-4">
                     <img
                     src={AboutFour}
                     alt=""
