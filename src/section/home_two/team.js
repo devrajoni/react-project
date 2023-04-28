@@ -17,16 +17,16 @@ export default function Team() {
 
   return (
     <>
-      <section className="mt-20 md:mt-40">
+      <section className="bg-[#121212]">
         <div className="relative">
-            <div className=" md:px-20 px-8 text-white py-20 bg-[#121212]">
+            <div className=" md:px-20 px-8 text-white py-20">
                 <div className="content">
                 {data.map((headings) => (
                     <TopTitle headings={headings} />
                 ))}
                 </div>
             </div>
-            <div className="md:flex gap-4 pb-28">
+            <div className="md:flex gap-4">
               <div className="relative group">
                   <img
                   src={Image1}

@@ -13,13 +13,13 @@ export default function Activity() {
 
   return (
     <>
-      <section className="service-section md:px-20 px-12 bg-[#121212]">
+      <section className="px-12 md:px-20 bg-[#121212]">
         <div className="flex justify-center items-center h-full w-full py-20">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />
           ))}
         </div>
-        <div class="grid grid-cols-12 gap-y-4 lg:gap-12 h-auto drop-shadow-md text-white">
+        <div class="grid grid-cols-12 gap-y-4 md:gap-12 h-auto drop-shadow-md text-white">
           <div className="col-span-12 md:col-span-6">
             <img src={Image} alt="activity" className="w-full" />
           </div>

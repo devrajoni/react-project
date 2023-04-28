@@ -12,7 +12,7 @@ export default function FooterCard() {
     return(
         <>
       <section className=" text-white bg-[#121212]">
-        <div className="py-16">
+        <div className="py-8 lg:py-16">
           {heading.map((headings) => (
             <TopTitle headings={headings} />
           ))}

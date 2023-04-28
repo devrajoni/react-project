@@ -94,7 +94,7 @@ export default function Work() {
   return (
     <div>
       <section className="work-section mb-12 md:mb-32">
-        <div className="flex justify-center items-center h-full mt-12 mb-16 md:mt-20 md:px-20 px-12">
+        <div className="flex justify-center items-center h-full py-16 md:px-20 px-12">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />
           ))}
@@ -133,7 +133,7 @@ export default function Work() {
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-12 gap-4 px-12 md:px-40">
+        <div className="grid grid-cols-12 gap-4 px-12 md:px-40 ">
           {selectedWorks.map((data) => {
             return (
               <div

@@ -11,7 +11,7 @@ export default function FooterCard() {
     return(
         <>
       <section className="service-section mt-20 md:mt-32 md:px-20 px-12 mb-32 text-white bg-[#0B0C10]">
-        <div className="my-16">
+        <div className="py-4 lg:py-16">
           {heading.map((headings) => (
             <TopTitle headings={headings} />
           ))}

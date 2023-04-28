@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 let links = [
-  { name: "Home", link: "/" },
+  { name: "Home", link: "/",
+  subMenu: [
+    { name: "Home 1", link: "/" },
+    { name: "Home 2", link: "/home" },
+  ],
+ },
   {
     name: "Service",
     link: "/service",
@@ -44,12 +49,12 @@ export default function Nav(props) {
 
   return (
       <div className={`${navbar ? "fixed left-0 right-0 w-full z-50 h-16 bg-[#66FCF1]" : "fixed left-0 w-full z-50 h-16"}`}>
-        <nav className="flex items-center font-medium justify-between w-full text-[#ffffff] md:px-20">
+        <nav className="flex items-center font-medium justify-between w-full text-[#ffffff] px-12 md:px-20">
           <div className="font-bold text-2xl font-[poppins]">
             <p>Logo</p>
           </div>
           <ul
-            className="hidden lg:flex gap-4 items-center"
+            className="hidden md:flex gap-4 items-center"
             // className="md:flex md:items-center top-20 md:top-0  md:pb-0 pb-12 absolute md:static bg-black md:bg-transparent md:z-auto z-[-1] w-full md:w-auto left-0 md:pl-0 pl-7 transition-all duration-500 ease-in "
           >
             {links.map((data) => (
@@ -123,7 +128,7 @@ function SideMenu({ isOpen, setOpen }) {
         isOpen ? "translate-x-0" : "-translate-x-full"
       } block lg:hidden h-screen z-50 transition duration-500`}
     >
-      <ul className="block lg:hidden absolute top-0 left-0 p-12 h-full w-full bg-black text-white">
+      <ul className="block lg:hidden absolute top-0 left-0  h-full w-full bg-black text-white">
         {/* {links.map((link) => (
           <li key={link.name}>
             <Link to={link.link}>{link.name}</Link>

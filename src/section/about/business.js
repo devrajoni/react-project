@@ -7,15 +7,17 @@ export default function Business() {
 
     return(
         <>
-        <section className="service-section md:px-20 px-12 mt-20 md:mt-40">
-            <div class="grid grid-cols-12 gap-12  h-auto drop-shadow-md text-white">
-                <div className='col-span-12 md:col-span-6'>
-                    <img src={Image} alt='activity'/>
-                </div>
-                <div className='col-span-12 md:col-span-6 text-left'>
-                    <h3 className='font-bold text-2xl md:text-6xl'>Best Solutions for Your Business</h3>
-                    <p className='text-1xl py-16'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet urna quis odio vehicula consectetur. Donec eu gravida diam. Aenean accumsan nisl sed fringilla sollicitudin. Donec tincidunt quis dolor eget consectetur. Suspendisse a mollis lacus.</p>
-                    <Button name="Watch Video" />
+        <section className="service-section md:px-20 px-12 gap-y-4 mt-20 md:mt-40">
+            <div>
+                <div class="grid grid-cols-12 sm:gap-y-8 md:gap-12 h-auto text-white">
+                    <div className='col-span-12 md:col-span-12 lg:col-span-6'>
+                        <img src={Image} alt='activity'/>
+                    </div>
+                    <div className='col-span-12 md:col-span-12 lg:col-span-6 mt-12 lg:mt-0 text-left'>
+                        <h3 className='font-bold sm:text-2xl md:text-2xl lg:text-6xl'>Best Solutions for Your Business</h3>
+                        <p className='text-1xl py-8 md:py-8 lg:py-16'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet urna quis odio vehicula consectetur. Donec eu gravida diam. Aenean accumsan nisl sed fringilla sollicitudin. Donec tincidunt quis dolor eget consectetur. Suspendisse a mollis lacus.</p>
+                        <Button name="Watch Video" />
+                    </div>
                 </div>
             </div>
         </section>

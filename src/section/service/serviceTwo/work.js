@@ -18,7 +18,7 @@ export default function Work() {
     return(
         <>
         <section className="h-full w-full bg-[#121212]">
-            <div className='px-12 md:px-20'>
+            <div className='px-12 md:px-20 py-16'>
                 <div className='flex justify-center items-center'>
                     {heading.map((headings) =>
                         <TopTitleTwo headings={headings} />
