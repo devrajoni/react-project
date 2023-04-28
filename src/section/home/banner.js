@@ -38,7 +38,10 @@ export default function Banner() {
 
   return (
     <>
-      <section className="header-section relative w-full bg-slate-900">
+      <section
+        className="header-section relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${Image2})` }}
+      >
         {/* <img
       srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
       sizes="(max-width: 600px) 480px,
@@ -46,22 +49,25 @@ export default function Banner() {
       src={Image1}
       alt="Elva dressed as a fairy"  className="w-full bg-cover h-full absolute mix-blend-overlay" /> */}
 
-        <img
+        {/* <img
           src={Image2}
           className="w-full bg-cover h-full absolute"
           alt="banner"
-        />
+        /> */}
         <Nav setSearch={setSearch} />
 
-        <div className="text-left absolute py-60 w-full text-white px-20 md:px-40">
+        <div className="text-left absolute py-60 w-full text-white px-6 md:px-40">
           <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap pb-3">
             Shapping your Ideas into products.
           </h5>
-          <h1 className="font-bold text-5xl pb-10">Creating brands worth <br />remembering</h1>
+          <h1 className="font-bold text-5xl pb-10">
+            Creating brands worth <br />
+            remembering
+          </h1>
           <Button name="3D Portfolio" />
         </div>
       </section>
-      <div class="grid grid-cols-12 gap-6 px-20 mb-32 h-auto ">
+      <div class="grid grid-cols-12 gap-6 px-6 lg:px-20 mb-32 h-auto ">
         {cardContents.map((cardContent) => (
           <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#121212] px-12 py-12 hover:ring-4 ring-[#66FCF1]">
             <Card cardContent={cardContent} />
