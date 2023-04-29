@@ -29,7 +29,7 @@ export default function Feature() {
 
     return(
         <>
-        <section className="service-section mt-16 mb-32 md:mt-24 md:px-20 px-12">
+        <section className=" mt-16 mb-32  px-6 md:mt-24 lg:px-20">
             <div className='flex justify-center items-center h-full w-full mb-16'>
                     {heading.map((headings) =>
                         <TopTitleTwo headings={headings} />

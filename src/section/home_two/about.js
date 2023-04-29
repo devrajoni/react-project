@@ -1,4 +1,5 @@
 import TopTitle from "../../components/TopTitle";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import AboutOne from "../../asset/home_two_about1.jpg";
 import AboutTwo from "../../asset/home_two_about2.jpg";
 import AboutThree from "../../asset/home_two_about3.jpg";
@@ -15,15 +16,15 @@ export default function About() {
   return (
     <>
       <section className="text-white">
-        <div className="my-20 px-12 md:px-20 ">
+        <div className="my-20 px-6 lg:px-20 ">
           {heading.map((headings) => (
             <TopTitle headings={headings} />
           ))}
         </div>
-        <div className="grid grid-cols-12 gap-4">
+        <div className="grid grid-cols-12 gap-4 px-6 lg:px-20">
             <div className="col-span-12 md:col-span-6 lg:col-span-4">
                 <div className="relative group">
-                    <img
+                    <LazyLoadImage
                     src={AboutOne}
                     alt=""
                     className="h-full w-full object-cover"
@@ -37,7 +38,7 @@ export default function About() {
                 </div>
 
                 <div className="relative group pt-4">
-                    <img
+                    <LazyLoadImage
                     src={AboutTwo}
                     alt=""
                     className="h-full w-full object-cover"
@@ -52,7 +53,7 @@ export default function About() {
             </div>
             <div className="flex flex-col col-span-12 md:col-span-6 lg:col-span-4">
                 <div className="relative h-1/2 group">
-                    <img
+                    <LazyLoadImage
                     src={AboutThree}
                     alt=""
                     className="h-full w-full object-cover"
@@ -66,7 +67,7 @@ export default function About() {
                 </div>
 
                 <div className="relative h-1/2 group pt-4">
-                    <img
+                    <LazyLoadImage
                     src={AboutFour}
                     alt=""
                     className="h-full w-full object-cover"

@@ -1,4 +1,5 @@
 import serviceAbout from "../../../asset/service_about.jpg";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Test1 from "../../../asset/test_1.jpg";
 import Test2 from "../../../asset/test_2.jpg";
 import Test3 from "../../../asset/test_3.jpg";
@@ -37,7 +38,7 @@ export default function About() {
 
     return(
         <>
-        <section className="md:px-20 h-full px-12 pb-8 text-white relative w-full bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${serviceAbout})` }}>
+        <section className="h-full px-6 lg:px-20  pb-8 text-white relative w-full bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${serviceAbout})` }}>
             <div className="py-12">
                 <h1 className="flex justify-center w-full text-white font-bold text-4xl">What people say about us</h1>
             </div>
@@ -55,7 +56,7 @@ export default function About() {
                             </div>
                             <div className='absolute bottom-0 translate-y-1/2 w-full  left-0'>
                                 <div className=' flex justify-center items-center text-white'>
-                                    <img src={item.image} className='h-32 w-32 rounded-full mt-16' alt='testimonial1'/>
+                                    <LazyLoadImage src={item.image} className='h-32 w-32 rounded-full mt-16' alt='testimonial1'/>
                                 </div>
                                 <div className='text-center pt-4 gap-6'>
                                     <h3 className='font-bold text-2xl'>{item.name}</h3>

@@ -46,7 +46,7 @@ export default function Banner() {
         />
         <Nav setSearch={setSearch} />
 
-        <div className="flex justify-center items-center text-center h-full absolute gap-12 py-60 w-full text-white px-20 md:px-40">
+        <div className="flex justify-center items-center text-center h-full absolute gap-12 py-60 w-full text-white px-6 md:px-40">
           <div >
             <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap mb-8">
               CREATIVE MIND, CREATIVE WORKS.
@@ -56,7 +56,7 @@ export default function Banner() {
           </div>
         </div>
       </section>
-      <div class="grid grid-cols-12 gap-6 px-20 mb-32 h-auto ">
+      <div class="grid grid-cols-12 gap-6 px-6 lg:px-20 mb-32 h-auto ">
         {cardContents.map((cardContent) => (
           <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#121212] px-12 py-12 hover:ring-4 ring-[#66FCF1]">
             <Card cardContent={cardContent} />

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import architecture_1 from "../../asset/architecture_1.jpg";
 import architecture_2 from "../../asset/architecture_2.jpg";
 import architecture_3 from "../../asset/architecture_3.jpg";
@@ -94,7 +95,7 @@ export default function Work() {
   return (
     <div>
       <section className="work-section mb-12 md:mb-32">
-        <div className="flex justify-center items-center h-full py-16 md:px-20 px-12">
+        <div className="flex justify-center items-center h-full py-16  px-6 lg:px-20">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />
           ))}
@@ -133,14 +134,14 @@ export default function Work() {
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-12 gap-4 px-12 md:px-40 ">
+        <div className="grid grid-cols-12 gap-4 px-6 lg:px-40 ">
           {selectedWorks.map((data) => {
             return (
               <div
                 className="col-span-12 md:col-span-6 relative group transition duration-500"
                 key={data.id}
               >
-                <img src={data.image} alt="image1" className="h-full" />
+                <LazyLoadImage src={data.image} alt="image1" className="h-full" />
                 <div className="absolute flex items-center justify-center inset-0 bg-black/0 group-hover:bg-black/50">
                   <p className="text-white text-bold text-2xl opacity-0 group-hover:opacity-100">
                     {data.title}

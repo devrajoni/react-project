@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Nav from "../../components/Layout/Nav";
 import Image2 from "../../asset/blog_banner.jpg";
 
@@ -18,7 +19,7 @@ export default function Banner() {
   return (
     <>
       <section className="header-section relative w-full bg-slate-900">
-        <img
+        <LazyLoadImage
           src={Image2}
           className="w-full bg-cover h-full absolute"
           alt="banner"

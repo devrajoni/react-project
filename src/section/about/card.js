@@ -37,7 +37,7 @@ export default function Card() {
 
     return(
         <>
-        <section className="service-section mt-16 md:mt-32 px-12 h-full w-full md:px-20">
+        <section className="mt-16 md:mt-32 px-6 h-full w-full lg:px-20">
             <div class="grid grid-cols-12 gap-6 drop-shadow-md">
                 { cardContents.map((cardContent) =>
                     <div className="col-span-12 md:col-span-6 lg:col-span-4 px-12 py-6">

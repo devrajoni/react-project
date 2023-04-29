@@ -1,6 +1,6 @@
 import TopTitle from "../../components/TopTitle";
 import Image from "../../asset/why.jpg";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 export default function Service() {
@@ -13,7 +13,7 @@ export default function Service() {
 
   return (
     <>
-      <section className="text-white px-12 md:px-20">
+      <section className="text-white px-6 lg:px-20">
         <div className="my-20 ">
           {heading.map((headings) => (
             <TopTitle headings={headings} />
@@ -51,7 +51,7 @@ export default function Service() {
             </div>
             <div className="col-span-12 lg:col-span-6">
                 <div className="relative group">
-                    <img
+                    <LazyLoadImage
                     src={Image}
                     alt=""
                     className="h-full w-full object-cover"

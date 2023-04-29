@@ -1,13 +1,12 @@
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Image from '../../asset/about_skill.jpg';
-import HorizontalLine from "../../components/HorizontalLine";
 // import Card from "../../../components/Card";
 
 export default function Skill() {
 
     return(
         <>
-        <section className="skill-section  px-12 md:px-20 bg-[#121212]">
+        <section className="skill-section  px-6 lg:px-20 bg-[#121212]">
             <div>
                 <div class="grid grid-cols-12 gap-y-4 lg:gap-12 h-auto">
                     <div className='col-span-12 md:col-span-12 lg:col-span-6 text-left text-white mb-16  mt-20 lg:mt-32'>
@@ -21,7 +20,7 @@ export default function Skill() {
                         </ul>
                     </div>
                     <div className='col-span-12 md:col-span-12 lg:col-span-6 text-left text-white  mt-12 lg:mt-32'>
-                        <img src={Image} alt='activity'/>
+                        <LazyLoadImage src={Image} alt='activity'/>
                     </div>
                 </div>
             </div>

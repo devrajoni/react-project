@@ -1,4 +1,4 @@
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import TopTitle from "../../components/TopTitle";
 import Image1 from "../../asset/about_team1.jpg";
 import Image2 from "../../asset/about_team2.jpg";
@@ -19,7 +19,7 @@ export default function Team() {
     <>
       <section className="bg-[#121212]">
         <div className="relative">
-            <div className=" md:px-20 px-8 text-white py-20">
+            <div className="px-6 md:px-20 text-white py-20">
                 <div className="content">
                 {data.map((headings) => (
                     <TopTitle headings={headings} />
@@ -28,7 +28,7 @@ export default function Team() {
             </div>
             <div className="md:flex gap-4">
               <div className="relative group">
-                  <img
+                  <LazyLoadImage
                   src={Image1}
                   alt="about"
                   className="w-full h-full"
@@ -49,7 +49,7 @@ export default function Team() {
                   className="relative group"
 
                 >
-                  <img src={Image2} alt="image1" />
+                  <LazyLoadImage src={Image2} alt="image1" />
                   <div className="absolute group flex items-center justify-center inset-0 bg-black/50 group-hover:bg-black/0 ">
                     <div className="text-white opacity-0 translate-y-24 md:translate-y-12 lg:translate-y-24 invisible group-hover:translate-y-8 transition-transform duration-300 ease-in group-hover:visible group-hover:opacity-100 ">
                       <h3 className="flex text-2xl justify-center pb-2">John Doe</h3>
@@ -64,7 +64,7 @@ export default function Team() {
                 </div>
 
               <div className="relative group">
-                  <img
+                  <LazyLoadImage
                   src={Image3}
                   alt="about"
                   className="w-full h-full"
@@ -82,7 +82,7 @@ export default function Team() {
                   </div>
               </div>
               <div className="relative group">
-                  <img
+                  <LazyLoadImage
                   src={Image4}
                   alt="about"
                   className="w-full h-full"
@@ -100,7 +100,7 @@ export default function Team() {
                   </div>
               </div>
               <div className="relative group">
-                  <img
+                  <LazyLoadImage
                   src={Image5}
                   alt="about"
                   className="w-full h-full"

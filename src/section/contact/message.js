@@ -18,7 +18,7 @@ export default function FooterCard() {
           ))}
         </div>
 
-        <div class="grid grid-cols-12 gap-4 pt-12 px-12 md:px-20 md:mb-0 w-full">
+        <div class="grid grid-cols-12 gap-4 pt-12 px-6 lg:px-20 md:mb-0 w-full">
             <div className="col-span-12 md:col-span-6 ">
                 <input type="text" placeholder="First Name" className="bg-[#242424] w-full p-4" />
             </div>
@@ -26,7 +26,7 @@ export default function FooterCard() {
                 <input type="text" placeholder="Last Name" className="bg-[#242424] w-full p-4" />
             </div>
         </div>
-        <div class="grid grid-cols-12 gap-4 pt-4 md:pt-12 px-12 md:px-20 w-full">
+        <div class="grid grid-cols-12 gap-4 pt-4 md:pt-12 px-6 lg:px-20 w-full">
             <div className="col-span-12 md:col-span-6">
                 <input type="text" placeholder="Email" className="bg-[#242424] w-full p-4"  />
             </div>
@@ -34,7 +34,7 @@ export default function FooterCard() {
                 <input type="text" placeholder="Subject" className="bg-[#242424] w-full p-4" />
             </div>
         </div>
-        <div class="grid grid-cols-12 gap-4 pt-4 md:pt-12 px-12 md:px-20 w-full">
+        <div class="grid grid-cols-12 gap-4 pt-4 md:pt-12 px-6 lg:px-20 w-full">
             <div className="col-span-12">
                 <textarea placeholder="Your Message" className="bg-[#242424] w-full p-4" rows={4} />
             </div>

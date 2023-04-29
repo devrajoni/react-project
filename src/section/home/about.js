@@ -1,4 +1,5 @@
 import TopTitle from "../../components/TopTitle";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Service() {
   let heading = [
@@ -28,7 +29,7 @@ export default function Service() {
 
   return (
     <>
-      <section className="service-section mt-20 md:mt-40 md:px-20 px-12 text-white">
+      <section className=" mt-20 px-6 md:mt-40 lg:px-20 text-white">
         <div className="my-20">
           {heading.map((headings) => (
             <TopTitle headings={headings} />
@@ -36,7 +37,7 @@ export default function Service() {
         </div>
         {/* <div class="grid grid-cols-2 gap-4 h-96 bg-red-900">
           <div className="relative h-full col-span-2 lg:col-span-1">
-            <img
+            <LazyLoadImage
               src="https://fastly.picsum.photos/id/7/4728/3168.jpg?hmac=c5B5tfYFM9blHHMhuu4UKmhnbZoJqrzNOP9xjkV4w3o"
               className="absolute"
               alt="about1"
@@ -49,14 +50,14 @@ export default function Service() {
           <div className=" col-span-2 lg:col-span-1">
             <div className="flex flex-col">
               <div className="bg-red-900 w-full">
-                <img
+                <LazyLoadImage
                   src="https://fastly.picsum.photos/id/7/4728/3168.jpg?hmac=c5B5tfYFM9blHHMhuu4UKmhnbZoJqrzNOP9xjkV4w3o"
                   className="h-auto w-full"
                   alt="about1"
                 />
               </div>
               <div className="bg-red-900 ">
-                <img
+                <LazyLoadImage
                   src="https://fastly.picsum.photos/id/7/4728/3168.jpg?hmac=c5B5tfYFM9blHHMhuu4UKmhnbZoJqrzNOP9xjkV4w3o"
                   className="h-auto w-full"
                   alt="about1"
@@ -67,7 +68,7 @@ export default function Service() {
         </div> */}
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 lg:col-span-6">
-            <img
+            <LazyLoadImage
               src="https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2021/01/people-working-in-office-e1613655962551.jpg"
               alt=""
               className="h-full w-full object-cover"
@@ -75,14 +76,14 @@ export default function Service() {
           </div>
           <div className="col-span-12 lg:col-span-6 flex flex-col gap-4">
             <div className="">
-              <img
+              <LazyLoadImage
                 src="https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2021/01/people-working-in-office-1.jpg"
                 // className="h-auto w-full"
                 alt="about1"
               />
             </div>
             <div className="">
-              <img
+              <LazyLoadImage
                 src="https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2021/01/office-e1613655942670.jpg"
                 // className="h-auto w-full"
                 alt="about1"

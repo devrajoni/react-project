@@ -1,6 +1,7 @@
 import Image from "../../../asset/activity_1.jpg";
 import HorizontalLine from "../../../components/HorizontalLine";
 import TopTitleTwo from "../../../components/TopTitleTwo";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import Card from "../../../components/Card";
 
 export default function Activity() {
@@ -13,7 +14,7 @@ export default function Activity() {
 
   return (
     <>
-      <section className="px-12 md:px-20 bg-[#121212]">
+      <section className="px-6 lg:px-20 bg-[#121212]">
         <div className="flex justify-center items-center h-full w-full py-20">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />
@@ -21,7 +22,7 @@ export default function Activity() {
         </div>
         <div class="grid grid-cols-12 gap-y-4 md:gap-12 h-auto drop-shadow-md text-white">
           <div className="col-span-12 md:col-span-6">
-            <img src={Image} alt="activity" className="w-full" />
+            <LazyLoadImage src={Image} alt="activity" className="w-full" />
           </div>
           <div className="col-span-12 md:col-span-6 text-left">
             <h3 className="font-bold text-2xl pb-4">Customer Opinion</h3>

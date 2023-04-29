@@ -1,4 +1,5 @@
 import TopTitleTwo from '../../components/TopTitleTwo';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import News1 from "../../asset/news_1.jpg";
 import News2 from "../../asset/news_2.jpg";
 import News3 from "../../asset/news_3.jpg";
@@ -12,16 +13,16 @@ export default function latestNews() {
     ];
     return(
         <>
-        <section className="service-section">
-            <div className='flex justify-center items-center h-full mt-12 mb-20 md:mt-24 md:px-20 px-12'>
+        <section className="">
+            <div className='flex justify-center items-center h-full px-6 mt-12 mb-20 md:mt-24 lg:px-20'>
                 {heading.map((headings) =>
                     <TopTitleTwo headings={headings} />
                 )}
             </div>
-            <div className='grid grid-cols-12 h-full mb-12 gap-6 px-8'>
+            <div className='grid grid-cols-12 h-full mb-12 gap-6 px-6 lg:px-20'>
                 <div className='col-span-12 md:col-span-6 lg:col-span-4 content'>
                     <div>
-                        <img src={News1} alt='test' className='w-full rounded-t-lg'/>
+                        <LazyLoadImage src={News1} alt='test' className='w-full rounded-t-lg'/>
                     </div>
                     <div className='flex justify-center items-center'>
                         <div className='bg-[#0B0C10] border-x-4 border-b-4 border-[#191919] drop-shadow-md text-white p-8'>
@@ -34,7 +35,7 @@ export default function latestNews() {
 
                 <div className='col-span-12 md:col-span-6 lg:col-span-4 content'>
                     <div>
-                        <img src={News2} alt='test' className='w-full rounded-t-lg'/>
+                        <LazyLoadImage src={News2} alt='test' className='w-full rounded-t-lg'/>
                     </div>
                     <div className='flex justify-center items-center'>
                         <div className='bg-[#0B0C10] border-x-4 border-b-4 border-[#191919] drop-shadow-md text-white p-8'>
@@ -46,7 +47,7 @@ export default function latestNews() {
                 </div>
                 <div className='col-span-12 md:col-span-6 lg:col-span-4 content'>
                     <div>
-                        <img src={News3} alt='test' className='w-full rounded-t-lg'/>
+                        <LazyLoadImage src={News3} alt='test' className='w-full rounded-t-lg'/>
                     </div>
                     <div className='flex justify-center item-center'>
                         <div className='bg-[#0B0C10] border-x-4 border-b-4 border-[#191919] drop-shadow-md text-white p-8'>

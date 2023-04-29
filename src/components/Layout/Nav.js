@@ -53,7 +53,7 @@ export default function Nav(props) {
     <div
       className={`${
         navbar
-          ? "fixed left-0 right-0 w-full z-50 h-16 bg-[#66FCF1]"
+          ? "fixed left-0 right-0 w-full z-50 h-16 bg-black"
           : "fixed left-0 right-0 w-full z-50 h-16"
       }`}
     >

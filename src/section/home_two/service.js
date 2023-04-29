@@ -46,14 +46,14 @@ export default function HomeService() {
         <>
         <section className="bg-[#121212] ">
             <div className='pb-16'>
-                <div className='py-20 px-12 md:px-20'>
+                <div className='py-20 px-6 lg:px-20'>
                     {heading.map((headings) =>
                         <TopTitle headings={headings} />
                     )}
                 </div>
-                <div class="grid grid-cols-12 gap-6 h-auto">
+                <div class="grid grid-cols-12 gap-6 h-auto px-6 lg:px-20">
                     { cardContents.map((cardContent) =>
-                        <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] px-12 py-12 border-b-4 border-white hover:border-[#66FCF1]">
+                        <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] px-8 py-12 border-b-4 border-white hover:border-[#66FCF1]">
                             <Card cardContent={cardContent}/>
                         </div>
                     )}

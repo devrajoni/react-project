@@ -10,14 +10,14 @@ export default function FooterCard() {
 
     return(
         <>
-      <section className="service-section mt-20 md:mt-32 md:px-20 px-12 mb-32 text-white bg-[#0B0C10]">
+      <section className=" mt-20 md:mt-32 mb-32 text-white bg-[#0B0C10]">
         <div className="py-4 lg:py-16">
           {heading.map((headings) => (
             <TopTitle headings={headings} />
           ))}
         </div>
 
-        <div class="grid grid-cols-12 md:gap-4 pt-12 md:mb-0 w-full bg-slate-900 text-left ">
+        <div class="grid grid-cols-12 md:gap-4 px-6 lg:px-20 pt-12 md:mb-0 w-full bg-slate-900 text-left ">
             <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-12 md:border-r-4 border-[#66FCF1] text-center">
                 <div className="text-[#66FCF1] text-4xl md:text-4xl mb-3">
                     <ion-icon name="call-outline"></ion-icon>

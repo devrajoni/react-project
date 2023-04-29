@@ -25,7 +25,7 @@ export default function Banner() {
         {/* <img src={Image2} className="w-full bg-cover h-full" alt="banner" /> */}
         <Nav setSearch={setSearch} />
 
-        <div className="text-left px-6 py-60 text-white px-20 md:px-40">
+        <div className="text-left px-6 py-60 text-white px-6 lg:px-40">
           <h1 className="font-bold text-7xl pb-6">Activity Tracker.</h1>
           <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap pb-3">
             CREATIVE MIND, CREATIVE WORKS.
