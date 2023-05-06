@@ -20,18 +20,18 @@ export default function Banner() {
 
   useEffect(() => {
     const loadData = async () => {
-        try {
-            const url = 'https://jsonplaceholder.typicode.com/todos/1'
-            const res = await fetch(url);
-            const data = await res.json();
-            return data
-        } catch (err) {
-            console.error(err);
-        }
-    }
-    const data = loadData();
-    console.log(data)
-    }, [])
+      const URL = "https://jsonplaceholder.typicode.com/todos/1";
+      try {
+        const response = await fetch(URL, { mode: "no-cors" });
+        const result = await response.json();
+        console.log(result);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    loadData();
+  }, []);
 
   let cardContents = [
     {
