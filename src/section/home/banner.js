@@ -18,6 +18,21 @@ export default function Banner() {
     };
   }, [search]);
 
+  useEffect(() => {
+    const loadData = async () => {
+        try {
+            const url = 'https://jsonplaceholder.typicode.com/todos/1'
+            const res = await fetch(url);
+            const data = await res.json();
+            return data
+        } catch (err) {
+            console.error(err);
+        }
+    }
+    const data = loadData();
+    console.log(data)
+    }, [])
+
   let cardContents = [
     {
       icon: "navigate-outline",
