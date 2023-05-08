@@ -1,9 +1,26 @@
 import { useEffect, useState } from "react";
 import Nav from "../../components/Layout/Nav";
 import Image2 from "../../asset/work_banner.jpg";
+import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 export default function Banner() {
   let [search, setSearch] = useState(false);
+  let [banner, setBanner] = useState({});
+
+  useEffect(() => {
+    const loadData = async() => {
+      const url = `${BASE_URL}/work-banner`;
+      try{
+        const response = await fetch(url);
+        const result = await response.json();
+        setBanner(result.data);
+      }catch(error){
+        console.log(error);
+      }
+    };
+    loadData();
+  }, []);
+
   useEffect(() => {
     if (search) {
       document.body.style.overflow = "hidden";
@@ -17,11 +34,11 @@ export default function Banner() {
 
   return (
     <>
-      <section className="header-section relative w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${Image2})` }}>
+      <section className="header-section relative w-full bg-cover bg-center bg-no-repeat"  style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}>
         <Nav setSearch={setSearch} />
 
         <div className="flex justify-center items-center w-full h-full absolute text-white">
-          <h1 className="font-bold text-6xl md:text-8xl">Our Works</h1>
+          <h1 className="font-bold text-6xl md:text-8xl">{banner.title}</h1>
         </div>
       </section>
       {search ? (

@@ -3,10 +3,13 @@ import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Nav from "../../components/Layout/Nav";
 // import Image1 from "../../asset/home_banner1.jpg";
-import Image2 from "../../asset/home_banner2.jpg";
+// import Image2 from "../../asset/home_banner2.jpg";
+import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 export default function Banner() {
   let [search, setSearch] = useState(false);
+  let [banner, setbanner] = useState({});
+
   useEffect(() => {
     if (search) {
       document.body.style.overflow = "hidden";
@@ -20,11 +23,11 @@ export default function Banner() {
 
   useEffect(() => {
     const loadData = async () => {
-      const URL = "https://jsonplaceholder.typicode.com/todos/1";
+      const URL = `${BASE_URL}/home-banner`;
       try {
-        const response = await fetch(URL, { mode: "no-cors" });
+        const response = await fetch(URL);
         const result = await response.json();
-        console.log(result);
+        setbanner(result.data);
       } catch (error) {
         console.log(error);
       }
@@ -32,22 +35,24 @@ export default function Banner() {
 
     loadData();
   }, []);
+  // console.log(banner.image)
+
 
   let cardContents = [
     {
       icon: "navigate-outline",
       title: "We Provide Full-Service.",
-      text: "We become fully immersed into our client business and industry, acquiring the same vision to accomplish goals together.​",
+      description: "We become fully immersed into our client business and industry, acquiring the same vision to accomplish goals together.​",
     },
     {
       icon: "snow-outline",
       title: "We deliver solutions.",
-      text: "We love to innovate and produce new ideas, to grow your business and save your time. Always proud to be able to exceed your expectations .",
+      description: "We love to innovate and produce new ideas, to grow your business and save your time. Always proud to be able to exceed your expectations .",
     },
     {
       icon: "bonfire-outline",
       title: "We Build Brands.",
-      text: "We design the brand; we turn the brand into an experience; and we communicate the brand’s story. We make brands matter.",
+      description: "We design the brand; we turn the brand into an experience; and we communicate the brand’s story. We make brands matter.",
     },
   ];
 
@@ -55,29 +60,16 @@ export default function Banner() {
     <>
       <section
         className="header-section relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${Image2})` }}
+        style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}
       >
-        {/* <img
-      srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
-      sizes="(max-width: 600px) 480px,
-            800px"
-      src={Image1}
-      alt="Elva dressed as a fairy"  className="w-full bg-cover h-full absolute mix-blend-overlay" /> */}
-
-        {/* <img
-          src={Image2}
-          className="w-full bg-cover h-full absolute"
-          alt="banner"
-        /> */}
         <Nav setSearch={setSearch} />
 
         <div className="text-left absolute py-60 w-full text-white px-6 md:px-40">
           <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap pb-3">
-            Shapping your Ideas into products.
+            {banner.sub_title}
           </h5>
-          <h1 className="font-bold text-5xl pb-10">
-            Creating brands worth <br />
-            remembering
+          <h1 className="font-bold text-5xl pb-10 w-1/2">
+            {banner.title}
           </h1>
           <Button name="3D Portfolio" />
         </div>

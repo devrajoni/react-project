@@ -2,9 +2,27 @@ import { useEffect, useState } from "react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Nav from "../../components/Layout/Nav";
 import Image2 from "../../asset/blog_banner.jpg";
+import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 export default function Banner() {
   let [search, setSearch] = useState(false);
+  let [banner, setbanner] = useState({});
+
+  useEffect(() => {
+    const loadData = async () => {
+      const URL = `${BASE_URL}/blog-banner`;
+      try {
+        const response = await fetch(URL);
+        const result = await response.json();
+        setbanner(result.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    loadData();
+  }, []);
+
   useEffect(() => {
     if (search) {
       document.body.style.overflow = "hidden";
@@ -18,16 +36,12 @@ export default function Banner() {
 
   return (
     <>
-      <section className="header-section relative w-full bg-slate-900">
-        <LazyLoadImage
-          src={Image2}
-          className="w-full bg-cover h-full absolute"
-          alt="banner"
-        />
+      <section className="header-section relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}>
         <Nav setSearch={setSearch} />
 
         <div className="flex justify-center items-center w-full h-full absolute text-white">
-          <h1 className="font-bold text-6xl md:text-8xl">Blog.</h1>
+          <h1 className="font-bold text-6xl md:text-8xl">{banner.title}</h1>
         </div>
       </section>
       {search ? (

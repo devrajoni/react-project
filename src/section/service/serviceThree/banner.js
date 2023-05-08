@@ -2,9 +2,26 @@ import { useEffect, useState } from "react";
 import Nav from "../../../components/Layout/Nav";
 // import Image1 from "../../asset/home_banner1.jpg";
 import Image2 from "../../../asset/single_service3.jpg";
+import { BASE_URL, IMAGE_URL } from "../../../data/baseUrl";
 
 export default function Banner() {
   let [search, setSearch] = useState(false);
+  let [banner, setBanner] = useState({});
+
+  useEffect(() => {
+    const loadData = async() => {
+      const url = `${BASE_URL}/single-service-banner`;
+      try{
+        const response = await fetch(url);
+        const result = await response.json();
+        setBanner(result.data);
+      }catch(error){
+        console.log(error);
+      }
+    };
+    loadData();
+  }, []);
+
   useEffect(() => {
     if (search) {
       document.body.style.overflow = "hidden";
@@ -19,20 +36,19 @@ export default function Banner() {
   return (
     <>
       <section
-        className="bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${Image2})` }}
+        className="header-section relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}
       >
-        {/* <img src={Image2} className="w-full bg-cover h-full" alt="banner" /> */}
+
         <Nav setSearch={setSearch} />
 
         <div className="text-left px-6 py-60 text-white px-6 lg:px-40">
-          <h1 className="font-bold text-7xl pb-6">Activity Tracker.</h1>
+          <h1 className="font-bold text-7xl pb-6">{banner.title}</h1>
           <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap pb-3">
-            CREATIVE MIND, CREATIVE WORKS.
+            {banner.sub_title}
           </h5>
           <p className="w-60 md:w-96 text-1xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id
-            arcu luctus, pellentesque lorem ac, pharetra sapien.
+            {banner.description}
           </p>
         </div>
       </section>

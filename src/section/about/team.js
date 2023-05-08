@@ -1,19 +1,38 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useState, useEffect } from 'react';
+import { BASE_URL } from '../../data/baseUrl';
 import TopTitle from "../../components/TopTitle";
 import Image1 from "../../asset/about_team1.jpg";
 import Image2 from "../../asset/about_team2.jpg";
 import Image3 from "../../asset/about_team3.jpg";
 import Image4 from "../../asset/about_team4.jpg";
 import Image5 from "../../asset/about_team5.jpg";
+import { Link } from 'react-router-dom';
 
 
 export default function Team() {
+  let [team, setTeam] = useState([]);
+
   let data = [
     {
       titleData: "Meet our team.",
       subTitle: "THE BEST PEOPLE TO SUPPORT YOUR PROJECT",
     },
   ];
+
+  useEffect(() => {
+    const loadData = async() => {
+        const url = `${BASE_URL}/team`;
+        try{
+            const response = await fetch(url);
+            const result = await response.json();
+            setTeam(result.data);
+        }catch(error){
+            console.log(error);
+        }
+    };
+    loadData()
+  }, []);
 
   return (
     <>
@@ -27,25 +46,27 @@ export default function Team() {
                 </div>
             </div>
             <div className="md:flex gap-4 pb-28">
-              <div className="relative group">
-                  <LazyLoadImage
-                  src={Image1}
-                  alt="about"
-                  className="w-full h-full"
-                  />
-                  <div className="absolute group flex items-center justify-center inset-0 bg-black/50 group-hover:bg-black/0 ">
-                    <div className="text-white opacity-0 translate-y-24 md:translate-y-12 lg:translate-y-24 invisible group-hover:translate-y-8 transition-transform duration-300 ease-in group-hover:visible group-hover:opacity-100 ">
-                      <p className="flex text-1xl md:text-2xl justify-center pb-2">John Doe</p>
-                      <p className="flex md:text-1xl justify-center pb-8">Designer</p>
-                      <div className="flex gap-4 md:gap-8 text-2xl">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                        <ion-icon name="logo-instagram"></ion-icon>
-                        <ion-icon name="logo-linkedin"></ion-icon>
+                {team.map((data) => (
+                    <div className="relative group">
+                      <LazyLoadImage
+                      src={Image1}
+                      alt="about"
+                      className="w-full h-full"
+                      />
+                      <div className="absolute group flex items-center justify-center inset-0 bg-black/50 group-hover:bg-black/0 ">
+                        <div className="text-white opacity-0 translate-y-24 md:translate-y-12 lg:translate-y-24 invisible group-hover:translate-y-8 transition-transform duration-300 ease-in group-hover:visible group-hover:opacity-100 ">
+                          <p className="flex text-1xl md:text-2xl justify-center pb-2">{data.name}</p>
+                          <p className="flex md:text-1xl justify-center pb-8">{data.designation}</p>
+                          <div className="flex gap-4 md:gap-8 text-2xl">
+                            <Link to={data.facebook}><ion-icon name="logo-facebook"></ion-icon></Link>
+                            <Link to={data.instagram}><ion-icon name="logo-instagram"></ion-icon></Link>
+                            <Link to={data.linkedin}><ion-icon name="logo-linkedin"></ion-icon></Link>
+                          </div>
+                        </div>
                       </div>
-                    </div>
                   </div>
-              </div>
-                <div
+                ))}
+                {/* <div
                   className="relative group"
 
                 >
@@ -116,7 +137,7 @@ export default function Team() {
                       </div>
                     </div>
                   </div>
-              </div>
+              </div> */}
             </div>
         </div>
       </section>
