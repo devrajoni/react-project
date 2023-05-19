@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import architecture_1 from "../../asset/architecture_1.jpg";
 import architecture_2 from "../../asset/architecture_2.jpg";
@@ -11,69 +12,70 @@ import photography_1 from "../../asset/photography_1.jpg";
 import photography_2 from "../../asset/photography_2.jpg";
 import photography_3 from "../../asset/photography_3.jpg";
 import TopTitleTwo from "../../components/TopTitleTwo";
+import { Link } from "react-router-dom";
 
-const works = [
-  {
-    id: 1,
-    title: "Product Photography",
-    image: photography_1,
-    category: "Photography",
-  },
-  {
-    id: 2,
-    title: "Product Photography",
-    image: photography_2,
-    category: "Photography",
-  },
-  {
-    id: 3,
-    title: "Wedding Photography",
-    image: photography_3,
-    category: "Photography",
-  },
-  {
-    id: 4,
-    title: "Interrior Design",
-    image: architecture_1,
-    category: "Architecture",
-  },
-  {
-    id: 5,
-    title: "Architecture",
-    image: architecture_2,
-    category: "Architecture",
-  },
-  {
-    id: 6,
-    title: "Building Architecture",
-    image: architecture_3,
-    category: "Architecture",
-  },
-  {
-    id: 7,
-    title: "Building Architecture",
-    image: architecture_4,
-    category: "Architecture",
-  },
-  {
-    id: 8,
-    title: "UI Design",
-    image: design_1,
-    category: "Design",
-  },
-  {
-    id: 9,
-    title: "Color Palatte",
-    image: design_2,
-    category: "Design",
-  },
-  {
-    id: 10,
-    title: "UI Design",
-    image: design_3,
-    category: "Design",
-  },
-];
+// const works = [
+//   {
+//     id: 1,
+//     title: "Product Photography",
+//     image: photography_1,
+//     category: "Photography",
+//   },
+//   {
+//     id: 2,
+//     title: "Product Photography",
+//     image: photography_2,
+//     category: "Photography",
+//   },
+//   {
+//     id: 3,
+//     title: "Wedding Photography",
+//     image: photography_3,
+//     category: "Photography",
+//   },
+//   {
+//     id: 4,
+//     title: "Interrior Design",
+//     image: architecture_1,
+//     category: "Architecture",
+//   },
+//   {
+//     id: 5,
+//     title: "Architecture",
+//     image: architecture_2,
+//     category: "Architecture",
+//   },
+//   {
+//     id: 6,
+//     title: "Building Architecture",
+//     image: architecture_3,
+//     category: "Architecture",
+//   },
+//   {
+//     id: 7,
+//     title: "Building Architecture",
+//     image: architecture_4,
+//     category: "Architecture",
+//   },
+//   {
+//     id: 8,
+//     title: "UI Design",
+//     image: design_1,
+//     category: "Design",
+//   },
+//   {
+//     id: 9,
+//     title: "Color Palatte",
+//     image: design_2,
+//     category: "Design",
+//   },
+//   {
+//     id: 10,
+//     title: "UI Design",
+//     image: design_3,
+//     category: "Design",
+//   },
+// ];
 
 let heading = [
   {
@@ -84,12 +86,29 @@ let heading = [
 
 export default function Work() {
   const [category, setCategory] = useState("");
+  const [works, setWork] = useState([]);
+
+  useEffect(() => {
+    const loadData = async() => {
+    const url = `${BASE_URL}/work`;
+      try{
+        const response = await fetch(url);
+        const result = await response.json();
+        setWork(result.data);
+      }catch(error){
+        console.log(error);
+      }
+    };
+    loadData();
+  },[]);
+
+  console.log(works);
 
   const selectedWorks =
     category === ""
       ? works
       : works.filter((work) => {
-          return work.category.toLowerCase() === category.toLowerCase();
+          return work.category.name.toLowerCase() === category.toLowerCase();
         });
 
   return (
@@ -108,30 +127,16 @@ export default function Work() {
             >
               All
             </button>
-            <button
-              className={`${
-                category === "Photography" ? "bg-[#66FCF1] py-2 px-8" : ""
-              }`}
-              onClick={() => setCategory("Photography")}
-            >
-              Photography
-            </button>
-            <button
-              className={`${
-                category === "Architecture" ? "bg-[#66FCF1] py-2 px-8" : ""
-              }`}
-              onClick={() => setCategory("Architecture")}
-            >
-              Architecture
-            </button>
-            <button
-              className={`${
-                category === "Design" ? "bg-[#66FCF1] py-2 px-8" : ""
-              }`}
-              onClick={() => setCategory("Design")}
-            >
-              Design
-            </button>
+            {works?.map((item) => (
+                <button
+                className={`${
+                  category === `${item.category.name}` ? "bg-[#66FCF1] py-2 px-8" : ""
+                }`}
+                onClick={() => setCategory(`${item.category.name}`)}
+              >
+                {item.category.name}
+              </button>
+            ))}
           </div>
         </div>
         <div className="grid grid-cols-12 gap-4 px-6 lg:px-40 ">
@@ -141,10 +146,10 @@ export default function Work() {
                 className="col-span-12 md:col-span-6 relative group transition duration-500"
                 key={data.id}
               >
-                <LazyLoadImage src={data.image} alt="image1" className="h-full" />
+                <LazyLoadImage src={`${IMAGE_URL}${data.image}`} alt="image1" className="h-full" />
                 <div className="absolute flex items-center justify-center inset-0 bg-black/0 group-hover:bg-black/50">
                   <p className="text-white text-bold text-2xl opacity-0 group-hover:opacity-100">
-                    {data.title}
+                    <Link to='/single-project'>{data.title}</Link>
                   </p>
                 </div>
               </div>

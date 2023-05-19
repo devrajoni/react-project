@@ -85,7 +85,7 @@ export default function Testimonial() {
         <div class="grid grid-cols-12 px-12 gap-6 mb-12 w-full text-white px-6 lg:px-20">
           {testimonial.map((item) => (
             <div className="col-span-12 md:col-span-6 lg:col-span-3 bg-[#0B0C10] px-8 pt-12 gap-6 mb-44 ring-4 ring-[#191919] relative">
-              <p className=" font-medium text-center">{item.description}</p>
+              <div className=" font-medium text-center" dangerouslySetInnerHTML={{__html:item.description}} />
               <div className="py-8 mb-28 flex justify-center items-center gap-3 text-1xl font-bold text-[#FEC42D]">
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
@@ -97,7 +97,7 @@ export default function Testimonial() {
                 <div className=" flex justify-center items-center text-white">
                   <LazyLoadImage
                     key={item.id}
-                    src={item.image}
+                    src={`${IMAGE_URL}${item.image}`}
                     className="h-32 w-32 rounded-full mt-16"
                     alt="testimonial1"
                   />

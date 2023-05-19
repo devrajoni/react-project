@@ -5,19 +5,19 @@ let links = [
   {
     name: "Home",
     link: "/",
-    subMenu: [
-      { name: "Home 1", link: "/" },
-      { name: "Home 2", link: "/home" },
-    ],
+    // subMenu: [
+    //   { name: "Home 1", link: "/" },
+    //   { name: "Home 2", link: "/home" },
+    // ],
   },
   {
     name: "Service",
     link: "/service",
-    subMenu: [
-      { name: "Service 1", link: "/service" },
-      { name: "Service 2", link: "/service-two" },
-      { name: "Single Project", link: "/single-project" },
-    ],
+    // subMenu: [
+    //   { name: "Service 1", link: "/service" },
+    //   { name: "Service 2", link: "/service-two" },
+    //   { name: "Single Project", link: "/single-project" },
+    // ],
   },
   { name: "Works", link: "/work" },
   { name: "About", link: "/about" },

@@ -4,7 +4,8 @@ import News1 from "../../asset/news_1.jpg";
 import News2 from "../../asset/news_2.jpg";
 import News3 from "../../asset/news_3.jpg";
 import { useState, useEffect } from 'react';
-import { BASE_URL } from '../../data/baseUrl';
+import { BASE_URL, IMAGE_URL } from '../../data/baseUrl';
+import { Link } from 'react-router-dom';
 
 export default function LatestNews() {
     let [latest, setLatest] = useState([]);
@@ -29,6 +30,7 @@ export default function LatestNews() {
         };
         loadData()
     }, []);
+    console.log(latest);
 
     return(
         <>
@@ -39,16 +41,16 @@ export default function LatestNews() {
                 )}
             </div>
             <div className='grid grid-cols-12 h-full mb-12 gap-6 px-8'>
-                {latest.map((data) => (
+                {latest.slice(0,3).map((data) => (
                     <div className='col-span-12 md:col-span-6 lg:col-span-4 content'>
                         <div>
-                            <LazyLoadImage src={News1} alt='test' className='w-full rounded-t-lg'/>
+                            <LazyLoadImage src={`${IMAGE_URL}${data.image}`} alt='test' className='w-full rounded-t-lg'/>
                         </div>
                         <div className='flex justify-center items-center'>
                             <div className='bg-[#0B0C10] border-x-4 border-b-4 border-[#191919] drop-shadow-md text-white p-8'>
                                 <h1 className='font-bold text-2xl py-2'>{data.title}</h1>
-                                <p className='text-1xl py-6'>{data.description}</p>
-                                <button className='btn ring-2 ring-[#66FCF1] p-4 hover:opacity-50'>Read More</button>
+                                <div className='text-1xl py-6' dangerouslySetInnerHTML={{__html:data.description}} />
+                                <Link to='/blog'><button className='btn ring-2 ring-[#66FCF1] p-4 hover:opacity-50'>Read More</button></Link>
                             </div>
                         </div>
                     </div>

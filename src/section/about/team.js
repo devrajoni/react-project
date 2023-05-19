@@ -1,6 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useState, useEffect } from 'react';
-import { BASE_URL } from '../../data/baseUrl';
+import { BASE_URL, IMAGE_URL } from '../../data/baseUrl';
 import TopTitle from "../../components/TopTitle";
 import Image1 from "../../asset/about_team1.jpg";
 import Image2 from "../../asset/about_team2.jpg";
@@ -49,7 +49,7 @@ export default function Team() {
                 {team.map((data) => (
                     <div className="relative group">
                       <LazyLoadImage
-                      src={Image1}
+                      src={`${IMAGE_URL}${data.image}`}
                       alt="about"
                       className="w-full h-full"
                       />
@@ -58,9 +58,9 @@ export default function Team() {
                           <p className="flex text-1xl md:text-2xl justify-center pb-2">{data.name}</p>
                           <p className="flex md:text-1xl justify-center pb-8">{data.designation}</p>
                           <div className="flex gap-4 md:gap-8 text-2xl">
-                            <Link to={data.facebook}><ion-icon name="logo-facebook"></ion-icon></Link>
-                            <Link to={data.instagram}><ion-icon name="logo-instagram"></ion-icon></Link>
-                            <Link to={data.linkedin}><ion-icon name="logo-linkedin"></ion-icon></Link>
+                            <Link to={data.facebook} target='_blank'><ion-icon name="logo-facebook"></ion-icon></Link>
+                            <Link to={data.twitter} target='_blank'><ion-icon name="logo-twitter"></ion-icon></Link>
+                            <Link to={data.linkedin} target='_blank'><ion-icon name="logo-linkedin"></ion-icon></Link>
                           </div>
                         </div>
                       </div>

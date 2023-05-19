@@ -4,13 +4,15 @@ import TopTitleTwo from "../../../components/TopTitleTwo";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import Card from "../../../components/Card";
 
-export default function Activity() {
+export default function Activity({data = []}) {
   let heading = [
     {
       titleData: "Activity Tracker.",
       subTitle: "what are the advantages of this product?",
     },
   ];
+
+  console.log(data)
 
   return (
     <>
@@ -30,13 +32,29 @@ export default function Activity() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
               feugiat posuere orci, eget semper magna suscipit nec.
             </p>
-            <ul className="skill-container">
+            {/* <ul className="skill-container">
               <li className="DURABILITY">DURABILITY</li>
               <li className="BATTERYLIFE">BATTERY LIFE</li>
               <li className="DESIGN">DESIGN</li>
               <li className="CONVENIENCE">CONVENIENCE</li>
               <li className="PRICE">PRICE</li>
-            </ul>
+            </ul> */}
+            <div>
+              {data[0]?.skill.map((item) =>
+                <div>
+                  <label for="file" style={{paddingRight:"10px"}}>{item.name}</label>
+                  <progress id="file" value="32" max="100" style={{width:"100%", borderRadius:"30px", height:"10px"}}>32%</progress>
+                </div>
+              )}
+              {/* <div>
+                <label for="file" style={{paddingRight:"10px"}}>BATTERY LIFE</label>
+                <progress id="file" value="40" max="100" style={{width:"100%", borderRadius:"30px", height:"10px"}}> 40% </progress>
+              </div>
+              <div>
+                <label for="file">DESIGN</label>
+                <progress id="file" value="50" max="100" style={{width:"100%", borderRadius:"30px", height:"10px"}}> 50% </progress>
+              </div> */}
+            </div>
           </div>
         </div>
         <div className="py-20">

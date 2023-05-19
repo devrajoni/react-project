@@ -1,31 +1,50 @@
 import TopTitleTwo from '../../../components/TopTitleTwo';
+import { useEffect, useState } from "react";
+import { BASE_URL, IMAGE_URL } from "../../../data/baseUrl";
 // import Card from "../../../components/Card";
 
-export default function Feature() {
+export default function Feature({data = []}) {
+    // const [card, setCard] = useState([]);
+
+    // useEffect(() => {
+    //   const loadData = async() => {
+    //     const url = `${BASE_URL}/feature`;
+    //     try {
+    //       const response = await fetch(url);
+    //       const result = await response.json();
+    //       setCard(result.data);
+    //     } catch(error) {
+    //       console.log(error);
+    //     }
+    //   };
+    //   loadData();
+    // }, []);
+    // console.log(card);
     let heading =[
         {
             titleData:'Key Features.',
             subTitle:'check out its special features',
         }
     ];
+    console.log(data)
 
-    let cardContents = [
-        {
-            icon:'bar-chart-outline',
-            title:'Water Proof',
-            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.​',
-        },
-        {
-            icon:'color-filter-outline',
-            title:'UX Designs',
-            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.',
-        },
-        {
-            icon:'cash-outline',
-            title:'Cheap Price',
-            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.',
-        },
-      ];
+    // let cardContents = [
+    //     {
+    //         icon:'bar-chart-outline',
+    //         title:'Water Proof',
+    //         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.​',
+    //     },
+    //     {
+    //         icon:'color-filter-outline',
+    //         title:'UX Designs',
+    //         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.',
+    //     },
+    //     {
+    //         icon:'cash-outline',
+    //         title:'Cheap Price',
+    //         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.',
+    //     },
+    //   ];
 
     return(
         <>
@@ -36,18 +55,13 @@ export default function Feature() {
                     )}
             </div>
             <div class="grid grid-cols-12 gap-6 h-auto mb-12 drop-shadow-md text-white">
-                {/* { cardContents.map((cardContent) =>
-                    <div className="bg-[#121212] px-12 py-12 border-b-4 border-white hover:border-[#66FCF1] drop-shadow-2xl">
-                        <Card cardContent={cardContent}/>
-                    </div>
-                )} */}
-                {cardContents.map((cardContent) =>
-                    <div className='col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-4 text-center'>
+                {data[0]?.feature?.map((cardContent) =>
+                    <div className='col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-4 text-center' key={cardContent.id}>
                         <div className='font-bold text-4xl pb-4 text-[#66FCF1]'>
                             <ion-icon name={cardContent.icon}></ion-icon>
                         </div>
                         <h1 className='font-bold text-4xl pb-4'>{cardContent.title}</h1>
-                        <p className='text-1xl pb-4'>{cardContent.text}</p>
+                        <p className='text-1xl pb-4' dangerouslySetInnerHTML={{__html:cardContent.description}}></p>
                     </div>
                 )}
             </div>

@@ -1,7 +1,7 @@
 import TopTitleTwo from '../../components/TopTitleTwo';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useState, useEffect } from 'react';
-import { BASE_URL } from '../../data/baseUrl';
+import { BASE_URL, IMAGE_URL } from '../../data/baseUrl';
 import News1 from "../../asset/blog_latest1.jpg";
 import News2 from "../../asset/blog_latest2.jpg";
 import News3 from "../../asset/blog_latest3.jpg";
@@ -23,7 +23,7 @@ export default function Latest() {
                 console.log(error);
             }
         };
-        loadData()
+        loadData();
     }, []);
 
     let heading =[
@@ -41,15 +41,15 @@ export default function Latest() {
                 )}
             </div>
             <div className='grid grid-cols-12 h-full mb-12 gap-6 px-8'>
-                {latest.map((data) => (
+                {latest.slice(0, 6).map((data) => (
                     <div className='col-span-12 md:col-span-6 lg:col-span-4 content'>
                         <div>
-                            <img src={News1} alt='test' className='w-full rounded-t-lg'/>
+                            <img src={`${IMAGE_URL}${data.image}`} alt='test' className='w-full rounded-t-lg'/>
                         </div>
                         <div className='flex justify-center items-center'>
                             <div className='bg-[#0B0C10] border-x-4 border-b-4 border-[#191919] drop-shadow-md text-white p-8'>
                                 <h1 className='font-bold text-2xl py-2'>{data.title}</h1>
-                                <p className='text-1xl py-6'>{data.description}</p>
+                                <div className='text-1xl py-6' dangerouslySetInnerHTML={{__html:data.description}} />
                                 <button className='btn ring-2 ring-[#66FCF1] hover:opacity-50 p-4'>Read More</button>
                             </div>
                         </div>

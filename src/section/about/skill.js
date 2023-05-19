@@ -1,8 +1,25 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Image from '../../asset/about_skill.jpg';
+import { useEffect, useState } from "react";
+import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 // import Card from "../../../components/Card";
 
 export default function Skill() {
+    const [skill, setSkill] = useState([]);
+
+    useEffect(() => {
+        const loadData = async() => {
+            const url = `${BASE_URL}/about-skill`;
+            try{
+                const response = await fetch(url);
+                const result = await response.json();
+                setSkill(result.data);
+            }catch(error){
+                console.log(error)
+            }
+        };
+        loadData();
+    },[]);
 
     return(
         <>

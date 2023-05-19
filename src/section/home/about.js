@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import TopTitle from "../../components/TopTitle";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { BASE_URL } from "../../data/baseUrl";
+import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 export default function Service() {
   let[about, setAbout] = useState([]);
@@ -11,6 +11,22 @@ export default function Service() {
       subTitle: "WE ARE MORE THAN DIGITAL AGENCY",
     },
   ];
+
+  let [gallery, setGallery] = useState([]);
+
+  useEffect(() => {
+    const dataLoad = async() => {
+      const url = `${BASE_URL}/about-gallery`;
+      try{
+        const response = await fetch(url);
+        const result = await response.json();
+        setGallery(result.data);
+      }catch(error){
+        console.log(error);
+      }
+    };
+    dataLoad();
+  },[]);
 
   useEffect(() => {
     const loadData = async() =>{
@@ -55,7 +71,7 @@ export default function Service() {
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 lg:col-span-6">
             <LazyLoadImage
-              src="https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2021/01/people-working-in-office-e1613655962551.jpg"
+              src={`${IMAGE_URL}${gallery.image_one}`}
               alt=""
               className="h-full w-full object-cover"
             />
@@ -63,14 +79,14 @@ export default function Service() {
           <div className="col-span-12 lg:col-span-6 flex flex-col gap-4">
             <div className="">
               <LazyLoadImage
-                src="https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2021/01/people-working-in-office-1.jpg"
+                src={`${IMAGE_URL}${gallery.image_two}`}
                 // className="h-auto w-full"
                 alt="about1"
               />
             </div>
             <div className="">
               <LazyLoadImage
-                src="https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2021/01/office-e1613655942670.jpg"
+                src={`${IMAGE_URL}${gallery.image_three}`}
                 // className="h-auto w-full"
                 alt="about1"
               />
@@ -81,7 +97,7 @@ export default function Service() {
           {about.map((item) => (
             <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-12 md:border-r-4 border-[#66FCF1]">
               <h3 className="text-bold text-2xl pb-4">{item.title}</h3>
-              <p>{item.description}</p>
+              <div dangerouslySetInnerHTML={{__html:item.description}} />
             </div>
           ))}
         </div>
