@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BASE_URL, IMAGE_URL } from '../../data/baseUrl';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -39,8 +40,9 @@ export default function Footer() {
       <div className="">
         <div className="grid grid-cols-12 gap-6 px-6 md:px-20 mt-12 md:mt-16 mb-16 text-white text-left">
           <div className="col-span-12 md:col-span-3 lg:col-span-3 md:text-xs">
-            <p className="font-bold text-2xl font-[poppins] pb-4">Logo</p>
-            <p className="text-1xl pb-4">{setting.description}</p>
+            <p className="pb-4"><Link to="/"><LazyLoadImage src={`${IMAGE_URL}${setting.company_logo}`} alt='test' className='w-8 h-8 object-cover object-center  rounded-t-lg' /></Link>
+            </p>
+            <div className="text-1xl pb-4" dangerouslySetInnerHTML={{__html:setting.description}} />
             <hr className="h-0.5 text-2xl w-16 bg-[#66FCF1]" />
           </div>
 
@@ -89,10 +91,7 @@ export default function Footer() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2   text-white text-left mt-4">
-          <p className="text-xs mb-6 sm:mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-          </p>
+          <div className="text-xs mb-6 sm:mb-4" dangerouslySetInnerHTML={{__html:setting.landing_description}} />
           <div className="flex gap-6 text-bold  ps-16 md:ps-56 lg:ps-96">
             <div>
               <Link to={social.facebook} target="_blank"><ion-icon name="logo-facebook" className=""></ion-icon></Link>

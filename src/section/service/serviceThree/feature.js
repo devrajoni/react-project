@@ -1,6 +1,7 @@
 import TopTitleTwo from '../../../components/TopTitleTwo';
 import { useEffect, useState } from "react";
 import { BASE_URL, IMAGE_URL } from "../../../data/baseUrl";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import Card from "../../../components/Card";
 
 export default function Feature({data = []}) {
@@ -57,8 +58,8 @@ export default function Feature({data = []}) {
             <div class="grid grid-cols-12 gap-6 h-auto mb-12 drop-shadow-md text-white">
                 {data[0]?.feature?.map((cardContent) =>
                     <div className='col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-4 text-center' key={cardContent.id}>
-                        <div className='font-bold text-4xl pb-4 text-[#66FCF1]'>
-                            <ion-icon name={cardContent.icon}></ion-icon>
+                        <div className='flex item-center justify-center pb-4 text-[#66FCF1]'>
+                            <LazyLoadImage src={`${IMAGE_URL}${cardContent.icon}`} alt='test' className='w-auto h-8 object-cover object-center'/>
                         </div>
                         <h1 className='font-bold text-4xl pb-4'>{cardContent.title}</h1>
                         <p className='text-1xl pb-4' dangerouslySetInnerHTML={{__html:cardContent.description}}></p>

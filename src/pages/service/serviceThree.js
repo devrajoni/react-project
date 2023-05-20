@@ -14,33 +14,41 @@ import Space from "../../section/service/serviceThree/space";
 export default function ServiceThree() {
   const  {id} = useParams();
   const [service, setService] = useState([]);
-
+  const [isloading, setIsLoading] = useState(false);
   useEffect(() => {
+    setIsLoading(true);
     const loadData = async() => {
     const url = `${BASE_URL}/single-service/${id}`;
       try{
         const response = await fetch(url);
         const result = await response.json();
-        setService(result.data);
+        // console.log(result);
+        setService(result);
+        setIsLoading(false);
       }catch(error){
         console.log(error);
+        setIsLoading(false);
       }
     };
     loadData();
   },[id]);
 
 
-
-  console.log(service);
+if(isloading){
+  return <p className="text-white h-100% flex item-center justify-center">Loading...</p>
+}
+  // console.log("hi" ,service);
   return (
     <>
       <div>
-        <Banner data={service[0]} key={service.id}/>
-        <Feature data={service} key={service.id}/>
+      {
+        service.data && <Banner data={service?.data[0]}/>
+      }
+        <Feature data={service?.data}/>
         <Image />
         <Space />
-        <Activity data={service} key={service.id}/>
-        <Similar/>
+        <Activity data={service?.data}/>
+        <Similar data={service?.services}/>
         <Inquiry />
         <Footer />
       </div>

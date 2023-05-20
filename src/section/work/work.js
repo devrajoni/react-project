@@ -87,6 +87,7 @@ let heading = [
 export default function Work() {
   const [category, setCategory] = useState("");
   const [works, setWork] = useState([]);
+  const [cat, setCat] = useState([]);
 
   useEffect(() => {
     const loadData = async() => {
@@ -95,6 +96,20 @@ export default function Work() {
         const response = await fetch(url);
         const result = await response.json();
         setWork(result.data);
+      }catch(error){
+        console.log(error);
+      }
+    };
+    loadData();
+  },[]);
+
+  useEffect(() => {
+    const loadData = async() => {
+    const url = `${BASE_URL}/work-category`;
+      try{
+        const response = await fetch(url);
+        const result = await response.json();
+        setCat(result.data);
       }catch(error){
         console.log(error);
       }
@@ -127,14 +142,14 @@ export default function Work() {
             >
               All
             </button>
-            {works?.map((item) => (
+            {cat.map((item) => (
                 <button
                 className={`${
-                  category === `${item.category.name}` ? "bg-[#66FCF1] py-2 px-8" : ""
+                  category === `${item.name}` ? "bg-[#66FCF1] py-2 px-8" : ""
                 }`}
-                onClick={() => setCategory(`${item.category.name}`)}
+                onClick={() => setCategory(`${item.name}`)}
               >
-                {item.category.name}
+                {item.name}
               </button>
             ))}
           </div>

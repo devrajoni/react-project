@@ -6,7 +6,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useEffect, useState } from "react";
 import { BASE_URL, IMAGE_URL } from "../../../data/baseUrl";
 
-export default function Similar() {
+export default function Similar({data = []}) {
   // const [project, setProject] = useState([]);
 
   // useEffect(() => {
@@ -42,15 +42,16 @@ export default function Similar() {
           ))}
         </div>
         <div class="grid grid-cols-12 gap-4 lg:gap-12 h-auto mb-12 drop-shadow-md text-white">
-          {/* {project.map((item, index) => (
-            <div key={index} className="transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4">
+          {data.slice(0, 3).map((item) => (
+            <div key={item.id} className="transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4">
               <LazyLoadImage
                 src={`${IMAGE_URL}${item.image}`}
                 alt="similar"
                 className="hover:scale-110 transition duration-500 w-full"
               />
             </div>
-          ))} */}
+          ))}
+
           {/* <div className="transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4">
             <LazyLoadImage
               src={Image2}

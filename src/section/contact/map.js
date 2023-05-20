@@ -1,11 +1,29 @@
+import { useEffect, useState } from "react";
+import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 export default function FooterMap() {
+    let [map, setMap] = useState({});
+    useEffect(() => {
+        const loadData = async () => {
+          const URL = `${BASE_URL}/setting`;
+          try {
+            const response = await fetch(URL);
+            const result = await response.json();
+            setMap(result.data);
+          } catch (error) {
+            console.log(error);
+          }
+        };
+
+        loadData();
+      }, []);
+      // console.log('ss', map);
 
     return(
         <>
       <section className=" h-full w-full">
             <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d233667.86600308164!2d90.25446688676529!3d23.78086318907288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1682354509995!5m2!1sen!2sbd" width="100%" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src={map.map} width="100%" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
       </section>
         </>

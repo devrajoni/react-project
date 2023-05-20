@@ -3,11 +3,11 @@ import Card from "../../components/Card";
 import TopTitle from "../../components/TopTitle";
 import { useParams } from "react-router-dom";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from 'react-router-dom';
 
 export default function Service() {
-  const  {id} = useParams();
+  const { id } = useParams();
   let [service, setService] = useState([]);
 
   let heading = [
@@ -74,18 +74,27 @@ export default function Service() {
           ))}
         </div>
         <div class="grid grid-cols-12 gap-6 h-auto mb-12 drop-shadow-md">
-          { service.map((item) =>
+          {service.map((item) => (
             <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#121212] px-12 py-12 border-b-4 border-white hover:border-[#66FCF1] drop-shadow-2xl">
               <div className="text-[#66FCF1] text-4xl mb-8 md:text-4xl">
-                <LazyLoadImage src={`${IMAGE_URL}${item.icon}`} alt='test' className='w-full rounded-t-lg'/>
+                <LazyLoadImage
+                  src={`${IMAGE_URL}${item.icon}`}
+                  alt="test"
+                  className="w-auto h-8 object-cover object-center"
+                />
               </div>
               <div className="content">
-                  <h1 className="font-bold text-2xl pb-4 text-white"><Link to={`/service/${item.id}`}>{item.name}</Link></h1>
-                  <hr className="mb-4 h-0.5 text-2xl w-16 bg-[#66FCF1]" />
-                  <div className="font-medium text-white" dangerouslySetInnerHTML={{__html:item.short_description}} />
+                <h1 className="font-bold text-2xl pb-4 text-white">
+                  <Link to={`/service/${item.id}`}>{item.name}</Link>
+                </h1>
+                <hr className="mb-4 h-0.5 text-2xl w-16 bg-[#66FCF1]" />
+                <div
+                  className="font-medium text-white"
+                  dangerouslySetInnerHTML={{ __html: item.short_description }}
+                />
               </div>
             </div>
-            )}
+          ))}
         </div>
       </section>
     </>

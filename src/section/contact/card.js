@@ -1,6 +1,7 @@
 import TopTitle from "../../components/TopTitleTwo";
 import { useEffect, useState } from "react";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function ContactCard() {
   const [card, setCard] = useState([]);
@@ -38,8 +39,8 @@ export default function ContactCard() {
         <div class="grid grid-cols-12 md:gap-4 px-6 lg:px-20 pt-12 md:mb-0 w-full bg-slate-900 text-left ">
             {card.slice(0, 3).map((data) => (
               <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-12 md:border-r-4 border-[#66FCF1] text-center" key={data.id}>
-                <div className="text-[#66FCF1] text-4xl md:text-4xl mb-3">
-                    <ion-icon name={data.icon}></ion-icon>
+                <div className="text-[#66FCF1] flex item-center justify-center md:text-4xl mb-3">
+                  <LazyLoadImage src={`${IMAGE_URL}${data.icon}`} alt='test' className='w-auto h-8 object-cover object-center'/>
                 </div>
                 <h3 className="text-bold text-2xl pb-4">{data.title}</h3>
                 <div dangerouslySetInnerHTML={{__html:data.description}} />

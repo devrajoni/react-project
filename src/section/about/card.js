@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Card() {
     const [card, setCard] = useState([]);
@@ -58,7 +59,7 @@ export default function Card() {
                 { card.map((cardContent) =>
                     <div className="col-span-12 md:col-span-6 lg:col-span-4 px-12 py-6">
                         <div className="text-[#66FCF1] text-4xl mb-8 md:text-4xl" key={cardContent.id}>
-                            <ion-icon name={cardContent.icon}></ion-icon>
+                           <LazyLoadImage src={`${IMAGE_URL}${cardContent.icon}`} alt='test' className='w-auto h-8 object-cover object-center'/>
                         </div>
                         <h1 className="font-bold text-2xl pb-4 text-white">{cardContent.title}</h1>
                         <div className="font-medium text-white" dangerouslySetInnerHTML={{__html:cardContent.description}}/>

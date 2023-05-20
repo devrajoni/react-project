@@ -6,6 +6,7 @@ import swal from 'sweetalert';
 
 export default function FooterCard() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
   const onSubmit = (data, e) => {
     fetch(`${BASE_URL}/contact`,{
       method:'POST',
@@ -19,6 +20,7 @@ export default function FooterCard() {
 
     })
   };
+
     let heading = [
         {
           titleData: "Send us a message!",

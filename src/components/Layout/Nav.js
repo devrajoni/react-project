@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 
 let links = [
@@ -28,6 +30,22 @@ let links = [
 export default function Nav(props) {
   let [open, setOpen] = useState(false);
   let [navbar, setNavbar] = useState(false);
+  let [setting, setSetting] = useState({});
+
+  useEffect(() => {
+      const loadData = async () => {
+        const URL = `${BASE_URL}/setting`;
+        try {
+          const response = await fetch(URL);
+          const result = await response.json();
+          setSetting(result.data);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      loadData();
+    }, []);
 
   useEffect(() => {
     if (open) {
@@ -57,9 +75,10 @@ export default function Nav(props) {
           : "fixed left-0 right-0 w-full z-50 h-16"
       }`}
     >
-      <nav className="flex items-center font-medium justify-between w-full text-[#ffffff] py-4 lg:py-0 px-12 md:px-20">
+      <nav className="flex items-center font-medium justify-between w-full text-[#ffffff] py-4 lg:py-4 px-12 md:px-20">
         <div className="font-bold text-2xl font-[poppins]">
-          <Link to="/">Logo</Link>
+          <Link to="/"><LazyLoadImage src={`${IMAGE_URL}${setting.company_logo}`} alt='test' className='w-full h-8 pt-4 object-cover object-center  rounded-t-lg'/>
+          </Link>
         </div>
         <ul
           className="hidden lg:flex gap-4 items-center"
