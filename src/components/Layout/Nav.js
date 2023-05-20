@@ -164,7 +164,7 @@ function SideMenu({ isOpen, setOpen }) {
         {links.map((data) => (
           <li
             key={data.name}
-            className="md:ml-8 md:text-xl md:my-0 my-4 left-0"
+            className="md:ml-8 md:text-xl md:my-4 my-4 left-0"
           >
             {data?.subMenu ? (
               <div className="relative group">

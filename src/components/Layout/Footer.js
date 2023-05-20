@@ -38,7 +38,7 @@ export default function Footer() {
   return (
     <>
       <div className="">
-        <div className="grid grid-cols-12 gap-6 px-6 md:px-20 mt-12 md:mt-16 mb-16 text-white text-left">
+        <div className="grid grid-cols-12 gap-6 px-6 lg:px-20 mt-12 md:mt-16 mb-16 text-white text-left">
           <div className="col-span-12 md:col-span-3 lg:col-span-3 md:text-xs">
             <p className="pb-4"><Link to="/"><LazyLoadImage src={`${IMAGE_URL}${setting.company_logo}`} alt='test' className='w-8 h-8 object-cover object-center  rounded-t-lg' /></Link>
             </p>
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="mb-8 px-12 md:px-20">
+      <div className="mb-8 px-6 lg:px-20">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 text-white mt-8 text-sm">
           <p>Copyright {setting.copyright_year} All rights reserved</p>
           <div className="flex gap-6 text-white">
@@ -92,7 +92,7 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2   text-white text-left mt-4">
           <div className="text-xs mb-6 sm:mb-4" dangerouslySetInnerHTML={{__html:setting.landing_description}} />
-          <div className="flex gap-6 text-bold  ps-16 md:ps-56 lg:ps-96">
+          <div className="flex gap-6 text-bold  md:ps-56 lg:ps-96">
             <div>
               <Link to={social.facebook} target="_blank"><ion-icon name="logo-facebook" className=""></ion-icon></Link>
             </div>

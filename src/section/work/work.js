@@ -135,7 +135,7 @@ export default function Work() {
           ))}
         </div>
         <div className="flex justify-center ">
-          <div className=" flex gap-x-4 md:gap-x-8 text-white md:text-2xl mb-16">
+          <div className=" flex gap-x-4 md:gap-x-8 text-white text-1xl md:text-2xl mb-16">
             <button
               className={`${category === "" ? "bg-[#66FCF1] py-2 px-8" : ""}`}
               onClick={() => setCategory("")}

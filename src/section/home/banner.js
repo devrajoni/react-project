@@ -64,7 +64,7 @@ export default function Banner() {
       >
         <Nav setSearch={setSearch} />
 
-        <div className="text-left absolute py-60 w-full text-white px-6 md:px-40">
+        <div className="text-left absolute py-60 w-full text-white px-6 md:px-12 lg:px-40">
           <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap pb-3">
             {banner.sub_title}
           </h5>

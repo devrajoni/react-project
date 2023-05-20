@@ -35,8 +35,8 @@ export default function Work() {
   return (
     <>
       <section className="mt-16 md:mt-28">
-        <div className="mt-12 md:mt-16 md:px-20 px-8 text-white  bg-[#121212]">
-          <div className="pt-28 pb-16 flex justify-between">
+        <div className="mt-12 md:mt-16 text-white  bg-[#121212]">
+          <div className="px-6  py-12 lg:px-16 flex justify-between">
             <div className="content">
               {data.map((headings, index) => (
                 <TopTitle key={index} headings={headings} />

@@ -75,7 +75,7 @@ export default function Testimonial() {
   return (
     <>
       <section className="service-section mt-16 md:mt-28 bg-[#121212]">
-        <div className="px-6 md:px-20 text-white  ">
+        <div className="px-6 lg:px-20 text-white  ">
           <div className="content pt-28 pb-16">
             {heading.map((headings) => (
               <TopTitle headings={headings} />
