@@ -76,8 +76,8 @@ export default function Nav(props) {
       }`}
     >
       <nav className="flex items-center font-medium justify-between w-full text-[#ffffff] py-4 lg:py-4 px-12 md:px-20">
-        <div className="font-bold text-2xl font-[poppins]">
-          <Link to="/"><LazyLoadImage src={`${IMAGE_URL}${setting.company_logo}`} alt='test' className='w-full h-8 pt-4 object-cover object-center  rounded-t-lg'/>
+        <div className=" font-[poppins]">
+          <Link to="/"><LazyLoadImage src={`${IMAGE_URL}${setting.company_logo}`} alt='test' className='w-full h-20 pt-4 object-cover object-center  rounded-t-lg'/>
           </Link>
         </div>
         <ul
