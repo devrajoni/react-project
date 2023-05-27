@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { BASE_URL, IMAGE_URL } from '../../data/baseUrl';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
+import {DataContext} from "../../App";
 
 export default function Footer() {
-  let [setting, setSetting] = useState([]);
-  let [social, setSocial] = useState([]);
+  const [setting, setSetting] = useContext(DataContext);
+  const [social, setSocial] = useState([]);
 
   useEffect(() => {
     const loadData = async() => {
@@ -21,19 +22,6 @@ export default function Footer() {
     loadData();
   }, []);
 
-  useEffect(() => {
-      const loadData = async() => {
-          const url = `${BASE_URL}/setting`;
-          try{
-              const response = await fetch(url);
-              const result = await response.json();
-              setSetting(result.data);
-          }catch(error){
-              console.log(error);
-          }
-      };
-      loadData()
-  }, []);
 
   return (
     <>

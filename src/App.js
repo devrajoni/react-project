@@ -9,10 +9,33 @@ import Work from  './pages/work/work';
 import About from  './pages/about/about';
 import Blog from  './pages/blog/blog';
 import Contact from  './pages/contact/contact';
+import { createContext, useState, useEffect } from 'react';
+import { BASE_URL } from './data/baseUrl';
+
+export const DataContext = createContext();
+
 
 function App() {
+  const[setting, setSetting] = useState({});
+
+  useEffect(() => {
+    const loadData = async () => {
+      const URL = `${BASE_URL}/setting`;
+      try {
+        const response = await fetch(URL);
+        const result = await response.json();
+        setSetting(result.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    loadData();
+  }, []);
+
   return (
-    <div>
+
+    <DataContext.Provider value= {[setting, setSetting]}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<HomeTwo />} />
@@ -24,7 +47,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </div>
+    </DataContext.Provider>
   );
 }
 

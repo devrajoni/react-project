@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
+import {DataContext} from "../../App";
 
 let links = [
   {
@@ -28,35 +29,23 @@ let links = [
 ];
 
 export default function Nav(props) {
-  let [open, setOpen] = useState(false);
-  let [navbar, setNavbar] = useState(false);
-  let [setting, setSetting] = useState({});
+  const [open, setOpen] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+  const [setting, setSetting] = useContext(DataContext);
 
-  useEffect(() => {
-      const loadData = async () => {
-        const URL = `${BASE_URL}/setting`;
-        try {
-          const response = await fetch(URL);
-          const result = await response.json();
-          setSetting(result.data);
-        } catch (error) {
-          console.log(error);
-        }
-      };
+  console.log(setting);
 
-      loadData();
-    }, []);
 
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [open]);
+  // useEffect(() => {
+  //   if (open) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [open]);
 
   const changeBackground = () => {
     if (window.scrollY >= 300) {
