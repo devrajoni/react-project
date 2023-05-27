@@ -40,7 +40,7 @@ export default function Footer() {
       <div className="">
         <div className="grid grid-cols-12 gap-6 px-6 lg:px-20 mt-12 md:mt-16 mb-16 text-white text-left">
           <div className="col-span-12 md:col-span-3 lg:col-span-3 md:text-xs">
-            <p className="pb-2"><Link to="/"><LazyLoadImage src={`${IMAGE_URL}${setting.company_logo}`} alt='test' className=' h-20 object-cover object-center  rounded-t-lg' /></Link>
+            <p><Link to="/"><LazyLoadImage src={`${IMAGE_URL}${setting.company_logo}`} alt='test' className='h-12 lg:h-16 object-cover object-center  rounded-t-lg' /></Link>
             </p>
             <div className="text-1xl pb-4" dangerouslySetInnerHTML={{__html:setting.description}} />
             <hr className="h-0.5 text-2xl w-16 bg-[#66FCF1]" />
