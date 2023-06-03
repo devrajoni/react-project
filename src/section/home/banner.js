@@ -61,7 +61,7 @@ export default function Banner() {
   return (
     <>
       <section
-        className=" relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
+        className="header-section relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}
       >
         <Nav />

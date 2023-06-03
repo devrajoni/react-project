@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
-import {DataContext} from "../../App";
+import { DataContext } from "../../App";
+import { IMAGE_URL } from "../../data/baseUrl";
 
 let links = [
   {
@@ -35,7 +35,6 @@ export default function Nav(props) {
 
   console.log(setting);
 
-
   // useEffect(() => {
   //   if (open) {
   //     document.body.style.overflow = "hidden";
@@ -66,7 +65,12 @@ export default function Nav(props) {
     >
       <nav className="flex items-center font-medium justify-between w-full text-[#ffffff] py-4 lg:py-4 px-12 md:px-20">
         <div className=" font-[poppins]">
-          <Link to="/"><LazyLoadImage src={`${IMAGE_URL}${setting.company_logo}`} alt='test' className='w-full h-12 lg:h-16  object-cover object-center  rounded-t-lg'/>
+          <Link to="/">
+            <LazyLoadImage
+              src={`${IMAGE_URL}${setting.company_logo}`}
+              alt="test"
+              className="w-full h-12 lg:h-16  object-cover object-center  rounded-t-lg"
+            />
           </Link>
         </div>
         <ul
@@ -88,7 +92,7 @@ export default function Nav(props) {
                       <li key={menu.name}>
                         <Link
                           to={menu.link}
-                          className="text-white-800 text-base hover:ring-offset-4 hover:ring-b inline-block"
+                          className="text-white-800 text-base font-bold hover:ring-offset-4 hover:ring-b inline-block"
                         >
                           {menu.name}
                         </Link>
@@ -99,13 +103,21 @@ export default function Nav(props) {
               ) : (
                 <Link
                   to={data.link}
-                  className="text-white-800 hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4"
+                  className="text-white-900 hover:text-green-400 font-bold duration-500 hover:underline hover:underline-offset-[14px] py-4"
                 >
                   {data.name}
                 </Link>
               )}
             </li>
           ))}
+          <li>
+            <Link
+              to="https://afro-jobs.com/login"
+              className="text-white-800 md:text-xl ml-8 font-bold hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4"
+            >
+              Login
+            </Link>
+          </li>
           {/* <li>
             <div
               className="text-xl md:ml-8 md:my-0 md:opacity-100 opacity-0 "
@@ -183,6 +195,14 @@ function SideMenu({ isOpen, setOpen }) {
             )}
           </li>
         ))}
+        <li>
+          <Link
+            to="https://afro-jobs.com/login"
+            className="text-white-800 font-bold hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4"
+          >
+            Login
+          </Link>
+        </li>
       </ul>
     </div>
   );

@@ -20,30 +20,30 @@ export default function WorkDetails({ data = {} }) {
               />
             </div>
             <div className="col-span-12 md:col-span-4">
-              <div class="grid grid-cols-12 pt-12 pb-2">
+              <div class="grid grid-cols-12">
                 <div class="col-span-3">
-                  <button className="bg-[#66FCF1] px-2">Category</button>
+                  <button className="font-bold">Category :</button>
                 </div>
                 <div class="col-span-9">
-                  <button className="bg-[#66FCF1] px-2">
+                  <button className="text-xs pt-1">
                     {data?.category?.name}
                   </button>
                 </div>
               </div>
               <div class="grid grid-cols-12">
-                <div class="col-span-3">Author:</div>
+                <div class="col-span-3 font-bold">Author :</div>
                 <div class="col-span-9 text-xs pt-1">{data.author}</div>
               </div>
               <div class="grid grid-cols-12">
-                <div class="col-span-3">Client:</div>
+                <div class="col-span-3 font-bold">Client :</div>
                 <div class="col-span-9 text-xs pt-1">{data.client}</div>
               </div>
               <div class="grid grid-cols-12">
-                <div class="col-span-3">Date:</div>
+                <div class="col-span-3 font-bold">Date :</div>
                 <div class="col-span-9 text-xs pt-1">{data.date}</div>
               </div>
               <div class="grid grid-cols-12">
-                <div class="col-span-3">Share:</div>
+                <div class="col-span-3 font-bold">Share :</div>
                 <div class="col-span-9 pt-2">
                   <div className="flex gap-2">
                     <FacebookShareButton url="https://www.google.com/">
