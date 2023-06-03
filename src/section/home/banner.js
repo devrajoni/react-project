@@ -7,19 +7,19 @@ import Nav from "../../components/Layout/Nav";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 export default function Banner() {
-  let [search, setSearch] = useState(false);
+  // let [search, setSearch] = useState(false);
   let [banner, setbanner] = useState({});
 
-  useEffect(() => {
-    if (search) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [search]);
+  // useEffect(() => {
+  //   if (search) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [search]);
 
   useEffect(() => {
     const loadData = async () => {
@@ -37,40 +37,40 @@ export default function Banner() {
   }, []);
   // console.log(banner.image)
 
-
   let cardContents = [
     {
       icon: "navigate-outline",
       name: "We Provide Full-Service.",
-      short_description: "We become fully immersed into our client business and industry, acquiring the same vision to accomplish goals together.​",
+      short_description:
+        "We become fully immersed into our client business and industry, acquiring the same vision to accomplish goals together.​",
     },
     {
       icon: "snow-outline",
       name: "We deliver solutions.",
-      short_description: "We love to innovate and produce new ideas, to grow your business and save your time. Always proud to be able to exceed your expectations .",
+      short_description:
+        "We love to innovate and produce new ideas, to grow your business and save your time. Always proud to be able to exceed your expectations .",
     },
     {
       icon: "bonfire-outline",
       name: "We Build Brands.",
-      short_description: "We design the brand; we turn the brand into an experience; and we communicate the brand’s story. We make brands matter.",
+      short_description:
+        "We design the brand; we turn the brand into an experience; and we communicate the brand’s story. We make brands matter.",
     },
   ];
 
   return (
     <>
       <section
-        className="header-section relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
+        className=" relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}
       >
-        <Nav setSearch={setSearch} />
+        <Nav />
 
         <div className="text-left absolute py-60 w-full text-white px-6 md:px-12 lg:px-40">
           <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap pb-3">
             {banner.sub_title}
           </h5>
-          <h1 className="font-bold text-5xl pb-10 w-1/2">
-            {banner.title}
-          </h1>
+          <h1 className="font-bold text-5xl pb-10 w-1/2">{banner.title}</h1>
           <Button name="3D Portfolio" />
         </div>
       </section>
@@ -82,7 +82,7 @@ export default function Banner() {
         ))}
       </div>
 
-      {search ? (
+      {/* {search ? (
         <div className="fixed z-50 inset-0 bg-slate-900/70">
           <div className="flex justify-end mt-6 mr-6">
             <button
@@ -102,7 +102,7 @@ export default function Banner() {
             </div>
           </div>
         </div>
-      ) : null}
+      ) : null} */}
     </>
   );
 }

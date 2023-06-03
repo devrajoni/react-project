@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Nav from "../../components/Layout/Nav";
-import Image2 from "../../asset/about_banner.jpg";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 export default function Banner() {
@@ -35,9 +34,10 @@ export default function Banner() {
 
   return (
     <>
-      <section className="header-section relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}>
-
+      <section
+        className=" relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}
+      >
         <Nav setSearch={setSearch} />
 
         <div className="flex justify-center items-center w-full h-full absolute text-white">

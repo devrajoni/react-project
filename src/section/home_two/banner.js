@@ -47,11 +47,14 @@ export default function Banner() {
         <Nav setSearch={setSearch} />
 
         <div className="flex justify-center items-center text-center h-full absolute gap-12 py-60 w-full text-white px-6 md:px-40">
-          <div >
+          <div>
             <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap mb-8">
               CREATIVE MIND, CREATIVE WORKS.
             </h5>
-            <h1 className="font-bold text-7xl mb-16">We are digital <br />agency.</h1>
+            <h1 className="font-bold text-7xl mb-16">
+              We are digital <br />
+              agency.
+            </h1>
             <Button name="3D Portfolio" />
           </div>
         </div>

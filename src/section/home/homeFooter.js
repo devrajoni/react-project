@@ -1,12 +1,11 @@
-import Footer from '../../components/Layout/Footer';
+import Footer from "../../components/Layout/Footer";
 
 export default function HomeFooter() {
-
-    return(
-        <>
-        <section className="bg-[#0B0C10] divide-y-2 divide-[#262626]">
-            <Footer />
-        </section>
-        </>
-    )
+  return (
+    <>
+      <section className="bg-[#0B0C10] divide-y-2 divide-[#262626]">
+        <Footer />
+      </section>
+    </>
+  );
 }

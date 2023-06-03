@@ -1,3 +1,4 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Icon1 from "../../asset/icon_1.png";
 import Icon2 from "../../asset/icon_2.png";
 import Icon3 from "../../asset/icon_3.png";
@@ -8,7 +9,6 @@ import Icon7 from "../../asset/icon_7.png";
 import Test1 from "../../asset/test_1.jpg";
 import Test2 from "../../asset/test_2.jpg";
 import Test3 from "../../asset/test_3.jpg";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import TopTitle from "../../components/TopTitle";
 
 export default function Service() {
@@ -92,13 +92,41 @@ export default function Service() {
           ))}
         </div>
         <div className="grid grid-rows-7 md:grid-rows-1 grid-flow-col gap-8 md:gap-24 px-12 md:px-40 pt-12">
-          <LazyLoadImage src={Icon1} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon2} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon3} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon4} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon5} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon6} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon7} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
+          <LazyLoadImage
+            src={Icon1}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon2}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon3}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon4}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon5}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon6}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon7}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
         </div>
         <div className="flex justify-center item-center p-24">
           <hr className="h-20 w-1 bg-[#66FCF1]"></hr>

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Nav from "../../components/Layout/Nav";
 // import Image2 from "../../asset/contact_banner.jpg";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 export default function Banner() {
@@ -9,13 +8,13 @@ export default function Banner() {
   let [banner, setBanner] = useState({});
 
   useEffect(() => {
-    const loadData = async() => {
+    const loadData = async () => {
       const url = `${BASE_URL}/contact-banner`;
-      try{
+      try {
         const response = await fetch(url);
         const result = await response.json();
         setBanner(result.data);
-      }catch(error){
+      } catch (error) {
         console.log(error);
       }
     };
@@ -33,12 +32,12 @@ export default function Banner() {
     };
   }, [search]);
 
-
-
   return (
     <>
-      <section className="header-section relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}>
+      <section
+        className=" relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}
+      >
         <Nav setSearch={setSearch} />
 
         <div className="flex justify-center items-center w-full h-full absolute text-white">

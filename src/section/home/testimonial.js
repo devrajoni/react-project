@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Icon1 from "../../asset/icon_1.png";
 import Icon2 from "../../asset/icon_2.png";
 import Icon3 from "../../asset/icon_3.png";
@@ -5,12 +7,7 @@ import Icon4 from "../../asset/icon_4.png";
 import Icon5 from "../../asset/icon_5.png";
 import Icon6 from "../../asset/icon_6.png";
 import Icon7 from "../../asset/icon_7.png";
-import Test1 from "../../asset/test_1.jpg";
-import Test2 from "../../asset/test_2.jpg";
-import Test3 from "../../asset/test_3.jpg";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import TopTitle from "../../components/TopTitle";
-import { useState, useEffect } from "react";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 export default function Testimonial() {
@@ -24,18 +21,18 @@ export default function Testimonial() {
   ];
 
   useEffect(() => {
-    const loadData = async() => {
+    const loadData = async () => {
       const url = `${BASE_URL}/testimonial`;
-      try{
+      try {
         const response = await fetch(url);
         const result = await response.json();
         setTestimonial(result.data);
-      }catch(error){
+      } catch (error) {
         console.log(error);
       }
     };
     loadData();
-  },[]);
+  }, []);
 
   // let items = [
   //   {
@@ -85,7 +82,10 @@ export default function Testimonial() {
         <div class="grid grid-cols-12 px-12 gap-6 mb-12 w-full text-white px-6 lg:px-20">
           {testimonial.map((item) => (
             <div className="col-span-12 md:col-span-6 lg:col-span-3 bg-[#0B0C10] px-8 pt-12 gap-6 mb-44 ring-4 ring-[#191919] relative">
-              <div className=" font-medium text-center" dangerouslySetInnerHTML={{__html:item.description}} />
+              <div
+                className=" font-medium text-center"
+                dangerouslySetInnerHTML={{ __html: item.description }}
+              />
               <div className="py-8 mb-28 flex justify-center items-center gap-3 text-1xl font-bold text-[#FEC42D]">
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
@@ -111,13 +111,41 @@ export default function Testimonial() {
           ))}
         </div>
         <div className="grid grid-rows-7 md:grid-rows-1 grid-flow-col gap-8 lg:gap-24 px-12 lg:px-40 pt-12">
-          <LazyLoadImage src={Icon1} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon2} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon3} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon4} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon5} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon6} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
-          <LazyLoadImage src={Icon7} alt="icon1" className="h-8 md:h-16 w-8 md:w-16" />
+          <LazyLoadImage
+            src={Icon1}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon2}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon3}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon4}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon5}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon6}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
+          <LazyLoadImage
+            src={Icon7}
+            alt="icon1"
+            className="h-8 md:h-16 w-8 md:w-16"
+          />
         </div>
         <div className="flex justify-center item-center p-24">
           <hr className="h-20 w-1 bg-[#66FCF1]"></hr>

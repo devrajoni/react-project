@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import Nav from "../../../components/Layout/Nav";
 // import Image1 from "../../asset/home_banner1.jpg";
 import Image2 from "../../../asset/single_service3.jpg";
-import { BASE_URL, IMAGE_URL } from "../../../data/baseUrl";
 
-export default function Banner({data = []}) {
+export default function Banner({ data = [] }) {
   let [search, setSearch] = useState(false);
   // let [banner, setBanner] = useState({});
 
@@ -36,10 +35,9 @@ export default function Banner({data = []}) {
   return (
     <>
       <section
-        className="header-section relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
+        className="relative w-full bg-slate-900 bg-cover h-full bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${Image2})` }}
       >
-
         <Nav setSearch={setSearch} />
 
         <div className="text-left px-6 py-60 text-white px-6 lg:px-40">
@@ -47,7 +45,10 @@ export default function Banner({data = []}) {
           <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap pb-3">
             {data.sub_title}
           </h5>
-          <div className="w-60 md:w-96 text-1xl" dangerouslySetInnerHTML={{__html:data.long_description}} />
+          <div
+            className="w-60 md:w-96 text-1xl"
+            dangerouslySetInnerHTML={{ __html: data.long_description }}
+          />
         </div>
       </section>
       {search ? (
@@ -55,7 +56,7 @@ export default function Banner({data = []}) {
           <div className="flex justify-end mt-6 mr-6">
             <button
               onClick={() => setSearch(false)}
-              className="text-white bg-black border-2 h-8 w-8 rounded-full top-16 right-16 z-[999]"
+              className="text-white bg-black border-2 w-8 rounded-full top-16 right-16 z-[999]"
             >
               <ion-icon name="close-outline"></ion-icon>
             </button>

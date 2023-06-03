@@ -1,14 +1,14 @@
+import { useEffect, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Button from "../../components/Button";
 import TopTitle from "../../components/TopTitle";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { useState, useEffect } from "react";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 export default function Work() {
   const [work, setWork] = useState([]);
 
   useEffect(() => {
-    const loadData = async() => {
+    const loadData = async () => {
       const url = `${BASE_URL}/work-gallery`;
       try {
         const response = await fetch(url);
@@ -16,14 +16,14 @@ export default function Work() {
         if (Array.isArray(result.data)) {
           setWork(result.data);
         }
-      } catch(error) {
+      } catch (error) {
         console.log(error);
       }
     };
     loadData();
   }, []);
 
-  console.log(work)
+  console.log(work);
 
   const data = [
     {

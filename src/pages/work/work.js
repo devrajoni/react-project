@@ -1,7 +1,7 @@
 import Banner from "../../section/work/banner";
-import Category from "../../section/work/work";
-import Inquiry from "../../section/work/inquiry";
 import Footer from "../../section/work/footer";
+import Inquiry from "../../section/work/inquiry";
+import Category from "../../section/work/work";
 
 export default function Work() {
   return (

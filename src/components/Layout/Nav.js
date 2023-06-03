@@ -106,14 +106,14 @@ export default function Nav(props) {
               )}
             </li>
           ))}
-          <li>
+          {/* <li>
             <div
               className="text-xl md:ml-8 md:my-0 md:opacity-100 opacity-0 "
               onClick={() => props.setSearch(true)}
             >
               <ion-icon name="search-outline"></ion-icon>
             </div>
-          </li>
+          </li> */}
         </ul>
         <div
           className="text-3xl cursor-pointer lg:hidden"

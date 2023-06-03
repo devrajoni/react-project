@@ -1,10 +1,10 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Image from "../../../asset/activity_1.jpg";
 import HorizontalLine from "../../../components/HorizontalLine";
 import TopTitleTwo from "../../../components/TopTitleTwo";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import Card from "../../../components/Card";
 
-export default function Activity({data = []}) {
+export default function Activity({ data = [] }) {
   let heading = [
     {
       titleData: "Activity Tracker.",
@@ -12,7 +12,7 @@ export default function Activity({data = []}) {
     },
   ];
 
-  console.log("string", data)
+  console.log("string", data);
 
   return (
     <>
@@ -40,15 +40,25 @@ export default function Activity({data = []}) {
               <li className="PRICE">PRICE</li>
             </ul> */}
             <div>
-              {data[0]?.skill.map((item) =>
+              {data[0]?.skill.map((item) => (
                 <div className="pb-3">
                   <div className="flex justify-between">
-                    <label for="file" className="text-left">{item.name}</label>
+                    <label for="file" className="text-left">
+                      {item.name}
+                    </label>
                     <p>{item.percentage}</p>
                   </div>
-                  <progress className="!rounded-full" id="file" value={item.percentage.split('%')[0]} max="100" style={{width:"100%", height:"10px"}}>32%</progress>
+                  <progress
+                    className="!rounded-full"
+                    id="file"
+                    value={item.percentage.split("%")[0]}
+                    max="100"
+                    style={{ width: "100%", height: "10px" }}
+                  >
+                    32%
+                  </progress>
                 </div>
-              )}
+              ))}
               {/* <div>
                 <label for="file" style={{paddingRight:"10px"}}>BATTERY LIFE</label>
                 <progress id="file" value="40" max="100" style={{width:"100%", borderRadius:"30px", height:"10px"}}> 40% </progress>

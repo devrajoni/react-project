@@ -1,12 +1,8 @@
-import Image1 from "../../../asset/similar_1.jpg";
-import Image2 from "../../../asset/similar_2.jpg";
-import Image3 from "../../../asset/similar_3.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import TopTitleTwo from "../../../components/TopTitleTwo";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { useEffect, useState } from "react";
-import { BASE_URL, IMAGE_URL } from "../../../data/baseUrl";
+import { IMAGE_URL } from "../../../data/baseUrl";
 
-export default function Similar({data = []}) {
+export default function Similar({ data = [] }) {
   // const [project, setProject] = useState([]);
 
   // useEffect(() => {
@@ -25,7 +21,6 @@ export default function Similar({data = []}) {
   //   loadData();
   // }, []);
 
-
   let heading = [
     {
       titleData: "Similar Project",
@@ -43,7 +38,10 @@ export default function Similar({data = []}) {
         </div>
         <div class="grid grid-cols-12 gap-4 lg:gap-12 h-auto mb-12 drop-shadow-md text-white">
           {data.slice(0, 3).map((item) => (
-            <div key={item.id} className="transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              key={item.id}
+              className="transition testing overflow-hidden col-span-12 md:col-span-6 lg:col-span-4"
+            >
               <LazyLoadImage
                 src={`${IMAGE_URL}${item.image}`}
                 alt="similar"

@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import TopTitle from "../../components/TopTitle";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 export default function Service() {
-  let[about, setAbout] = useState([]);
+  let [about, setAbout] = useState([]);
   let heading = [
     {
       titleData: "About.",
@@ -15,27 +15,27 @@ export default function Service() {
   let [gallery, setGallery] = useState([]);
 
   useEffect(() => {
-    const dataLoad = async() => {
+    const dataLoad = async () => {
       const url = `${BASE_URL}/about-gallery`;
-      try{
+      try {
         const response = await fetch(url);
         const result = await response.json();
         setGallery(result.data);
-      }catch(error){
+      } catch (error) {
         console.log(error);
       }
     };
     dataLoad();
-  },[]);
+  }, []);
 
   useEffect(() => {
-    const loadData = async() =>{
+    const loadData = async () => {
       const url = `${BASE_URL}/about`;
-      try{
+      try {
         const response = await fetch(url);
         const result = await response.json();
         setAbout(result.data);
-      }catch(error){
+      } catch (error) {
         console.log(error);
       }
     };
@@ -97,7 +97,7 @@ export default function Service() {
           {about.map((item) => (
             <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-12 md:border-r-4 border-[#66FCF1]">
               <h3 className="text-bold text-2xl pb-4">{item.title}</h3>
-              <div dangerouslySetInnerHTML={{__html:item.description}} />
+              <div dangerouslySetInnerHTML={{ __html: item.description }} />
             </div>
           ))}
         </div>

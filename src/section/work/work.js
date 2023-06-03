@@ -1,18 +1,8 @@
-import { useState, useEffect } from "react";
-import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import architecture_1 from "../../asset/architecture_1.jpg";
-import architecture_2 from "../../asset/architecture_2.jpg";
-import architecture_3 from "../../asset/architecture_3.jpg";
-import architecture_4 from "../../asset/architecture_4.jpg";
-import design_1 from "../../asset/design_1.jpg";
-import design_2 from "../../asset/design_2.jpg";
-import design_3 from "../../asset/design_3.jpg";
-import photography_1 from "../../asset/photography_1.jpg";
-import photography_2 from "../../asset/photography_2.jpg";
-import photography_3 from "../../asset/photography_3.jpg";
-import TopTitleTwo from "../../components/TopTitleTwo";
+import { useEffect, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
+import TopTitleTwo from "../../components/TopTitleTwo";
+import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
 // const works = [
 //   {
@@ -90,32 +80,32 @@ export default function Work() {
   const [cat, setCat] = useState([]);
 
   useEffect(() => {
-    const loadData = async() => {
-    const url = `${BASE_URL}/work`;
-      try{
+    const loadData = async () => {
+      const url = `${BASE_URL}/work`;
+      try {
         const response = await fetch(url);
         const result = await response.json();
         setWork(result.data);
-      }catch(error){
+      } catch (error) {
         console.log(error);
       }
     };
     loadData();
-  },[]);
+  }, []);
 
   useEffect(() => {
-    const loadData = async() => {
-    const url = `${BASE_URL}/work-category`;
-      try{
+    const loadData = async () => {
+      const url = `${BASE_URL}/work-category`;
+      try {
         const response = await fetch(url);
         const result = await response.json();
         setCat(result.data);
-      }catch(error){
+      } catch (error) {
         console.log(error);
       }
     };
     loadData();
-  },[]);
+  }, []);
 
   console.log(works);
 
@@ -143,7 +133,7 @@ export default function Work() {
               All
             </button>
             {cat.map((item) => (
-                <button
+              <button
                 className={`${
                   category === `${item.name}` ? "bg-[#66FCF1] py-2 px-8" : ""
                 }`}
@@ -161,10 +151,16 @@ export default function Work() {
                 className="col-span-12 md:col-span-6 relative group transition duration-500"
                 key={data.id}
               >
-                <LazyLoadImage src={`${IMAGE_URL}${data.image}`} alt="image1" className="h-full" />
+                <Link to={`/work/${data.id}`}>
+                  <LazyLoadImage
+                    src={`${IMAGE_URL}${data.image}`}
+                    alt="image1"
+                    className="h-full"
+                  />
+                </Link>
                 <div className="absolute flex items-center justify-center inset-0 bg-black/0 group-hover:bg-black/50">
                   <p className="text-white text-bold text-2xl opacity-0 group-hover:opacity-100">
-                    <Link to='/single-project'>{data.title}</Link>
+                    <Link to={`/work/${data.id}`}>{data.title}</Link>
                   </p>
                 </div>
               </div>
