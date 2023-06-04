@@ -80,7 +80,7 @@ export default function Testimonial() {
           </div>
         </div>
         <div class="grid grid-cols-12 px-12 gap-6 mb-12 w-full text-white px-6 lg:px-20">
-          {testimonial.map((item) => (
+          {testimonial.slice(0, 4).map((item) => (
             <div className="col-span-12 md:col-span-6 lg:col-span-3 bg-[#0B0C10] px-8 pt-12 gap-6 mb-44 ring-4 ring-[#191919] relative">
               <div
                 className=" font-medium text-center"

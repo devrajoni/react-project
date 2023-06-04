@@ -67,7 +67,7 @@ export default function Service() {
     <>
       <section className="service-section mt-20 mb-32 md:mt-40 px-6 lg:px-8">
         <div className="lg:px-12 py-12">
-          {heading.map((headings) => (
+          {heading.slice(0, 6).map((headings) => (
             <TopTitle headings={headings} />
           ))}
         </div>

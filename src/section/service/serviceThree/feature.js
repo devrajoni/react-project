@@ -55,7 +55,7 @@ export default function Feature({ data = [] }) {
           ))}
         </div>
         <div class="grid grid-cols-12 gap-6 h-auto mb-12 drop-shadow-md text-white">
-          {data[0]?.feature?.map((cardContent) => (
+          {data[0]?.feature?.slice(0, 3).map((cardContent) => (
             <div
               className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-4 text-center"
               key={cardContent.id}

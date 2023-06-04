@@ -56,7 +56,7 @@ export default function Card() {
     <>
       <section className="mt-16 md:mt-32 px-6 h-full w-full lg:px-20">
         <div class="grid grid-cols-12 gap-6 drop-shadow-md">
-          {card.map((cardContent) => (
+          {card.slice(0, 6).map((cardContent) => (
             <div className="col-span-12 md:col-span-6 lg:col-span-4 px-12 py-6">
               <div
                 className="text-[#66FCF1] text-4xl mb-8 md:text-4xl"

@@ -40,7 +40,7 @@ export default function Team() {
             </div>
           </div>
           <div className="md:flex gap-4 pb-28">
-            {team.map((data) => (
+            {team.slice(0, 5).map((data) => (
               <div className="relative group">
                 <LazyLoadImage
                   src={`${IMAGE_URL}${data.image}`}
