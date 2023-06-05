@@ -1,12 +1,5 @@
 import { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Icon1 from "../../asset/icon_1.png";
-import Icon2 from "../../asset/icon_2.png";
-import Icon3 from "../../asset/icon_3.png";
-import Icon4 from "../../asset/icon_4.png";
-import Icon5 from "../../asset/icon_5.png";
-import Icon6 from "../../asset/icon_6.png";
-import Icon7 from "../../asset/icon_7.png";
 import TopTitle from "../../components/TopTitle";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
@@ -110,7 +103,7 @@ export default function Testimonial() {
             </div>
           ))}
         </div>
-        <div className="grid grid-rows-7 md:grid-rows-1 grid-flow-col gap-8 lg:gap-24 px-12 lg:px-40 pt-12">
+        {/* <div className="grid grid-rows-7 md:grid-rows-1 grid-flow-col gap-8 lg:gap-24 px-12 lg:px-40 pt-12">
           <LazyLoadImage
             src={Icon1}
             alt="icon1"
@@ -146,7 +139,7 @@ export default function Testimonial() {
             alt="icon1"
             className="h-8 md:h-16 w-8 md:w-16"
           />
-        </div>
+        </div> */}
         <div className="flex justify-center item-center p-24">
           <hr className="h-20 w-1 bg-[#66FCF1]"></hr>
         </div>
