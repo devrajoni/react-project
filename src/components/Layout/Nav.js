@@ -59,8 +59,8 @@ export default function Nav(props) {
     <div
       className={`${
         navbar
-          ? "fixed left-0 right-0 w-full z-50 h-16 bg-black"
-          : "fixed left-0 right-0 w-full z-50 h-16"
+          ? "fixed left-0 right-0 w-full z-50 h-16 flex items-center bg-black"
+          : "fixed left-0 right-0 w-full z-50  h-16"
       }`}
     >
       <nav className="flex items-center font-medium justify-between w-full text-[#ffffff] py-4 lg:py-4 px-12 md:px-20">
@@ -156,7 +156,7 @@ function SideMenu({ isOpen, setOpen }) {
         isOpen ? "translate-x-0" : "-translate-x-full"
       } block lg:hidden h-screen z-50 transition duration-500`}
     >
-      <ul className="block lg:hidden px-6 absolute top-0 left-0  h-full w-full bg-black text-white">
+      <ul className="block lg:hidden px-6 absolute top-0 left-0  h-full w-full  bg-black text-white">
         {/* {links.map((link) => (
           <li key={link.name}>
             <Link to={link.link}>{link.name}</Link>
@@ -198,7 +198,7 @@ function SideMenu({ isOpen, setOpen }) {
         <li>
           <Link
             to="https://afro-jobs.com/login"
-            className="text-white-800 font-bold hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4"
+            className="text-white-800 lg:font-bold hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4"
           >
             Login
           </Link>
