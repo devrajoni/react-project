@@ -93,9 +93,9 @@ export default function Service() {
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-12 gap-4 pt-12 md:mb-0 w-full bg-slate-900 text-left">
+        <div class="grid grid-cols-12 gap-4 pt-12 md:mb-0 w-full  text-left">
           {about.map((item) => (
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-12 md:border-r-4 border-[#66FCF1]">
+            <div className="col-span-12 md:col-span-6 lg:col-span-4 p-12 md:border-r-4 border-[#66FCF1]">
               <h3 className="text-bold text-2xl pb-4">{item.title}</h3>
               <div dangerouslySetInnerHTML={{ __html: item.description }} />
             </div>

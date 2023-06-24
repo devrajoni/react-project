@@ -29,14 +29,14 @@ export default function ContactCard() {
 
   return (
     <>
-      <section className=" mt-20 md:mt-32 mb-32 text-white bg-[#0B0C10]">
+      <section className=" pb-32 text-white bg-[#0B0C10]">
         <div className="py-4 lg:py-16">
           {heading.map((headings) => (
             <TopTitle headings={headings} />
           ))}
         </div>
 
-        <div class="grid grid-cols-12 md:gap-4 px-6 lg:px-20 pt-12 md:mb-0 w-full bg-slate-900 text-left ">
+        <div class="grid grid-cols-12 md:gap-4 px-6 lg:px-20 pt-12 md:mb-0 w-full text-left ">
           {card.slice(0, 3).map((data) => (
             <div
               className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-12 md:border-r-4 border-[#66FCF1] text-center"

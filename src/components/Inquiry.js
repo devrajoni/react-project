@@ -33,23 +33,36 @@ export default function Inquiry() {
           <div className="text-center">
             <HorizontalLine />
             <div className="text-2xl mt-20 flex justify-center item-center gap-8 mb-8">
-              <div className="ring-2 ring-[#66FCF1] h-12 w-12 rounded-full p-2 ">
+              <div className="ring-2 ring-[#66FCF1] h-12 w-12 rounded-full  flex items-center justify-center">
                 <Link to={social.facebook} target="_blank">
-                  <ion-icon name="logo-facebook" className=""></ion-icon>
+                  <ion-icon
+                    name="logo-facebook"
+                    className=" flex justify-center items-center h-full w-full "
+                  ></ion-icon>
                 </Link>
               </div>
-              <div className="ring-2 ring-[#66FCF1] h-12 w-12 rounded-full p-2 ">
+              <div className="ring-2 ring-[#66FCF1] h-12 w-12 rounded-full flex items-center justify-center">
                 <Link to={social.twitter} target="_blank">
-                  <ion-icon name="logo-twitter"></ion-icon>
+                  <ion-icon
+                    name="logo-twitter"
+                    className=" flex justify-center items-center h-full w-full"
+                  ></ion-icon>
                 </Link>
               </div>
-              <div className="ring-2 ring-[#66FCF1] h-12 w-12 rounded-full p-2 ">
+              <div className="ring-2 ring-[#66FCF1] h-12 w-12 rounded-full  flex items-center justify-center">
                 <Link to={social.instagram} target="_blank">
-                  <ion-icon name="logo-instagram"></ion-icon>
+                  <ion-icon
+                    name="logo-instagram"
+                    className=" flex justify-center items-center h-full w-full "
+                  ></ion-icon>
                 </Link>
               </div>
-              <div className="ring-2 ring-[#66FCF1] h-12 w-12 rounded-full p-2 ">
-                <Link to={social.youtube} target="_blank">
+              <div className="ring-2 ring-[#66FCF1] h-12 w-12 rounded-full flex items-center justify-center">
+                <Link
+                  to={social.youtube}
+                  target="_blank"
+                  className=" flex justify-center items-center h-full w-full"
+                >
                   <ion-icon name="logo-youtube"></ion-icon>
                 </Link>
               </div>

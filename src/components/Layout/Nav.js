@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { DataContext } from "../../App";
 import { IMAGE_URL } from "../../data/baseUrl";
 
@@ -92,7 +92,11 @@ export default function Nav(props) {
                       <li key={menu.name}>
                         <Link
                           to={menu.link}
-                          className="text-white-800 text-base font-bold hover:ring-offset-4 hover:ring-b inline-block"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "ring-b ring-offset-4 text-white-800 text-base hover:ring-offset-4 hover:ring-b inline-block text-red bg-white"
+                              : "text-white-800 text-base hover:ring-offset-4 hover:ring-b inline-block"
+                          }
                         >
                           {menu.name}
                         </Link>
@@ -172,26 +176,31 @@ function SideMenu({ isOpen, setOpen }) {
                 <p className="text-white-800 hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4">
                   {data.name}
                 </p>
+                {/* text-white-800 text-base hover:ring-offset-4 hover:ring-b inline-block */}
                 <ul className="absolute translate-y-12 invisible group-hover:translate-y-0 transition-transform duration-300 ease-in group-hover:visible bg-slate-900 w-56 p-4 rounded">
                   {data?.subMenu?.map((menu) => (
                     <li key={menu.name}>
-                      <Link
+                      <NavLink
                         to={menu.link}
-                        className="text-white-800 text-base hover:ring-offset-4 hover:ring-b inline-block"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "ring-b ring-offset-4 text-white-800 text-base hover:ring-offset-4 hover:ring-b inline-block text-red bg-white"
+                            : "text-white-800 text-base hover:ring-offset-4 hover:ring-b inline-block"
+                        }
                       >
                         {menu.name}
-                      </Link>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>
               </div>
             ) : (
-              <Link
+              <NavLink
                 to={data.link}
                 className="text-white-800 hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4"
               >
                 {data.name}
-              </Link>
+              </NavLink>
             )}
           </li>
         ))}

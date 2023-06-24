@@ -1,6 +1,5 @@
 import Banner from "../../section/service/serviceOne/banner";
 import Services from "../../section/service/serviceOne/service";
-import Skill from "../../section/service/serviceOne/skill";
 import Space from "../../section/service/serviceOne/space";
 import About from "../../section/service/serviceTwo/about";
 import Footer from "../../section/service/serviceTwo/footer";
@@ -17,7 +16,7 @@ export default function ServiceTwo() {
         <Work />
         <Space />
         <About />
-        <Skill />
+        {/* <Skill /> */}
         <Inquiry />
         <Footer />
       </div>
