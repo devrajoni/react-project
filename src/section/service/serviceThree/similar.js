@@ -30,7 +30,7 @@ export default function Similar({ data = [] }) {
 
   return (
     <>
-      <section className="mt-16 md:mt-24 md:px-20 px-6">
+      <section className="mt-16 md:mt-24 container">
         <div className="flex justify-center items-center h-full w-full pb-16">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />

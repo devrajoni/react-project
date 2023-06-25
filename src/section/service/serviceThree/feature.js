@@ -26,29 +26,10 @@ export default function Feature({ data = [] }) {
       subTitle: "check out its special features",
     },
   ];
-  console.log(data);
-
-  // let cardContents = [
-  //     {
-  //         icon:'bar-chart-outline',
-  //         title:'Water Proof',
-  //         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.​',
-  //     },
-  //     {
-  //         icon:'color-filter-outline',
-  //         title:'UX Designs',
-  //         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.',
-  //     },
-  //     {
-  //         icon:'cash-outline',
-  //         title:'Cheap Price',
-  //         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.',
-  //     },
-  //   ];
 
   return (
     <>
-      <section className=" mt-16 mb-32  px-6 md:mt-24 lg:px-20">
+      <section className=" mt-16 mb-32  md:mt-24 container">
         <div className="flex justify-center items-center h-full w-full mb-16">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />
@@ -67,9 +48,9 @@ export default function Feature({ data = [] }) {
                   className="w-auto h-8 object-cover object-center"
                 />
               </div>
-              <h1 className="font-bold text-4xl pb-4">{cardContent.title}</h1>
+              <h1 className="font-bold text-2xl pb-4">{cardContent.title}</h1>
               <p
-                className="text-1xl pb-4"
+                className=" pb-4"
                 dangerouslySetInnerHTML={{ __html: cardContent.description }}
               ></p>
             </div>

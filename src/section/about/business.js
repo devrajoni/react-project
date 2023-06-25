@@ -23,7 +23,7 @@ export default function Business() {
 
   return (
     <>
-      <section className=" px-6 lg:px-20 gap-y-4 mt-20 md:mt-40">
+      <section className="container gap-y-4 mt-20 md:mt-40">
         <div>
           <div class="grid grid-cols-12 sm:gap-y-8 md:gap-12 h-auto text-white">
             <div className="col-span-12 md:col-span-12 lg:col-span-6">

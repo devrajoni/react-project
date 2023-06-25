@@ -52,7 +52,6 @@ export default function Banner() {
 
     loadData();
   }, []);
-  // console.log(banner.image)
 
   let cardContents = [
     {

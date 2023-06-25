@@ -32,8 +32,8 @@ export default function Team() {
     <>
       <section className="mt-20 md:mt-40">
         <div className="relative">
-          <div className="px-6 lg:px-20 text-white py-20 bg-[#121212]">
-            <div className="content">
+          <div className=" text-white py-20 bg-[#121212]">
+            <div className="container content">
               {data.map((headings) => (
                 <TopTitle headings={headings} />
               ))}

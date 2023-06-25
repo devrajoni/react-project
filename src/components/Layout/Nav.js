@@ -63,7 +63,7 @@ export default function Nav(props) {
           : "fixed left-0 right-0 w-full z-50  h-16"
       }`}
     >
-      <nav className="flex items-center font-medium justify-between w-full text-[#ffffff] py-4 lg:py-4 px-12 md:px-20">
+      <nav className="flex items-center font-medium justify-between w-full text-[#ffffff] py-4 lg:py-4 container">
         <div className=" font-[poppins]">
           <Link to="/">
             <LazyLoadImage
@@ -105,12 +105,16 @@ export default function Nav(props) {
                   </ul>
                 </div>
               ) : (
-                <Link
+                <NavLink
                   to={data.link}
-                  className="text-white-900 hover:text-green-400 font-bold duration-500 hover:underline hover:underline-offset-[14px] py-4"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-green-400 hover:text-green-400 font-bold duration-500 py-4 underline underline-offset-[12px]"
+                      : "text-white-900 hover:text-green-400 font-bold duration-500 hover:underline hover:underline-offset-[14px] py-4"
+                  }
                 >
                   {data.name}
-                </Link>
+                </NavLink>
               )}
             </li>
           ))}
@@ -160,7 +164,7 @@ function SideMenu({ isOpen, setOpen }) {
         isOpen ? "translate-x-0" : "-translate-x-full"
       } block lg:hidden h-screen z-50 transition duration-500`}
     >
-      <ul className="block lg:hidden px-6 absolute top-0 left-0  h-full w-full  bg-black text-white">
+      <ul className="block lg:hidden container absolute top-0 left-0  h-full w-full  bg-black text-white">
         {/* {links.map((link) => (
           <li key={link.name}>
             <Link to={link.link}>{link.name}</Link>
@@ -197,7 +201,11 @@ function SideMenu({ isOpen, setOpen }) {
             ) : (
               <NavLink
                 to={data.link}
-                className="text-white-800 hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-green-400 hover:text-green-400 font-bold duration-500 py-4 underline underline-offset-[14px]"
+                    : "text-white-900 hover:text-green-400 font-bold duration-500 hover:underline hover:underline-offset-[14px] py-4"
+                }
               >
                 {data.name}
               </NavLink>

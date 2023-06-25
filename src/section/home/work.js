@@ -22,9 +22,6 @@ export default function Work() {
     };
     loadData();
   }, []);
-
-  console.log(work);
-
   const data = [
     {
       titleData: "Works.",
@@ -36,7 +33,7 @@ export default function Work() {
     <>
       <section className="mt-16 md:mt-28">
         <div className="mt-12 md:mt-16 text-white  bg-[#121212]">
-          <div className="px-6  py-12 lg:px-16 flex justify-between">
+          <div className="container pt-20  pb-12 flex justify-between">
             <div className="content">
               {data.map((headings, index) => (
                 <TopTitle key={index} headings={headings} />

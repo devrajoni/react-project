@@ -62,13 +62,13 @@ export default function Service() {
 
   return (
     <>
-      <section className=" mt-20 px-6 md:mt-40 lg:px-8 text-white">
-        <div className="lg:px-12 py-12">
+      <section className="container mt-20 md:mt-40 text-white">
+        <div className="py-12">
           {heading.map((headings) => (
             <TopTitle headings={headings} />
           ))}
         </div>
-        <div className="grid grid-cols-12 gap-4 lg:px-12">
+        <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 lg:col-span-6">
             <LazyLoadImage
               src={`${IMAGE_URL}${gallery.image_one}`}

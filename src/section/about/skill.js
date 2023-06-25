@@ -23,7 +23,7 @@ export default function Skill() {
 
   return (
     <>
-      <section className="skill-section  px-6 lg:px-20 bg-[#121212]">
+      <section className="skill-section container bg-[#121212]">
         <div>
           <div class="grid grid-cols-12 gap-y-4 lg:gap-12 h-auto">
             <div className="col-span-12 md:col-span-12 lg:col-span-6 text-left text-white mb-16  mt-20 lg:mt-32">

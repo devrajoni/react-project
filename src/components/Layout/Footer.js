@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <>
       <div className="">
-        <div className="grid grid-cols-12 gap-6 lg:gap-28 px-6 lg:px-20 pt-12 md:pt-16 pb-16 text-white text-left">
+        <div className="grid grid-cols-12 gap-6 lg:gap-28 container pt-12 md:pt-16 pb-16 text-white text-left">
           <div className="col-span-12 md:col-span-3 lg:col-span-3">
             <p>
               <Link to="/">
@@ -94,7 +94,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="pb-8 px-6 lg:px-20">
+      <div className="pb-8 container">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 text-white mt-8 text-sm">
           <p>Copyright {setting.copyright_year} All rights reserved</p>
           <div className="flex gap-6 text-white">

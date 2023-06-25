@@ -5,12 +5,10 @@ import {
 } from "react-share";
 
 export default function WorkDetails({ data = {} }) {
-  console.log(data);
-  // console.log(window.location)
   return (
     <>
       <section className="bg-[#121212]">
-        <div className="container px-6 lg:px-20  py-12">
+        <div className="container py-12">
           <div class="grid grid-cols-12 gap-y-4 md:gap-12 h-auto drop-shadow-md text-white">
             <div className="col-span-12 md:col-span-8">
               <h1 className="bold text-4xl">{data.title}</h1>
