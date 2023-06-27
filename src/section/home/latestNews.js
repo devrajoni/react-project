@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Link } from "react-router-dom";
 import TopTitleTwo from "../../components/TopTitleTwo";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
@@ -38,27 +37,27 @@ export default function LatestNews() {
         </div>
         <div className="grid grid-cols-12 gap-6">
           {latest.slice(0, 3).map((data) => (
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 h-full">
+            <div className="col-span-12 md:col-span-6 lg:col-span-4 h-full  text-white  bg-[#0B0C10] border-x-4 flex flex-col justify-between border-b-4 border-[#191919] ">
               <div>
-                <LazyLoadImage
-                  src={`${IMAGE_URL}${data.image}`}
-                  alt="test"
-                  className="w-full rounded-t-lg"
-                />
-              </div>
-              <div className="flex justify-center h-full">
-                <div className="bg-[#0B0C10] border-x-4   border-b-4  border-[#191919] drop-shadow-md text-white p-8">
+                <div>
+                  <LazyLoadImage
+                    src={`${IMAGE_URL}${data.image}`}
+                    alt="test"
+                    className="w-full rounded-t-lg"
+                  />
+                </div>
+                <div className="px-8">
                   <h1 className="font-bold text-2xl pt-2">{data.title}</h1>
                   <div
-                    className="text-1xl pt-4 pb-8"
+                    className="text-1xl pt-4"
                     dangerouslySetInnerHTML={{ __html: data.description }}
                   />
-                  <Link to="/blog">
-                    <button className="btn ring-2 ring-[#66FCF1] p-4 hover:opacity-50">
-                      Read More
-                    </button>
-                  </Link>
                 </div>
+              </div>
+              <div className="p-8">
+                <button className="btn ring-2 ring-[#66FCF1] p-4 hover:opacity-50">
+                  Read More
+                </button>
               </div>
             </div>
           ))}

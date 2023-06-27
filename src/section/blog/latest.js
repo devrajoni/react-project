@@ -36,25 +36,27 @@ export default function Latest() {
         </div>
         <div className="grid grid-cols-12 gap-6 flex  h-full">
           {latest.slice(0, 6).map((data) => (
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 h-full ">
+            <div className="col-span-12 md:col-span-6 lg:col-span-4 h-full  text-white  bg-[#0B0C10] border-x-4 flex flex-col justify-between border-b-4 border-[#191919] ">
               <div>
-                <LazyLoadImage
-                  src={`${IMAGE_URL}${data.image}`}
-                  alt="test"
-                  className="w-full rounded-t-lg"
-                />
-              </div>
-              <div className=" gap-4 flex">
-                <div className="bg-[#0B0C10] border-x-4 border-b-4 border-[#191919] text-white p-8">
+                <div>
+                  <LazyLoadImage
+                    src={`${IMAGE_URL}${data.image}`}
+                    alt="test"
+                    className="w-full rounded-t-lg"
+                  />
+                </div>
+                <div className="px-8">
                   <h1 className="font-bold text-2xl pt-2">{data.title}</h1>
                   <div
-                    className="text-1xl pt-4 pb-8"
+                    className="text-1xl pt-4"
                     dangerouslySetInnerHTML={{ __html: data.description }}
                   />
-                  <button className="btn ring-2 ring-[#66FCF1] p-4 hover:opacity-50">
-                    Read More
-                  </button>
                 </div>
+              </div>
+              <div className="p-8">
+                <button className="btn ring-2 ring-[#66FCF1] p-4 hover:opacity-50">
+                  Read More
+                </button>
               </div>
             </div>
           ))}

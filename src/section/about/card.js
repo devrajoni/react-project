@@ -21,7 +21,7 @@ export default function Card() {
 
   return (
     <>
-      <section className="mt-16 md:mt-32 h-full w-full container">
+      <section className="my-32 h-full w-full container">
         <div class="grid grid-cols-12 gap-6 drop-shadow-md">
           {card.slice(0, 6).map((cardContent) => (
             <div className="relative col-span-12 md:col-span-6 lg:col-span-4 border border-[#66FCF1] rounded-md border-opacity-20 drop-shadow-xl p-6">

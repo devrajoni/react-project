@@ -73,7 +73,9 @@ export default function Inquiry() {
             <h3 className="text-4xl font-bold text-center pb-12">
               Have any project in mind?
             </h3>
-            <Button name="Make Inquiry" />
+            <Link to="/contact">
+              <Button name="Make Inquiry" />
+            </Link>
           </div>
         </div>
       </section>

@@ -90,7 +90,7 @@ export default function Banner() {
           <Button name="3D Portfolio" />
         </div>
       </section>
-      <div class="grid grid-cols-12 gap-6 px-6 lg:px-20 mb-32 h-auto ">
+      <div class="grid grid-cols-12 gap-6 container h-auto ">
         {service.slice(0, 3).map((item) => (
           <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#121212] px-12 py-12 hover:ring-4 ring-[#66FCF1]">
             <div className="text-[#66FCF1] text-4xl mb-8 md:text-4xl">

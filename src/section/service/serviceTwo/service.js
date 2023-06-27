@@ -63,7 +63,7 @@ export default function Services() {
 
   return (
     <>
-      <section className="service-section mt-16 md:mt-24 container">
+      <section className="service-section my-20 container">
         <div className="flex justify-center items-center h-full w-full mb-16">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />

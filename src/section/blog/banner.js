@@ -35,7 +35,7 @@ export default function Banner() {
   return (
     <>
       <section
-        className="header-section relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
+        className="h-[400px] lg:h-[600px] relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}
       >
         <Nav setSearch={setSearch} />

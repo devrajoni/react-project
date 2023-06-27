@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import TopTitle from "../../components/TopTitle";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
@@ -39,7 +40,9 @@ export default function Work() {
                 <TopTitle key={index} headings={headings} />
               ))}
             </div>
-            <Button name="View All" />
+            <Link to="/work">
+              <Button name="View All" />
+            </Link>
           </div>
         </div>
         <div className="flex">

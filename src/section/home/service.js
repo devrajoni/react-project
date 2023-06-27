@@ -65,7 +65,7 @@ export default function Service() {
 
   return (
     <>
-      <section className="service-section mt-20  md:mt-40 container">
+      <section className="service-section mt-20 mb-32 container">
         <div className="py-12">
           {heading.slice(0, 6).map((headings) => (
             <TopTitle headings={headings} />

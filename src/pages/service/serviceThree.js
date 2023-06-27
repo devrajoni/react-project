@@ -10,7 +10,6 @@ import Footer from "../../section/service/serviceThree/footer";
 import Image from "../../section/service/serviceThree/image";
 import Inquiry from "../../section/service/serviceThree/inquiry";
 import Similar from "../../section/service/serviceThree/similar";
-import Space from "../../section/service/serviceThree/space";
 
 export default function ServiceThree() {
   const { id } = useParams();
@@ -48,7 +47,6 @@ export default function ServiceThree() {
         {service.data && <Banner data={service?.data[0]} />}
         <Feature data={service?.data} />
         <Image />
-        <Space />
         <Activity data={service?.data} />
         <Similar data={service?.services} />
         <Inquiry />

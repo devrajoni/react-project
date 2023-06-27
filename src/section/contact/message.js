@@ -90,7 +90,7 @@ export default function FooterCard() {
                     placeholder="Your Message"
                     {...register("message", { required: true })}
                     className="bg-[#242424] w-full p-4"
-                    rows={4}
+                    rows={6}
                   />
                   {errors.message && <span>This field is required</span>}
                 </div>

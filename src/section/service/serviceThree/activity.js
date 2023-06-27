@@ -1,6 +1,5 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Image from "../../../asset/activity_1.jpg";
-import HorizontalLine from "../../../components/HorizontalLine";
 import TopTitleTwo from "../../../components/TopTitleTwo";
 // import Card from "../../../components/Card";
 
@@ -51,19 +50,8 @@ export default function Activity({ data = [] }) {
                     </progress>
                   </div>
                 ))}
-                {/* <div>
-                <label for="file" style={{paddingRight:"10px"}}>BATTERY LIFE</label>
-                <progress id="file" value="40" max="100" style={{width:"100%", borderRadius:"30px", height:"10px"}}> 40% </progress>
-              </div>
-              <div>
-                <label for="file">DESIGN</label>
-                <progress id="file" value="50" max="100" style={{width:"100%", borderRadius:"30px", height:"10px"}}> 50% </progress>
-              </div> */}
               </div>
             </div>
-          </div>
-          <div className="py-20">
-            <HorizontalLine />
           </div>
         </div>
       </section>
