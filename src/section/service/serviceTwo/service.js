@@ -63,13 +63,13 @@ export default function Services() {
 
   return (
     <>
-      <section className="service-section mt-16 mb-32 md:mt-24 px-6 lg:px-20">
+      <section className="service-section mt-16 md:mt-24 container">
         <div className="flex justify-center items-center h-full w-full mb-16">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />
           ))}
         </div>
-        <div class="grid grid-cols-12 gap-6 h-auto mb-12 drop-shadow-md">
+        <div class="grid grid-cols-12 gap-6 h-auto  drop-shadow-md">
           {service.map((item) => (
             <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#121212] px-12 py-12 border-b-4 border-white hover:border-[#66FCF1] drop-shadow-2xl">
               <div className="text-[#66FCF1] text-4xl mb-8 md:text-4xl">

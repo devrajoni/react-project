@@ -62,7 +62,7 @@ export default function Service() {
 
   return (
     <>
-      <section className="container mt-20 md:mt-40 text-white">
+      <section className="container mt-20 text-white">
         <div className="py-12">
           {heading.map((headings) => (
             <TopTitle headings={headings} />
@@ -94,8 +94,14 @@ export default function Service() {
           </div>
         </div>
         <div class="grid grid-cols-12 gap-4 pt-12 md:mb-0 w-full  text-left">
-          {about.map((item) => (
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 p-12 md:border-r-4 border-[#66FCF1]">
+          {about.map((item, index) => (
+            <div
+              className={
+                index === 0
+                  ? "col-span-12 md:col-span-6 lg:col-span-4 p-4 md:border-l-4 md:border-r-4 border-[#66FCF1]"
+                  : "col-span-12 md:col-span-6 lg:col-span-4 p-4 md:border-r-4 border-[#66FCF1]"
+              }
+            >
               <h3 className="text-bold text-2xl pb-4">{item.title}</h3>
               <div dangerouslySetInnerHTML={{ __html: item.description }} />
             </div>

@@ -124,9 +124,11 @@ export default function Work() {
             ))}
           </div>
           <div className="flex justify-center ">
-            <div className=" flex gap-x-4 md:gap-x-8 text-white text-xs md:text-2xl mb-16">
+            <div className=" group flex gap-x-4 md:gap-x-8 text-white text-xs md:text-2xl mb-16">
               <button
-                className={`${category === "" ? "bg-[#66FCF1] py-2 px-8" : ""}`}
+                className={`${
+                  category === "" ? "bg-[#66FCF1] text-slate-950 py-2 px-8" : ""
+                }`}
                 onClick={() => setCategory("")}
               >
                 All
@@ -134,7 +136,9 @@ export default function Work() {
               {cat.map((item) => (
                 <button
                   className={`${
-                    category === `${item.name}` ? "bg-[#66FCF1] py-2 px-8" : ""
+                    category === `${item.name}`
+                      ? "bg-[#66FCF1] text-slate-950 py-2 px-8"
+                      : ""
                   }`}
                   onClick={() => setCategory(`${item.name}`)}
                 >

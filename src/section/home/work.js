@@ -31,8 +31,8 @@ export default function Work() {
 
   return (
     <>
-      <section className="mt-16 md:mt-28">
-        <div className="mt-12 md:mt-16 text-white  bg-[#121212]">
+      <section className="">
+        <div className=" text-white  bg-[#121212]">
           <div className="container pt-20  pb-12 flex justify-between">
             <div className="content">
               {data.map((headings, index) => (

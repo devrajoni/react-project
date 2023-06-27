@@ -19,45 +19,12 @@ export default function Card() {
     loadData();
   }, []);
 
-  // let cardContents = [
-  //     {
-  //         icon:'stats-chart-outline',
-  //         title:'Excellent Design',
-  //         text:'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
-  //     },
-  //     {
-  //         icon:'pencil-outline',
-  //         title:'Brand manual',
-  //         text:'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
-  //     },
-  //     {
-  //         icon:'people-circle-outline',
-  //         title:'SEO',
-  //         text:'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
-  //     },
-  //     {
-  //         icon:'globe-outline',
-  //         title:'Social Media',
-  //         text:'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
-  //     },
-  //     {
-  //         icon:'triangle-outline',
-  //         title:'Website',
-  //         text:'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
-  //     },
-  //     {
-  //         icon:'stats-chart-outline',
-  //         title:'Mobile Apps',
-  //         text:'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
-  //     }
-  //   ];
-
   return (
     <>
       <section className="mt-16 md:mt-32 h-full w-full container">
         <div class="grid grid-cols-12 gap-6 drop-shadow-md">
           {card.slice(0, 6).map((cardContent) => (
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 px-12 py-6">
+            <div className="relative col-span-12 md:col-span-6 lg:col-span-4 border border-[#66FCF1] rounded-md border-opacity-20 drop-shadow-xl p-6">
               <div
                 className="text-[#66FCF1] text-4xl mb-8 md:text-4xl"
                 key={cardContent.id}
@@ -73,7 +40,9 @@ export default function Card() {
               </h1>
               <div
                 className="font-medium text-white"
-                dangerouslySetInnerHTML={{ __html: cardContent.description }}
+                dangerouslySetInnerHTML={{
+                  __html: cardContent.description,
+                }}
               />
             </div>
           ))}

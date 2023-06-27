@@ -29,8 +29,8 @@ export default function Feature({ data = [] }) {
 
   return (
     <>
-      <section className=" mt-16 mb-32  md:mt-24 container">
-        <div className="flex justify-center items-center h-full w-full mb-16">
+      <section className="py-16 container">
+        <div className="flex justify-center items-center h-full w-full mb-12">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />
           ))}
@@ -38,7 +38,7 @@ export default function Feature({ data = [] }) {
         <div class="grid grid-cols-12 gap-6 h-auto mb-12 drop-shadow-md text-white">
           {data[0]?.feature?.slice(0, 3).map((cardContent) => (
             <div
-              className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-4 text-center"
+              className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] text-center border border-[#66FCF1] rounded-md border-opacity-20 drop-shadow-xl p-6"
               key={cardContent.id}
             >
               <div className="flex item-center justify-center pb-4 text-[#66FCF1]">

@@ -29,7 +29,7 @@ export default function Inquiry() {
         style={{ backgroundImage: `url(${Quiry})` }}
       >
         {/* <img src={Quiry} alt="quiry" className="absolute inset-0" /> */}
-        <div className="container flex justify-center item-center py-12">
+        <div className="container flex justify-center item-center py-20">
           <div className="text-center">
             <HorizontalLine />
             <div className="text-2xl mt-20 flex justify-center item-center gap-8 mb-8">

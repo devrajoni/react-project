@@ -37,9 +37,13 @@ export default function ContactCard() {
         </div>
 
         <div class="grid grid-cols-12 md:gap-4 container pt-12 md:mb-0 w-full text-left ">
-          {card.slice(0, 3).map((data) => (
+          {card.slice(0, 3).map((data, index) => (
             <div
-              className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-4 md:border-r-4 border-[#66FCF1] text-center"
+              className={
+                index === 0
+                  ? "col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-4 md:border-l-4 md:border-r-4 border-[#66FCF1] text-center"
+                  : "col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-4 md:border-r-4 border-[#66FCF1] text-center"
+              }
               key={data.id}
             >
               <div className="text-[#66FCF1] flex item-center justify-center md:text-4xl mb-3">

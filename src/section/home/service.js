@@ -65,14 +65,14 @@ export default function Service() {
 
   return (
     <>
-      <section className="service-section mt-20 mb-32 md:mt-40 container">
+      <section className="service-section mt-20  md:mt-40 container">
         <div className="py-12">
           {heading.slice(0, 6).map((headings) => (
             <TopTitle headings={headings} />
           ))}
         </div>
         <div class="grid grid-cols-12 gap-6 h-auto mb-12 drop-shadow-md ">
-          {service.map((item) => (
+          {service.slice(3, 9).map((item) => (
             <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#121212] p-8 border-b-4 border-white hover:border-[#66FCF1] drop-shadow-2xl">
               <div className="text-[#66FCF1] text-4xl mb-8 md:text-4xl">
                 <LazyLoadImage

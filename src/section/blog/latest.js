@@ -28,15 +28,15 @@ export default function Latest() {
   ];
   return (
     <>
-      <section className="blog-section container h-auto">
+      <section className="blog-section container">
         <div className="flex justify-center items-center h-full mt-12 mb-20 md:mt-24 ">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />
           ))}
         </div>
-        <div className="grid grid-cols-12 gap-8 h-auto">
+        <div className="grid grid-cols-12 gap-6 h-auto mb-12 drop-shadow-md">
           {latest.slice(0, 6).map((data) => (
-            <div className="col-span-12 md:col-span-6 lg:col-span-4">
+            <div className="col-span-12 md:col-span-6 lg:col-span-4 gap-6">
               <div>
                 <LazyLoadImage
                   src={`${IMAGE_URL}${data.image}`}
