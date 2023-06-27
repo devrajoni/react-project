@@ -73,7 +73,7 @@ export default function Testimonial() {
               ))}
             </div>
           </div>
-          <div class="grid grid-cols-12  gap-6 mb-12 w-full text-white">
+          {/* <div class="grid grid-cols-12  gap-6 mb-12 w-full text-white">
             {testimonial.slice(0, 4).map((item) => (
               <div className="col-span-12 md:col-span-6 lg:col-span-3 bg-[#0B0C10] px-8 pt-12 gap-6 ring-4 ring-[#191919] relative">
                 <div
@@ -98,6 +98,45 @@ export default function Testimonial() {
                       />
                     </div>
                     <div className="pt-4">
+                      <h3 className="font-bold">{item.name}</h3>
+                      <p className="text-xs">{item.designation}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div> */}
+          <div class="grid grid-cols-12  gap-6 mb-12 w-full text-white">
+            {testimonial.slice(0, 4).map((item) => (
+              <div className="col-span-12 md:col-span-6 lg:col-span-3 h-full w-full ">
+                <div className="bg-[#0B0C10] px-8 pt-12 gap-6 ring-4 ring-[#191919] h-full w-full">
+                  <div
+                    className=" font-medium text-center"
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  />
+                  <div className="py-8 flex justify-center items-center gap-3 text-1xl font-bold text-[#FEC42D]">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <div className="grid grid-cols-12 gap-4 text-white mt-8">
+                  <div className="col-span-4">
+                    <div>
+                      <LazyLoadImage
+                        key={item.id}
+                        src={`${IMAGE_URL}${item.image}`}
+                        className="rounded-full"
+                        style={{ height: "80px", width: "100px" }}
+                        alt="testimonial1"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="col-span-8">
+                    <div className="p-4 w-full ring-4 ring-[#191919] bg-[#0B0C10]">
                       <h3 className="font-bold">{item.name}</h3>
                       <p className="text-xs">{item.designation}</p>
                     </div>
@@ -144,7 +183,7 @@ export default function Testimonial() {
             className="h-8 md:h-16 w-8 md:w-16"
           />
         </div> */}
-        <div className="flex justify-center item-center container py-20">
+        <div className="flex justify-center item-center container pt-28 pb-20">
           <hr className="h-20 w-1 bg-[#66FCF1]"></hr>
         </div>
       </section>

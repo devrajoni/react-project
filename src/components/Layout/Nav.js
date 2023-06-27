@@ -84,7 +84,7 @@ export default function Nav(props) {
             >
               {data?.subMenu ? (
                 <div className="relative group">
-                  <p className="text-white-800 hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4">
+                  <p className="text-white-800 hover:text-[#66FCF1] duration-500 hover:underline hover:underline-offset-[14px] py-4">
                     {data.name}
                   </p>
                   <ul className="absolute translate-y-12 invisible group-hover:translate-y-0 transition-transform duration-300 ease-in group-hover:visible bg-slate-900 w-56 p-4 rounded">
@@ -109,7 +109,7 @@ export default function Nav(props) {
                   to={data.link}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-green-400 hover:text-green-400 font-bold duration-500 py-4 underline underline-offset-[12px]"
+                      ? "text-green-400 hover:text-[#66FCF1] font-bold duration-500 py-4 underline underline-offset-[12px]"
                       : "text-white-900 hover:text-green-400 font-bold duration-500 hover:underline hover:underline-offset-[14px] py-4"
                   }
                 >
@@ -177,7 +177,7 @@ function SideMenu({ isOpen, setOpen }) {
           >
             {data?.subMenu ? (
               <div className="relative group">
-                <p className="text-white-800 hover:text-green-400 duration-500 hover:underline hover:underline-offset-[14px] py-4">
+                <p className="text-white-800 hover:text-[#66FCF1] duration-500 hover:underline hover:underline-offset-[14px] py-4">
                   {data.name}
                 </p>
                 {/* text-white-800 text-base hover:ring-offset-4 hover:ring-b inline-block */}
