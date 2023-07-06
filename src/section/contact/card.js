@@ -23,7 +23,7 @@ export default function ContactCard() {
   let heading = [
     {
       titleData: "Get in touch with us!",
-      subTitle: "LOREM IPSUM DOLOR SIT AMET",
+      subTitle: "IF ANY QUIRY GIVE A KNOCK",
     },
   ];
 

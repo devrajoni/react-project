@@ -29,7 +29,7 @@ export default function FooterCard() {
   let heading = [
     {
       titleData: "Send us a message!",
-      subTitle: "LOREM IPSUM DOLOR SIT AMET",
+      subTitle: "FEEL FREE TO CONTACT",
     },
   ];
 
