@@ -5,7 +5,6 @@ import Loader from "../../asset/gif.gif";
 import { BASE_URL } from "../../data/baseUrl";
 import Banner from "../../section/work/banner";
 import Footer from "../../section/work/footer";
-import Images from "../../section/work/single-work/image";
 import WorkDetails from "../../section/work/single-work/work-details";
 
 export default function SingleWork() {
@@ -43,7 +42,6 @@ export default function SingleWork() {
     <>
       <div>
         <Banner />
-        <Images />
         <WorkDetails data={work} />
         <Footer />
       </div>

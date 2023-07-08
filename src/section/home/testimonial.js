@@ -43,9 +43,9 @@ export default function Testimonial() {
               ))}
             </div>
           </div>
-          <div class="grid grid-cols-12  gap-6 w-full text-white">
+          <div class="grid grid-cols-12  gap-4 text-white">
             {testimonial.slice(0, load).map((item) => (
-              <div className="col-span-12 md:col-span-6 lg:col-span-3 h-full flex flex-col justify-between w-full bg-[#0B0C10] px-8 pt-12 gap-6 ring-4 ring-[#191919] h-full w-full">
+              <div className="col-span-12 md:col-span-6 lg:col-span-3 flex flex-col justify-between bg-[#0B0C10] px-8 pt-12 gap-6 ring-4 ring-[#191919]">
                 <div>
                   <div
                     className=" font-medium text-center"
@@ -59,17 +59,17 @@ export default function Testimonial() {
                     <ion-icon name="star"></ion-icon>
                   </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-2">
                   <div className=" py-8">
                     <LazyLoadImage
                       key={item.id}
                       src={`${IMAGE_URL}${item.image}`}
                       className="rounded-full"
-                      style={{ height: "100px", width: "100px" }}
+                      // style={{ height: "100px", width: "100px" }}
                       alt="testimonial1"
                     />
                   </div>
-                  <div className="flex items-center h-full">
+                  <div className="flex items-center">
                     <div>
                       <h3 className="font-bold">{item.name}</h3>
                       <p className="text-xs">{item.designation}</p>

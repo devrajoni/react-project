@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 import TopTitleTwo from "../../components/TopTitleTwo";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
 
@@ -55,9 +56,11 @@ export default function LatestNews() {
                 </div>
               </div>
               <div className="p-8">
-                <button className="btn ring-2 ring-[#66FCF1] p-4 hover:opacity-50">
-                  Read More
-                </button>
+                <Link to="/blog">
+                  <button className="btn ring-2 ring-[#66FCF1] p-4 hover:opacity-50">
+                    Read More
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

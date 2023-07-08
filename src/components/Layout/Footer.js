@@ -42,39 +42,16 @@ export default function Footer() {
             />
             <hr className="h-0.5 text-2xl w-16 bg-[#66FCF1]" />
           </div>
-
-          <div className="col-span-12 md:col-span-3 lg:col-span-3">
-            <h1 className="text-2xl pb-4">Contact Us</h1>
-            <div className="flex pb-4 gap-2">
-              <ion-icon name="call-outline"></ion-icon>
-              <p className="text-1xl">{setting.phone}</p>
-            </div>
-            <div className="flex pb-4 gap-2">
-              <ion-icon name="mail-outline"></ion-icon>
-              <p className="text-1xl">{setting.email}</p>
-            </div>
-            <div className="flex pb-4 gap-2">
-              <ion-icon name="location-outline"></ion-icon>
-              <p className="text-1xl">{setting.address}</p>
-            </div>
-            <div className="flex pb-4 gap-2">
-              <ion-icon name="calendar-outline"></ion-icon>
-              <p className="text-1xl ">Monday to Friday</p>
-            </div>
-          </div>
           <div className="col-span-12 md:col-span-3 lg:col-span-3">
             <h1 className="text-2xl pb-4">Our Services</h1>
-            <Link to="/single-project">
+            {/* <Link to="/single-project">
               <p className="text-1xl pb-4">Single Project</p>
-            </Link>
+            </Link> */}
             <Link to="/service">
-              <p className="text-1xl pb-4">Service 1</p>
-            </Link>
-            <Link to="/service">
-              <p className="text-1xl pb-4">Service 2</p>
+              <p className="text-1xl pb-4">Service</p>
             </Link>
             <Link to="/work">
-              <p className="text-1xl pb-4">Works</p>
+              <p className="text-1xl pb-4">Work</p>
             </Link>
           </div>
           <div className="col-span-12 md:col-span-3 lg:col-span-3">
@@ -86,17 +63,31 @@ export default function Footer() {
               <p className="text-1xl pb-4">Blog</p>
             </Link>
             <Link to="/contact">
-              <p className="text-1xl pb-4">Contact Us 1</p>
+              <p className="text-1xl pb-4">Contact</p>
             </Link>
-            <Link to="/contact">
-              <p className="text-1xl pb-4">Contact Us 2</p>
-            </Link>
+          </div>
+          <div className="col-span-12 md:col-span-3 lg:col-span-3">
+            <h1 className="text-2xl pb-4">Contact Us</h1>
+            <div className="flex items-center pb-4 gap-2">
+              <ion-icon name="call-outline"></ion-icon>
+              <p className="text-1xl">{setting.phone}</p>
+            </div>
+            <div className="flex items-center pb-4 gap-2">
+              <ion-icon name="mail-outline"></ion-icon>
+              <p className="text-1xl">{setting.email}</p>
+            </div>
+            <div className="flex items-center pb-4 gap-2">
+              <ion-icon name="location-outline"></ion-icon>
+              <p className="text-1xl">{setting.address}</p>
+            </div>
           </div>
         </div>
       </div>
       <div className="pb-8 container">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 text-white mt-8 text-sm">
-          <p>Copyright {setting.copyright_year} All rights reserved</p>
+          <p>
+            Copyright @SKY Digital {setting.copyright_year} All rights reserved
+          </p>
           <div className="flex gap-6 text-white">
             <p>PRIVACY POLICY</p>
             <p>Terms of Use</p>

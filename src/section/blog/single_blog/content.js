@@ -46,7 +46,7 @@ export default function Content() {
                 <LazyLoadImage
                   src={`${IMAGE_URL}${item.image}`}
                   alt="test"
-                  className="w-full rounded-t-lg"
+                  className="w-full rounded-lg"
                   style={{ height: "400px" }}
                 />
               </div>
@@ -55,7 +55,7 @@ export default function Content() {
                 <div className="pt-6">
                   <div
                     className="text-1xl pt-4"
-                    dangerouslySetInnerHTML={{ __html: item.description }}
+                    dangerouslySetInnerHTML={{ __html: item.long_description }}
                   />
                 </div>
               </div>
@@ -69,13 +69,13 @@ export default function Content() {
                 </h1>
               </div>
               {latest.slice(0, 10).map((data) => (
-                <div className="grid grid-cols-12 gap-6  flex flex-col p-3 justify-between">
+                <div className="grid grid-cols-12 gap-6 h-full p-3 justify-between">
                   <div className="col-span-4 h-full ">
                     <div>
                       <LazyLoadImage
                         src={`${IMAGE_URL}${data.image}`}
                         alt="test"
-                        className="w-full rounded-t-lg"
+                        className="w-full h-full rounded-lg"
                       />
                     </div>
                   </div>
