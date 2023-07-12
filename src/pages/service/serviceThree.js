@@ -35,7 +35,7 @@ export default function ServiceThree() {
 
   if (isloading) {
     return (
-      <div className="h-screen text-white flex justify-center items-cneter">
+      <div className="h-screen py-32 text-white flex justify-center text-sm items-cneter">
         <LazyLoadImage src={Loader} />
       </div>
     );

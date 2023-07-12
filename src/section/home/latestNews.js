@@ -30,7 +30,7 @@ export default function LatestNews() {
 
   return (
     <>
-      <section className="container">
+      <section className="container mb-24">
         <div className="flex justify-center items-center h-full mt-12 mb-20 md:mt-24">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />

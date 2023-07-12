@@ -74,19 +74,22 @@ export default function Banner() {
     },
   ];
 
+  const bannerImage = banner.image ? `${IMAGE_URL}${banner?.image}` : "";
+  const bannerTitle = banner.title ? banner.title : "";
+  const bannerSubTitle = banner.sub_title ? banner.sub_title : "";
   return (
     <>
       <section
         className="header-section relative w-full bg-slate-900 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}
+        style={{ backgroundImage: `url(${bannerImage})` }}
       >
         <Nav />
 
         <div className="text-left absolute py-60 w-full text-white px-6 md:px-12 lg:px-40">
           <h5 className="text-[#66FCF1] text-uppercase whitespace-pre-wrap pb-3">
-            {banner.sub_title}
+            {bannerSubTitle}
           </h5>
-          <h1 className="font-bold text-5xl pb-10 w-1/2">{banner.title}</h1>
+          <h1 className="font-bold text-5xl pb-10 w-1/2">{bannerTitle}</h1>
           <Button name="3D Portfolio" />
         </div>
       </section>

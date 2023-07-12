@@ -29,7 +29,7 @@ export default function Latest() {
   ];
   return (
     <>
-      <section className="blog-section h-auto  container">
+      <section className="blog-section h-auto  container mb-24 ">
         <div className="flex justify-center items-center h-full mt-12 mb-20 md:mt-24 ">
           {heading.map((headings) => (
             <TopTitleTwo headings={headings} />

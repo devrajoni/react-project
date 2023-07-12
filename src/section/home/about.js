@@ -59,6 +59,11 @@ export default function Service() {
         "Social media addiction Free Google and Facebook Paid Media Cheatsheet Review you...",
     },
   ];
+  const ImageOne = gallery.image_one ? `${IMAGE_URL}${gallery?.image_one}` : "";
+  const ImageTwo = gallery.image_two ? `${IMAGE_URL}${gallery?.image_two}` : "";
+  const ImageThree = gallery.image_three
+    ? `${IMAGE_URL}${gallery?.image_three}`
+    : "";
 
   return (
     <>
@@ -71,7 +76,7 @@ export default function Service() {
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 lg:col-span-6">
             <LazyLoadImage
-              src={`${IMAGE_URL}${gallery.image_one}`}
+              src={`${ImageOne}`}
               alt=""
               className="h-full w-full object-cover"
             />
@@ -79,14 +84,14 @@ export default function Service() {
           <div className="col-span-12 lg:col-span-6 flex flex-col gap-4">
             <div className="">
               <LazyLoadImage
-                src={`${IMAGE_URL}${gallery.image_two}`}
+                src={`${ImageTwo}`}
                 // className="h-auto w-full"
                 alt="about1"
               />
             </div>
             <div className="">
               <LazyLoadImage
-                src={`${IMAGE_URL}${gallery.image_three}`}
+                src={`${ImageThree}`}
                 // className="h-auto w-full"
                 alt="about1"
               />

@@ -21,6 +21,14 @@ export default function Business() {
     loadData();
   }, []);
 
+  const businesssImage = businesss.image
+    ? `${IMAGE_URL}${businesss?.image}`
+    : "";
+  const businesssTitle = businesss.title ? businesss.title : "";
+  const businesssDescription = businesss.description
+    ? businesss.description
+    : "";
+
   return (
     <>
       <section className="container gap-y-4">
@@ -28,18 +36,18 @@ export default function Business() {
           <div class="grid grid-cols-12 sm:gap-y-8 md:gap-12 h-auto text-white">
             <div className="col-span-12 md:col-span-12 lg:col-span-6">
               <LazyLoadImage
-                src={`${IMAGE_URL}${businesss.image}`}
+                src={`${businesssImage}`}
                 alt="activity"
                 className="h-full"
               />
             </div>
             <div className="col-span-12 md:col-span-12 lg:col-span-6 mt-12 lg:mt-0 text-left">
               <h3 className="font-bold sm:text-2xl md:text-2xl lg:text-6xl">
-                {businesss.title}
+                {businesssTitle}
               </h3>
               <div
                 className="text-1xl py-8 md:py-8 lg:py-16"
-                dangerouslySetInnerHTML={{ __html: businesss.description }}
+                dangerouslySetInnerHTML={{ __html: `${businesssDescription}` }}
               />
               <Button name="Watch Video" />
             </div>

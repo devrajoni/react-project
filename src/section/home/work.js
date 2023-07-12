@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Button from "../../components/Button";
 import TopTitle from "../../components/TopTitle";
 import { BASE_URL, IMAGE_URL } from "../../data/baseUrl";
@@ -29,7 +33,7 @@ export default function Work() {
       subTitle: "Flagship projects",
     },
   ];
-
+  console.log(work);
   return (
     <>
       <section className="">
@@ -45,17 +49,50 @@ export default function Work() {
             </Link>
           </div>
         </div>
-        <div className="flex">
-          {work.map((item, index) => (
-            <div key={index} className="item">
-              <LazyLoadImage
-                src={`${IMAGE_URL}${item.image}`}
-                alt=""
-                className="w-full h-full"
-              />
-            </div>
+
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={12}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+          }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          loop
+        >
+          {work?.map((item) => (
+            <SwiperSlide className="mb-20 " key={item.id}>
+              <div className="text-white">
+                <div className="item">
+                  <LazyLoadImage
+                    src={`${IMAGE_URL}${item.image}`}
+                    alt=""
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </section>
     </>
   );

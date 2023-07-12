@@ -31,16 +31,19 @@ export default function Banner() {
     };
   }, [search]);
 
+  const bannerImage = banner.image ? `${IMAGE_URL}${banner?.image}` : "";
+  const bannerTitle = banner.title ? banner.title : "";
+
   return (
     <>
       <section
         className="h-[400px] lg:h-[600px] relative w-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${IMAGE_URL}${banner?.image})` }}
+        style={{ backgroundImage: `url(${bannerImage})` }}
       >
         <Nav setSearch={setSearch} />
 
         <div className="flex justify-center items-center w-full h-full absolute text-white">
-          <h1 className="font-bold text-6xl md:text-8xl">{banner.title}</h1>
+          <h1 className="font-bold text-6xl md:text-8xl">{bannerTitle}</h1>
         </div>
       </section>
       {search ? (
