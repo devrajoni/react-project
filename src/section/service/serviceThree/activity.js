@@ -14,7 +14,7 @@ export default function Activity({ data = [] }) {
   return (
     <>
       <section className=" bg-[#121212]">
-        <div className="container">
+        <div className="container pb-20">
           <div className="flex justify-center items-center h-full w-full py-20">
             {heading.map((headings) => (
               <TopTitleTwo headings={headings} />

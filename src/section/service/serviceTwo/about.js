@@ -135,6 +135,87 @@ export default function Testimonial() {
     setLoad((prevValue) => prevValue + 4);
   };
 
+  const rating1 = (rating) => {
+    switch (rating) {
+      case "1":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+          </>
+        );
+      case "1.5":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </>
+        );
+      case "2":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </>
+        );
+      case "2.5":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </>
+        );
+      case "3":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </>
+        );
+      case "3.5":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </>
+        );
+      case "4":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </>
+        );
+      case "4.5":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </>
+        );
+      case "5":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </>
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
     <>
       <section className=" mt-16 md:mt-28 bg-[#121212]">
@@ -154,12 +235,8 @@ export default function Testimonial() {
                     className=" font-medium text-center"
                     dangerouslySetInnerHTML={{ __html: item.description }}
                   />
-                  <div className="pt-8 flex justify-center items-center gap-3 text-1xl font-bold text-[#FEC42D]">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
+                  <div className="pt-8 flex justify-center items-center gap-3 text-1xl font-bold text-[#66FCF1]">
+                    {rating1(item.rating)}
                   </div>
                 </div>
                 <div className="flex gap-4">
