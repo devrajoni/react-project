@@ -31,7 +31,7 @@ export default function Testimonial() {
   const loadMore = () => {
     setLoad((prevValue) => prevValue + 4);
   };
-  console.log("he", testimonial);
+
   const rating1 = (rating) => {
     switch (rating) {
       case "1":
@@ -40,11 +40,26 @@ export default function Testimonial() {
             <ion-icon name="star"></ion-icon>
           </>
         );
+      case "1.5":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </>
+        );
       case "2":
         return (
           <>
             <ion-icon name="star"></ion-icon>
             <ion-icon name="star"></ion-icon>
+          </>
+        );
+      case "2.5":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
           </>
         );
       case "3":
@@ -55,9 +70,38 @@ export default function Testimonial() {
             <ion-icon name="star"></ion-icon>
           </>
         );
+      case "3.5":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </>
+        );
       case "4":
         return (
           <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </>
+        );
+      case "4.5":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </>
+        );
+      case "5":
+        return (
+          <>
+            <ion-icon name="star"></ion-icon>
             <ion-icon name="star"></ion-icon>
             <ion-icon name="star"></ion-icon>
             <ion-icon name="star"></ion-icon>
