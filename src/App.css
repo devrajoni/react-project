@@ -184,6 +184,6 @@ progress::-webkit-progress-value {
   height: 10px;
   margin: 0px -10px 0 0;
   padding-left: 50px; /* Rounded corners requires a padding */
-  background: #22e2d5;
+  background: #06d8ca;
   border-radius: 100px;
 }

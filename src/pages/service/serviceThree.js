@@ -7,7 +7,6 @@ import Activity from "../../section/service/serviceThree/activity";
 import Banner from "../../section/service/serviceThree/banner";
 import Feature from "../../section/service/serviceThree/feature";
 import Footer from "../../section/service/serviceThree/footer";
-import Image from "../../section/service/serviceThree/image";
 import Inquiry from "../../section/service/serviceThree/inquiry";
 import Similar from "../../section/service/serviceThree/similar";
 
@@ -46,7 +45,6 @@ export default function ServiceThree() {
       <div>
         {service.data && <Banner data={service?.data[0]} />}
         <Feature data={service?.data} />
-        <Image />
         <Activity data={service?.data} />
         <Similar data={service?.services} />
         <Inquiry />

@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <>
       <div className="">
-        <div className="grid grid-cols-12 gap-6 lg:gap-28 container pt-12 md:pt-16 pb-16 text-white text-left">
+        <div className="grid grid-cols-12 gap-4 lg:gap-16 container pt-12 md:pt-16 pb-16 text-white text-left">
           <div className="col-span-12 md:col-span-3 lg:col-span-3">
             <p>
               <Link to="/">
@@ -83,23 +83,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="pb-8 container">
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 text-white mt-8 text-sm">
-          <p>
-            Copyright @SKY Digital {setting.copyright_year} All rights reserved
-          </p>
-          <div className="flex gap-6 text-white">
-            <p>PRIVACY POLICY</p>
-            <p>Terms of Use</p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2   text-white text-left mt-4">
+      <div className="pb-8 container mt-4">
+        <div className="lg:flex justify-between mt-8">
           <div
             className="text-sm pb-6 sm:pb-4"
             dangerouslySetInnerHTML={{ __html: setting.landing_description }}
           />
-          <div className="flex gap-6 text-bold  md:ps-56 lg:ps-96">
+          <div className="flex gap-6 text-bold text-white  lg:ps-96">
             <div className="text-2xl">
               <Link to={social.facebook} target="_blank">
                 <ion-icon name="logo-facebook"></ion-icon>
@@ -119,6 +109,20 @@ export default function Footer() {
               <Link to={social.youtube} target="_blank">
                 <ion-icon name="logo-youtube"></ion-icon>
               </Link>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2   text-white text-left ">
+          <div className=" text-white mt-4 text-sm">
+            <div className="flex gap-6 pb-2 text-white">
+              <p>PRIVACY POLICY</p>
+              <p>Terms of Use</p>
+            </div>
+            <div>
+              <p>
+                Copyright @SKY Digital {setting.copyright_year} All rights
+                reserved
+              </p>
             </div>
           </div>
         </div>

@@ -240,7 +240,7 @@ export default function Testimonial() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className=" py-8">
+                  <div className="shrink-0 py-8">
                     <LazyLoadImage
                       key={item.id}
                       src={`${IMAGE_URL}${item.image}`}

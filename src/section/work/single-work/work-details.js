@@ -19,14 +19,14 @@ export default function WorkDetails({ data = {} }) {
             />
           </div>
           <div class="grid grid-cols-12 gap-y-4 md:gap-12 mt-16 h-auto drop-shadow-md text-white">
-            <div className="col-span-12 md:col-span-8">
+            <div className="col-span-12 lg:col-span-8">
               <h1 className="bold text-4xl">{data.title}</h1>
               <div
                 className="font-medium text-white py-2"
                 dangerouslySetInnerHTML={{ __html: data.description }}
               />
             </div>
-            <div className="col-span-12 md:col-span-4 flex justify-end">
+            <div className="col-span-12 lg:col-span-4 flex lg:justify-end">
               <div>
                 <div class="grid grid-cols-12">
                   <div class="col-span-3">

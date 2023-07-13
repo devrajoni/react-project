@@ -41,8 +41,8 @@ export default function ContactCard() {
             <div
               className={
                 index === 0
-                  ? "col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-4 md:border-l-4 md:border-r-4 border-[#66FCF1] text-center"
-                  : "col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-4 md:border-r-4 border-[#66FCF1] text-center"
+                  ? "col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-2 md:border-l-4 md:border-r-4 border-[#66FCF1] text-center"
+                  : "col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-2 md:border-r-4 border-[#66FCF1] text-center"
               }
               key={data.id}
             >
@@ -53,8 +53,15 @@ export default function ContactCard() {
                   className="w-auto h-8 object-cover object-center"
                 />
               </div>
-              <h3 className="text-bold text-2xl pb-4">{data.title}</h3>
-              <div dangerouslySetInnerHTML={{ __html: data.description }} />
+              <div className="flex justify-center text-white">
+                <div>
+                  <h3 className="text-bold text-2xl pb-4">{data.title}</h3>
+                  <div
+                    className="text-center"
+                    dangerouslySetInnerHTML={{ __html: data.description }}
+                  />
+                </div>
+              </div>
             </div>
           ))}
           {/* <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-[#0B0C10] p-12 md:border-r-4 border-[#66FCF1] text-center">

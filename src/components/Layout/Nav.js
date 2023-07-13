@@ -162,14 +162,10 @@ function SideMenu({ isOpen, setOpen }) {
     <div
       className={`${
         isOpen ? "translate-x-0" : "-translate-x-full"
-      } block lg:hidden h-screen z-50 transition duration-500`}
+      } block lg:hidden h-screen transition duration-500`}
+      style={{ zIndex: "99999999 !important" }}
     >
       <ul className="block lg:hidden container absolute top-0 left-0  h-full w-full  bg-black text-white">
-        {/* {links.map((link) => (
-          <li key={link.name}>
-            <Link to={link.link}>{link.name}</Link>
-          </li>
-        ))} */}
         {links.map((data) => (
           <li
             key={data.name}
@@ -180,7 +176,6 @@ function SideMenu({ isOpen, setOpen }) {
                 <p className="text-white-800 hover:text-[#66FCF1] duration-500 hover:underline hover:underline-offset-[14px] py-4">
                   {data.name}
                 </p>
-                {/* text-white-800 text-base hover:ring-offset-4 hover:ring-b inline-block */}
                 <ul className="absolute translate-y-12 invisible group-hover:translate-y-0 transition-transform duration-300 ease-in group-hover:visible bg-slate-900 w-56 p-4 rounded">
                   {data?.subMenu?.map((menu) => (
                     <li key={menu.name}>
